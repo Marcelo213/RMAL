@@ -1,0 +1,19 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;    //the iostream library used std namespace, so this has to be declared
+ 
+
+
+char command[10];
+fstream file("/dev/ttyUSB0");
+
+int main(void){
+
+    cin >> command; // this takes an input from the keyboard
+    file << command; // this sends the input from the user onto the arduino
+    
+    
+    return 0;
+
+    }
