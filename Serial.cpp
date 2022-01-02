@@ -1,12 +1,14 @@
 #include "Serial.h" // The header file we are declaring 
 
-//Constructor
-Serial::Serial(std::string portName){
-    boost::asio::serial_port port(io, portName); // Creates serial_port object
-}
+Serial::Serial(){}
+Serial::~Serial(){}
 
-//Sends string to arduino
+boost::asio::io_service io;
+boost::asio::serial_port port(boost::asio::io_service io, std::string portName = "/dev/ttyUSB0");
+
+
 void Serial::sendString(std::string sendData){
-
-    port.write(sendData);
+  port.write_some(boost::asio::buffer(sendData.c_str(), sendData.size()) )
 }
+
+
