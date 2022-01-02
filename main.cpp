@@ -1,14 +1,22 @@
 #include "Serial.h"
 
-std::string portName = "/dev/ttyUSB0";
+
+std::string port_linux = "/dev/ttyUSB0";
 std::string command = "on";
+
 
 int main(void){
 
-    Serial arduino(portName);
-    //arduino.s_default();
-    arduino.sendString(command);
+    //      Note: Libraries must be linked.
+    //      Use g++ main.cpp -o main -L /usr/lib/ -lboost_system -lboost_thread -lpthread
+    //      Boost library and Thread library must be used
 
+    Serial arduino;
+    arduino.sendString("on");
+    
+    
+    
+    
     return 0;
 
-    }
+}
