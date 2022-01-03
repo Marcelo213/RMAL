@@ -1,9 +1,23 @@
+#include <Servo.h>
+
 
 void setup() {
   // put your setup code here, to run once:
 
 Serial.begin(9600);
 pinMode(LED_BUILTIN,OUTPUT);
+Servo myServo;
+myServo.attach(5);
+myServo.write(90);
+delay(500);
+myServo.write(0);
+delay(500);
+myServo.write(90);
+delay(500);
+myServo.write(180);
+delay(500);
+myServo.write(90);
+delay(500);
 
 }
 
@@ -14,12 +28,12 @@ while (Serial.available()>0) {
 
   String incomingbyte = Serial.readStringUntil('\n');
       Serial.println(incomingbyte);
-  if (incomingbyte.equals("ON")){
+  if (incomingbyte.equals("on")){
     
         Serial.println("LED is ON");
         digitalWrite(LED_BUILTIN, HIGH);
    
-  } else if(incomingbyte.equals("OFF")){
+  } else if(incomingbyte.equals("off")){
     
         Serial.println("LED is OFF");
         digitalWrite(LED_BUILTIN, LOW);
