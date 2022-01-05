@@ -1,0 +1,23 @@
+int phasePin = 3;
+int quadratureA = 8;
+int quadratureB = 9;
+int enablePin = 5;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(phasePin, OUTPUT);
+  pinMode(quadratureA,INPUT);
+  pinMode(quadratureB,INPUT);
+  pinMode(enablePin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  analogWrite(enablePin, 100);
+  digitalWrite(phasePin, HIGH);
+  bool stateA = digitalRead(quadratureA);
+  bool stateB = digitalRead(quadratureB);
+
+  Serial.println(quadratureA);
+}
