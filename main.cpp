@@ -2,8 +2,6 @@
 
 
 std::string port_linux = "/dev/ttyUSB0";
-std::string command = "on";
-
 
 int main(void){
 
@@ -13,7 +11,7 @@ int main(void){
 
     Serial arduino;
     arduino.sendString("on");
-    
+    //arduino.g_data();
     
     
     
