@@ -1,18 +1,22 @@
 #include <Servo.h>
+
 int phasePin = 3;
 int quadratureA = 8;
 int quadratureB = 9;
 int enablePin = 5;
 
 void setup() {
-  // put your setup code here, to run once:
+  
   pinMode(phasePin, OUTPUT);
   pinMode(quadratureA,INPUT);
   pinMode(quadratureB,INPUT);
   pinMode(enablePin, OUTPUT);
-  Serial.begin(9600);
   pinMode(LED_BUILTIN,OUTPUT);
+  Serial.begin(9600);
 
+
+
+  // NOTE: This is movement on a servo to indicate that the code is working properly
   Servo myServo;
   myServo.attach(5);
   myServo.write(90);
@@ -29,24 +33,45 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  while (Serial.available()>0) {
-    analogWrite(enablePin, 100); // This is a pwm signal to determine the speed of the servo motor. Range is 0 to 255
-    // digitalWrite(phasePin, HIGH) // This dictates the direction of the motor
+  
+  while (Serial.available() > 0) {
+    
+    
     int stateA = digitalRead(quadratureA);
     int stateB = digitalRead(quadratureB);
-    Serial.print(stateA, " " );
-    Serial.print(stateB, "\n");
-
+    // Add variable 'currentState' that uses cases and is based on quadrature positioning
     
     String incomingbyte = Serial.readStringUntil('\n');
-    Serial.println(incomingbyte);
-    if (incomingbyte.equals("on")){
-      Serial.println("LED is ON");
-      digitalWrite(LED_BUILTIN, HIGH);
-  } else if(incomingbyte.equals("off")){
-      Serial.println("LED is OFF");
-      digitalWrite(LED_BUILTIN, LOW);
+    
+      if (incomingbyte.equals("on")){
+        Serial.println("LED is ON");
+        digitalWrite(LED_BUILTIN, HIGH);
+    } else if(incomingbyte.equals("off")){
+        Serial.println("LED is OFF");
+        digitalWrite(LED_BUILTIN, LOW);
+    }
+
+
+    
+      else if(incomingbyte.equals("turn servo")){
+       int angle = Serial.parseInt();
+
+       if (angle <= currentState) {
+       digitalWrite(phasePin, HIGH) // This dictates the direction of the motor ------>  NOTE need to check if phasePin HIGH is CCW motion 
+       analogWrite(enablePin, 100); // This is a pwm signal to determine the speed of the servo motor. Range is 0 to 255
+        } else if (angle >= currentState){
+            digitalWrite(phasePin, LOW) // This dictates the direction of the motor ------>  NOTE need to check if phasePin HIGH is CCW motion 
+            analogWrite(enablePin, 100); // This is a pwm signal to determine the speed of the servo motor. Range is 0 to 255
+
+          
+        }
+
+  
+       }
+       
+      }
   }
-  }
-}
+
+
+
+  
