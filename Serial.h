@@ -5,13 +5,20 @@
 #include <boost/asio/serial_port.hpp>
 #include <string>
 
+// From Herk.hpp
+static const uint8_t HERK_BUFFER = 223;  // maximum allowable packet size
+
 class Serial{
     private:
+        // Variables
         double something;
-        std::string portName = "/dev/ttyUSB0";
-        static boost::asio::io_service io;
-        static boost::asio::serial_port port(boost::asio::io_service io, std::string portName = "/dev/ttyUSB0");
-        //port = boost::asio::serial(ioservice, "/dev/ttyACM0").new();
+        
+        // Necessary objects
+        boost::asio::io_service io;
+        //boost::asio::serial_port port(boost::asio::io_service io, std::string portName = "/dev/ttyUSB0");
+
+        // From Herk.hpp
+        boost::shared_ptr<boost::asio::serial_port>	_serial;
 
     public:
         Serial();
