@@ -36,5 +36,5 @@ class Serial{
         void sendString(std::string sendData);
         
         // Getting Functions
-        std::string g_data();
+        void g_data( );
 };
