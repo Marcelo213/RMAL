@@ -1,7 +1,7 @@
 #include "Serial.h"
 
 
-std::string port_linux = "/dev/ttyUSB0";
+
 
 int main(void){
 
@@ -10,8 +10,8 @@ int main(void){
     //      Boost library and Thread library must be used
 
     Serial arduino;
-    arduino.sendString("on");
-    //arduino.g_data();
+    
+    arduino.g_data();
     
     
     
