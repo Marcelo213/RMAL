@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLibsModule.a CMakeFiles/LibsModule.dir/Serial.cpp.o
+/usr/bin/ranlib libLibsModule.a
