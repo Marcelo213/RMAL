@@ -10,7 +10,7 @@
 /**
  * @mainpage Serial Class 
  * @section Description
- *      This class allows communication with an object connected to a serial port
+ *      This class allows communication with an object connected to a serial port.
  */
 
 

@@ -17,7 +17,7 @@ Serial::~Serial(){
 }
 
 // Setting Functions
-/*void Serial::s_default(){};
+//void Serial::s_default(){};
 
 bool Serial::s_portName(std::string port){
   m_Serial->open(port);
@@ -27,7 +27,7 @@ bool Serial::s_portName(std::string port){
 bool Serial::s_baudRate(int rate){
   m_Serial->set_option(boost::asio::serial_port_base::baud_rate(rate));
   return true;
-}*/
+}
 
 /*bool Serial::s_parity(int parity){}
 bool Serial::s_stopBit(int bits){}
