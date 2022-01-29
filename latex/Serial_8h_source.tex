@@ -1,0 +1,49 @@
+\hypertarget{Serial_8h_source}{}\doxysection{Serial.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <boost/asio.hpp>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <boost/asio/serial\_port.hpp>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classSerial}{Serial}}\{}
+\DoxyCodeLine{18     \textcolor{keyword}{private}:}
+\DoxyCodeLine{19         }
+\DoxyCodeLine{20         \textcolor{comment}{// From Herk.hpp}}
+\DoxyCodeLine{21         \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t m\_bufferSize = 244;  \textcolor{comment}{// maximum allowable packet size}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{comment}{// Necessary objects}}
+\DoxyCodeLine{24         boost::asio::io\_service m\_IO;}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26         \textcolor{comment}{// From Herk.hpp}}
+\DoxyCodeLine{27         boost::shared\_ptr<boost::asio::serial\_port> m\_Serial;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36         \mbox{\hyperlink{classSerial_ac91dae41c89fdc0c29f75af5050ddb5e}{Serial}}(std::string portName); \textcolor{comment}{// Constructor}}
+\DoxyCodeLine{37         \mbox{\hyperlink{classSerial}{\string~Serial}}(); \textcolor{comment}{// Deconstructor}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{comment}{// Setting Functions -\/ must return bool}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \textcolor{keywordtype}{void} s\_default();}
+\DoxyCodeLine{42         \textcolor{keywordtype}{bool} s\_portName(std::string port);}
+\DoxyCodeLine{43         \textcolor{keywordtype}{bool} s\_baudRate(\textcolor{keywordtype}{int} rate);}
+\DoxyCodeLine{44         \textcolor{keywordtype}{bool} s\_parity(\textcolor{keywordtype}{int} parity);}
+\DoxyCodeLine{45         \textcolor{keywordtype}{bool} s\_stopBit(\textcolor{keywordtype}{int} bits);}
+\DoxyCodeLine{46         \textcolor{keywordtype}{bool} s\_charSize(\textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         \textcolor{comment}{// Doing Functions -\/ must return void}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56         \textcolor{keywordtype}{void} \mbox{\hyperlink{classSerial_af472898861099623b3d79ac3d12745ba}{sendString}}(std::string sendData);}
+\DoxyCodeLine{57         }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         \textcolor{comment}{// Getting Functions -\/ must return the expected output}}
+\DoxyCodeLine{60         }
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{classSerial_ad7a43948ca41c04421f78c30ed824d4b}{g\_data}}();}
+\DoxyCodeLine{66         }
+\DoxyCodeLine{67 \};          }
+
+\end{DoxyCode}

@@ -1,0 +1,72 @@
+\hypertarget{classSerial}{}\doxysection{Serial Class Reference}
+\label{classSerial}\index{Serial@{Serial}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerial_ac91dae41c89fdc0c29f75af5050ddb5e}{Serial}} (std\+::string port\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor is used to declare the serial port object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSerial_a1b56dda91bf21d468bcf5fd726bd90a4}\label{classSerial_a1b56dda91bf21d468bcf5fd726bd90a4}} 
+void {\bfseries s\+\_\+default} ()
+\item 
+\mbox{\Hypertarget{classSerial_a8c75df8239b24042c5e875b78b07edbb}\label{classSerial_a8c75df8239b24042c5e875b78b07edbb}} 
+bool {\bfseries s\+\_\+port\+Name} (std\+::string port)
+\item 
+\mbox{\Hypertarget{classSerial_a65dec1abc565534bfb6394b5a14c1b1a}\label{classSerial_a65dec1abc565534bfb6394b5a14c1b1a}} 
+bool {\bfseries s\+\_\+baud\+Rate} (int rate)
+\item 
+\mbox{\Hypertarget{classSerial_a6e79986301cd6314a3e8c32c778eb02f}\label{classSerial_a6e79986301cd6314a3e8c32c778eb02f}} 
+bool {\bfseries s\+\_\+parity} (int parity)
+\item 
+\mbox{\Hypertarget{classSerial_af5cbde1f3d7253344802d9860ceb0425}\label{classSerial_af5cbde1f3d7253344802d9860ceb0425}} 
+bool {\bfseries s\+\_\+stop\+Bit} (int bits)
+\item 
+\mbox{\Hypertarget{classSerial_a98bf3a71a7d38eb75b9b9afef0d86764}\label{classSerial_a98bf3a71a7d38eb75b9b9afef0d86764}} 
+bool {\bfseries s\+\_\+char\+Size} (int size)
+\item 
+void \mbox{\hyperlink{classSerial_af472898861099623b3d79ac3d12745ba}{send\+String}} (std\+::string send\+Data)
+\begin{DoxyCompactList}\small\item\em Sends a string to the serial object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSerial_ad7a43948ca41c04421f78c30ed824d4b}\label{classSerial_ad7a43948ca41c04421f78c30ed824d4b}} 
+void {\bfseries g\+\_\+data} ()
+\begin{DoxyCompactList}\small\item\em Reads bytes from buffer. Must set buffer size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSerial_ac91dae41c89fdc0c29f75af5050ddb5e}\label{classSerial_ac91dae41c89fdc0c29f75af5050ddb5e}} 
+\index{Serial@{Serial}!Serial@{Serial}}
+\index{Serial@{Serial}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{Serial()}{Serial()}}
+{\footnotesize\ttfamily Serial\+::\+Serial (\begin{DoxyParamCaption}\item[{std\+::string}]{port\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructor is used to declare the serial port object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port\+Name} & This is the name of the serial object, ex\+: \char`\"{}/dev/tty\+USB0\char`\"{} or \char`\"{}\+COM2\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSerial_af472898861099623b3d79ac3d12745ba}\label{classSerial_af472898861099623b3d79ac3d12745ba}} 
+\index{Serial@{Serial}!sendString@{sendString}}
+\index{sendString@{sendString}!Serial@{Serial}}
+\doxysubsubsection{\texorpdfstring{sendString()}{sendString()}}
+{\footnotesize\ttfamily void Serial\+::send\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{send\+Data }\end{DoxyParamCaption})}
+
+
+
+Sends a string to the serial object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em send\+Data} & This is the string to be sent. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Serial.\+h\item 
+Serial.\+cpp\end{DoxyCompactItemize}
