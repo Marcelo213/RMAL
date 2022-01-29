@@ -8,6 +8,7 @@ int main(void){
     std::string command = "Turn motor CW.";
     arduino.sendString(command);
 
+	// Testing git
 
     std::cout << "Task complete." << std::endl;
 
