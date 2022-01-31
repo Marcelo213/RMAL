@@ -1,5 +1,7 @@
 #include "Serial.h" 
 
+// NOTE: There is a different version of Serial.h and Serial.cpp in the Endo folder.
+
 Serial::Serial(std::string portName){
   std::cout << "Wait for connection to be established." << std::endl;
   
@@ -16,6 +18,7 @@ Serial::Serial(std::string portName){
 
 Serial::~Serial(){
   m_Serial->close();
+  std::cout << "Connection closed." << std::endl;
 }
 
 // Setting Functions
@@ -50,25 +53,26 @@ void Serial::sendString(std::string sendData){
   std::string command = val.substr(0,pos);
   std::cout << command; 
   
-  //std::cout << val << std:: endl;
+
+  std::string angle = val.substr(24,pos);
+  std::cout << angle;
+  
 }
 
 
 //  Getting Functions
 void Serial::g_data(){
-  unsigned char out[m_bufferSize];
+  unsigned char out[m_bufferSize];    // Reads feedback
   m_Serial->read_some(boost::asio::buffer(out, m_bufferSize));
   std::string val(reinterpret_cast<char*> (out));
-  //char delimiter('.');
-  //int pos = val.find(delimiter);
-  //pos += 1;
-  //std::string command = val.substr(0,pos);
   
-  std::cout << "Got here1 \n";
-  //std::cout << command << std:: endl;
-  std::cout << val << std:: endl;
-  std::cout << "Got here2 \n";
-  
+  char delimiter(':');
+  char delimiter2('\n');
+  int pos = val.find(delimiter);
+  int pos2 = val.find(delimiter2);
+  pos += 2;
+  std::string command = val.substr(pos, pos2);
+  std::cout << command; 
   
   
   

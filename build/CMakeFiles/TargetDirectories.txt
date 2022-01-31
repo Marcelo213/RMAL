@@ -1,0 +1,4 @@
+/home/marcelot/Desktop/RMAL/build/CMakeFiles/LibsModule.dir
+/home/marcelot/Desktop/RMAL/build/CMakeFiles/main.dir
+/home/marcelot/Desktop/RMAL/build/CMakeFiles/edit_cache.dir
+/home/marcelot/Desktop/RMAL/build/CMakeFiles/rebuild_cache.dir

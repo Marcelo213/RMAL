@@ -35,7 +35,7 @@ class MainLoop : public vtkCommand
         double m_rotated;
         double m_bended;
 
-		
+
 	public:
 		MainLoop(Visualizer vis);
         ~MainLoop();

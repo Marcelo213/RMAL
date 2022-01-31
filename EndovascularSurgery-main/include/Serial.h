@@ -26,6 +26,8 @@ class Serial{
         // From Herk.hpp
         boost::shared_ptr<boost::asio::serial_port>	m_Serial;
 
+    
+
     public:
         /** 
          * @brief 

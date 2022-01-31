@@ -1,10 +1,11 @@
 #include <mainloop.h>
+
+
+// Marcelo
 #include "Serial.h"
-#include <string> 
-
-
-std::string port = "/dev/ttyACM0";
+std::string port = "/dev/ttyUSB0";
 Serial arduino(port);
+
 
 MainLoop::MainLoop(Visualizer vis) {
     mp_vis = vis;
@@ -166,15 +167,24 @@ void MainLoop::Execute(vtkObject *caller, unsigned long eventId, void *vtkNotUse
         if (*(iren->GetKeySym()) == 'm') {
             m_q(1,0) = m_q(1,0) + m_cath.g_q2change();  // Rotate CW
             
-            std::string command = "Turn motor CW.";
+            std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
+
+           
+            std::string command = std::to_string(m_q(1,0));
             arduino.sendString(command);
+            //arduino.g_data();
+
             m_cathEn = true;
         }
         if (*(iren->GetKeySym()) == 'n') {
             m_q(1,0) = m_q(1,0) - m_cath.g_q2change();  // Rotate CCW
             
-            std::string command = "Turn motor CCW.";
+            std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
+
+            
+            std::string command = std::to_string(m_q(1,0));
             arduino.sendString(command);
+            //arduino.g_data();
             m_cathEn = true;
         }
         if (*(iren->GetKeySym()) == 'k') { 

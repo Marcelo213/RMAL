@@ -2,13 +2,13 @@
 
 int main(void){
 
-    std::string port = "/dev/ttyACM0";
+    std::string port = "/dev/ttyUSB0";
     Serial arduino(port);
     
-    std::string command = "Turn motor CW.";
-    arduino.sendString(command);
+    std::string command;
 
-	// Testing git
+    std::cin >> command;
+    arduino.sendString(command);
 
     std::cout << "Task complete." << std::endl;
 

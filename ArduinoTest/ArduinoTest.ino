@@ -7,18 +7,18 @@ void setup() {
 Serial.begin(9600);
 myServo.attach(5);
 myServo.write(90);
+
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
     if (Serial.available() > 0){
       String incomingByte = Serial.readStringUntil('\n');
-        if (incomingByte.equals("Left") == true ){
-          myServo.write(0);
-        } else if (incomingByte.equals("Right") == true){
-          myServo.write(180);
-        } 
+        float angle = incomingByte.toFloat();
+        angle = angle * (180/3.14) + 90; // Angle in degrees
+        Serial.print("Arduino angle (in deg): ");
+        Serial.println(angle);
+        myServo.write(angle);
         
-    }     delay(1000);
-        myServo.write(90);
+    }     
 }
