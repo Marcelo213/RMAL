@@ -42,38 +42,25 @@ bool Serial::s_charSize(int size){}*/
 // Doing Functions
 void Serial::sendString(std::string sendData){
   m_Serial->write_some(boost::asio::buffer(sendData.c_str(), sendData.size())); // Writes string
+}
+
+
+void Serial::angleRead(){
+  
 
   unsigned char out[m_bufferSize];    // Reads feedback
   m_Serial->read_some(boost::asio::buffer(out, m_bufferSize));
   std::string val(reinterpret_cast<char*> (out));
-  
+  std::cout << val << std::endl;
+
   char delimiter('\n');
   int pos = val.find(delimiter);
   pos += 1;
-  std::string command = val.substr(0,pos);
-  std::cout << command; 
-  
-
-  std::string angle = val.substr(24,pos);
-  std::cout << angle;
+  angle2 = val.substr(0,pos);
+  //std::cout << angle2 << std::endl;
   
 }
 
 
 //  Getting Functions
-void Serial::g_data(){
-  unsigned char out[m_bufferSize];    // Reads feedback
-  m_Serial->read_some(boost::asio::buffer(out, m_bufferSize));
-  std::string val(reinterpret_cast<char*> (out));
-  
-  char delimiter(':');
-  char delimiter2('\n');
-  int pos = val.find(delimiter);
-  int pos2 = val.find(delimiter2);
-  pos += 2;
-  std::string command = val.substr(pos, pos2);
-  std::cout << command; 
-  
-  
-  
-}
+//void Serial::g_data();

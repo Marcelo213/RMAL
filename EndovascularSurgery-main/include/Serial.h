@@ -18,7 +18,8 @@ class Serial{
     private:
         
         // From Herk.hpp
-        static const uint8_t m_bufferSize = 244;  // maximum allowable packet size
+        static const uint8_t m_bufferSize = 200;  // maximum allowable packet size
+        // Angle stream is sensitive to buffer size; output val is better than angle2
 
         // Necessary objects
         boost::asio::io_service m_IO;
@@ -26,9 +27,17 @@ class Serial{
         // From Herk.hpp
         boost::shared_ptr<boost::asio::serial_port>	m_Serial;
 
+        
+
     
 
     public:
+
+
+        std::string angle;
+        std::string angle2;
+        float angle_float;
+        
         /** 
          * @brief 
          *      Constructor is used to declare the serial port object.
@@ -57,6 +66,13 @@ class Serial{
          */
         void sendString(std::string sendData);
         
+        /**
+         * @brief 
+         *      Reads the angle of the servo.
+         * 
+         */
+        void angleRead();
+
 
         // Getting Functions - must return the expected output
         

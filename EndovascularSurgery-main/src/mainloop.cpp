@@ -51,7 +51,9 @@ MainLoop::~MainLoop() {}
 
 void MainLoop::Execute(vtkObject *caller, unsigned long eventId, void *vtkNotUsed(callData)) {
     // Event Loop
-    
+    arduino.angleRead();
+    //std::cout << arduino.angle2; 
+
     if (vtkCommand::TimerEvent == eventId) {
         // Drawing Aorta
         if (m_aortaEn){
@@ -140,8 +142,8 @@ void MainLoop::Execute(vtkObject *caller, unsigned long eventId, void *vtkNotUse
             m_engaged = false;
         }
     }
-
-
+    
+    
     // Key Presses
     else if (vtkCommand::KeyPressEvent == eventId){
         vtkRenderWindowInteractor *iren = static_cast<vtkRenderWindowInteractor *>(caller);
@@ -166,25 +168,16 @@ void MainLoop::Execute(vtkObject *caller, unsigned long eventId, void *vtkNotUse
         }
         if (*(iren->GetKeySym()) == 'm') {
             m_q(1,0) = m_q(1,0) + m_cath.g_q2change();  // Rotate CW
-            
             std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
-
-           
             std::string command = std::to_string(m_q(1,0));
             arduino.sendString(command);
-            //arduino.g_data();
-
             m_cathEn = true;
         }
         if (*(iren->GetKeySym()) == 'n') {
             m_q(1,0) = m_q(1,0) - m_cath.g_q2change();  // Rotate CCW
-            
             std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
-
-            
             std::string command = std::to_string(m_q(1,0));
             arduino.sendString(command);
-            //arduino.g_data();
             m_cathEn = true;
         }
         if (*(iren->GetKeySym()) == 'k') { 
