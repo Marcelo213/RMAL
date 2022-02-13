@@ -2,9 +2,9 @@
 
 
 // Marcelo
-#include "Serial.h"
+/*#include "Serial.h"
 std::string port = "/dev/ttyUSB0";
-Serial arduino(port);
+Serial arduino(port);*/
 
 
 MainLoop::MainLoop(Visualizer vis) {
@@ -31,27 +31,69 @@ MainLoop::MainLoop(Visualizer vis) {
     
     double r = 10;   // 2mm in diameter
     double h = 100;   // 2mm in Height
-    double max = 1000;
+    double max = 10;
     double rot = M_PI/64;
     //double max = 240;
+
+
+    // For first column
     for (int i=0; i<max; i++){
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
-        point(0,3) = r*sin(i*rot);
-        point(1,3) = r*cos(i*rot);
-        point(2,3) = (h/2) + (h/2)*i/max;
-                
+        //point(0,3) = r*sin(i*rot);
+        //point(1,3) = r*cos(i*rot);
+        //point(2,3) = (h/2) + (h/2)*i/max;
+
+        for (int rotate=0; rotate<128; rotate++){
+            point(0,3) = r*sin(rotate*rot); // X?
+            point(1,3) = r*cos(rotate*rot); // Y?
+            point(2,3) = (h/2) + (h/2)*i/max;
+            m_aorta.s_point(point);
+        }
+    } 
+    
+    // For first incline
+    for (int i=0; i<max; i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+        //point(0,3) = r*sin(i*rot);
+        //point(1,3) = r*cos(i*rot);
+        //point(2,3) = (h/2) + (h/2)*i/max;
+    
+
+        for (int rotate=0; rotate<128; rotate++){
+        point(0,3) = (2*i) + r*sin(rotate*rot); // X?
+        point(1,3) = (2*i) + r*cos(rotate*rot); // Y?
+        point(2,3) = (50) + (h/2) + (h/2)*i/max;
         m_aorta.s_point(point);
+        }
     }
+
+    // For second incline
+    for (int i=0; i<max; i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+        //point(0,3) = r*sin(i*rot);
+        //point(1,3) = r*cos(i*rot);
+        //point(2,3) = (h/2) + (h/2)*i/max;
+    
+
+        for (int rotate=0; rotate<128; rotate++){
+        point(0,3) = (2*max) - (2*i) + r*sin(rotate*rot); // X?
+        point(1,3) = (2*max) - (2*i) + r*cos(rotate*rot); // Y?
+        point(2,3) = 100 + (h/2) + (h/2)*i/max;
+        m_aorta.s_point(point);
+        }
+    }
+
+
     m_engaged = false;
     m_cathEn = false;
-    m_aortaEn = false;
+    m_aortaEn = true;
 } 
 
 MainLoop::~MainLoop() {}
 
 void MainLoop::Execute(vtkObject *caller, unsigned long eventId, void *vtkNotUsed(callData)) {
     // Event Loop
-    arduino.angleRead();
+    //arduino.angleRead();
     //std::cout << arduino.angle2; 
 
     if (vtkCommand::TimerEvent == eventId) {
@@ -168,16 +210,16 @@ void MainLoop::Execute(vtkObject *caller, unsigned long eventId, void *vtkNotUse
         }
         if (*(iren->GetKeySym()) == 'm') {
             m_q(1,0) = m_q(1,0) + m_cath.g_q2change();  // Rotate CW
-            std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
-            std::string command = std::to_string(m_q(1,0));
-            arduino.sendString(command);
+            //std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
+            //std::string command = std::to_string(m_q(1,0));
+            //arduino.sendString(command);
             m_cathEn = true;
         }
         if (*(iren->GetKeySym()) == 'n') {
             m_q(1,0) = m_q(1,0) - m_cath.g_q2change();  // Rotate CCW
-            std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
-            std::string command = std::to_string(m_q(1,0));
-            arduino.sendString(command);
+            //std::cout << "Simulation angle (in rad): " << m_q(1,0) << std::endl;
+            //std::string command = std::to_string(m_q(1,0));
+            //arduino.sendString(command);
             m_cathEn = true;
         }
         if (*(iren->GetKeySym()) == 'k') { 
