@@ -31,6 +31,12 @@
 // Added from Tut 1
 #include "vtkNamedColors.h"
 
+
+
+#include <vtkSTLReader.h>
+
+
+
 int main()
 {
 

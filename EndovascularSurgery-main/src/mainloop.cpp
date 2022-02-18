@@ -1,5 +1,8 @@
 #include <mainloop.h>
-
+#include <fstream>
+#include <iostream>
+#include <string>
+using namespace std;
 
 // Marcelo
 /*#include "Serial.h"
@@ -30,19 +33,38 @@ MainLoop::MainLoop(Visualizer vis) {
     m_q = q;
     
     double r = 10;   // 2mm in diameter
-    double h = 100;   // 2mm in Height
-    double max = 10;
+    double h = 100;   // 2mm in Height; space between circles
+    double max = 5;  // Number of circles; nummber of points in spiral
     double rot = M_PI/64;
     //double max = 240;
 
 
+    
+    /* Stl to Point Cloud 
+    ifstream inFile;
+    string STRING;
+    inFile.open("/home/marcelot/Desktop/Matlab/PointCloud.txt");
+    Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+    while (inFile.eof() != true) {
+        getline(inFile, STRING);
+        stringstream ss(STRING);
+        for(int i=0;i<3;i++){    
+            ss >> point(i,3);
+        }
+        m_aorta.s_point(point);  
+    }
+    inFile.close();*/
+
+    ////////////// For Object 1
+    
+    /*
     // For first column
     for (int i=0; i<max; i++){
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
         //point(0,3) = r*sin(i*rot);
-        //point(1,3) = r*cos(i*rot);
+       // point(1,3) = r*cos(i*rot);
         //point(2,3) = (h/2) + (h/2)*i/max;
-
+        //m_aorta.s_point(point);
         for (int rotate=0; rotate<128; rotate++){
             point(0,3) = r*sin(rotate*rot); // X?
             point(1,3) = r*cos(rotate*rot); // Y?
@@ -60,13 +82,18 @@ MainLoop::MainLoop(Visualizer vis) {
     
 
         for (int rotate=0; rotate<128; rotate++){
-        point(0,3) = (2*i) + r*sin(rotate*rot); // X?
-        point(1,3) = (2*i) + r*cos(rotate*rot); // Y?
-        point(2,3) = (50) + (h/2) + (h/2)*i/max;
+        int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+        point(0,3) = (-3*i) + r*sin(rotate*rot); // X?
+        point(1,3) = (-3*i) + r*cos(rotate*rot); // Y?
+        
+        //point(2,3) = (50) + (h/2) + (h/2)*i/max;  // default
+        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
+        point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
         m_aorta.s_point(point);
         }
     }
-
+    /*
     // For second incline
     for (int i=0; i<max; i++){
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
@@ -81,7 +108,161 @@ MainLoop::MainLoop(Visualizer vis) {
         point(2,3) = 100 + (h/2) + (h/2)*i/max;
         m_aorta.s_point(point);
         }
+    }*/
+    
+    ///////////////////// For Object 2
+
+    /*
+  // For first column
+    for (int i=0; i<max; i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+        //point(0,3) = r*sin(i*rot);
+        //point(1,3) = r*cos(i*rot);
+        //point(2,3) = (h/2) + (h/2)*i/max;
+
+        for (int rotate=0; rotate<128; rotate++){
+            point(0,3) = r*sin(rotate*rot); // X?
+            point(1,3) = r*cos(rotate*rot); // Y?
+            point(2,3) = (h/2) + (h/2)*i/max;
+            m_aorta.s_point(point);
+        }
+    } 
+    
+    // For first curve
+    for (int i=0; i<max; i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+
+        for (int rotate=0; rotate<128; rotate++){
+        point(0,3) = (-i) + r*sin(rotate*rot); // X?
+        point(1,3) = (-i) + r*cos(rotate*rot); // Y?
+
+
+        //point(0,3) = + r*sin(rotate*rot); // X?
+        //point(1,3) = + r*cos(rotate*rot); // Y?
+        point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
+        m_aorta.s_point(point);
+        }
     }
+    /*
+    // For second curve
+    for (int i=0; i<max; i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+
+        for (int rotate=0; rotate<128; rotate++){
+        point(0,3) = (2*max) - (2*i) + r*sin(rotate*rot); // X?
+        point(1,3) = (2*max) - (2*i) + r*cos(rotate*rot); // Y?
+        point(2,3) = 100 + (h/2) + (h/2)*i/max;
+        m_aorta.s_point(point);
+        }
+    }*/
+
+
+    // AORTA Attempt
+
+
+    // For right iliac curve
+    for (int i=0; i<(max+2); i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+
+        for (int rotate=0; rotate<128; rotate++){
+        int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+        point(0,3) = (-4*i) + r*sin(rotate*rot); // X?
+        point(1,3) =  r*cos(rotate*rot); // Y?
+        
+        point(2,3) = (50) + (h/2) + (h/2)*i/max;  // default
+        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
+        //point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
+        m_aorta.s_point(point);
+        }
+    }
+
+    // For Abdominal aorta
+    r = 12;
+    for (int i=0; i<(max+6); i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+        
+        for (int rotate=0; rotate<128; rotate++){
+        int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+        point(0,3) = (-30) + r*sin(rotate*rot); // X?
+        point(1,3) = r*cos(rotate*rot); // Y?
+        
+        point(2,3) = (50) + (h/2) + (h/2)*7/max + (h/2)*i/max;  // default
+        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
+        //point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
+        m_aorta.s_point(point);
+        }
+    }
+
+    // For Descending thoracic aorta
+    for (int i=0; i<(max+2); i++){
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+
+        for (int rotate=0; rotate<128; rotate++){
+        int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+        point(0,3) = -30 + (3*i) + r*sin(rotate*rot); // X?
+        point(1,3) =  r*cos(rotate*rot); // Y?
+        
+        point(2,3) = (50) + (h/2) + (h/2)*18/max + (h/2)*i/max;  // default
+        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
+        //point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
+        m_aorta.s_point(point);
+        }
+    }
+
+    // For Arch
+    for (int i=0; i<(max+2); i++){
+        
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+
+        for (int rotate=0; rotate<128; rotate++){
+        int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+        point(0,3) = -30 + (3*7) - (3*i)+ r*sin(rotate*rot); // X?
+        point(1,3) =  r*cos(rotate*rot); // Y?
+        
+        //point(2,3) = (50) + (h/2) + (h/2)*25/max + (h/2)*i/max;  // default
+        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
+        point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i + (6*i)*sin(rotate*rot);
+        m_aorta.s_point(point);
+        }
+    }
+    
+    // For Left-Side of Arch
+    for (int i=0; i<(max+2); i++){
+        
+        Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
+
+        for (int rotate=0; rotate<128; rotate++){
+        int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+        point(0,3) = -50 - (3*7) + (3*i)+ r*sin(rotate*rot); // X?
+        point(1,3) =  r*cos(rotate*rot); // Y?
+        
+        //point(2,3) = (50) + (h/2) + (h/2)*25/max + (h/2)*i/max;  // default
+        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
+        point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i - (6*i)*sin(rotate*rot);
+        m_aorta.s_point(point);
+        }
+    }
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     m_engaged = false;
