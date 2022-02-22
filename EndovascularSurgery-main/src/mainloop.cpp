@@ -160,7 +160,7 @@ MainLoop::MainLoop(Visualizer vis) {
     // AORTA Attempt
 
 
-    // For right iliac curve
+    /*// For right iliac curve
     for (int i=0; i<(max+2); i++){
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
 
@@ -175,9 +175,9 @@ MainLoop::MainLoop(Visualizer vis) {
         //point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
         m_aorta.s_point(point);
         }
-    }
+    }*/
 
-    // For Abdominal aorta
+    /*// For Abdominal aorta
     r = 12;
     for (int i=0; i<(max+6); i++){
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
@@ -193,9 +193,9 @@ MainLoop::MainLoop(Visualizer vis) {
         //point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
         m_aorta.s_point(point);
         }
-    }
+    }*/
 
-    // For Descending thoracic aorta
+    /*// For Descending thoracic aorta
     for (int i=0; i<(max+2); i++){
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
 
@@ -210,25 +210,25 @@ MainLoop::MainLoop(Visualizer vis) {
         //point(2,3) = (50) + (h/2) + 10*i + (4*i)*sin(rotate*rot);
         m_aorta.s_point(point);
         }
-    }
+    }*/
 
-    // For Arch
+    /*// For Arch
     for (int i=0; i<(max+2); i++){
         
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
 
         for (int rotate=0; rotate<128; rotate++){
-        int angle = 45 * (3.14/180); // enter in deg, output in rad
 
-        point(0,3) = -30 + (3*7) - (3*i)+ r*sin(rotate*rot); // X?
-        point(1,3) =  r*cos(rotate*rot); // Y?
+            int angle = 45 * (3.14/180); // enter in deg, output in rad
+
+            point(0,3) = -30 + (3*7) - (3*i)+ r*sin(rotate*rot); // X?
+            point(1,3) =  r*cos(rotate*rot); // Y?
+            
         
-        //point(2,3) = (50) + (h/2) + (h/2)*25/max + (h/2)*i/max;  // default
-        //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
-        point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i + (6*i)*sin(rotate*rot);
-        m_aorta.s_point(point);
+            point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i + (2*i)*sin(rotate*rot);
+            m_aorta.s_point(point);
         }
-    }
+    }*/
     
     // For Left-Side of Arch
     for (int i=0; i<(max+2); i++){
@@ -243,7 +243,7 @@ MainLoop::MainLoop(Visualizer vis) {
         
         //point(2,3) = (50) + (h/2) + (h/2)*25/max + (h/2)*i/max;  // default
         //point(2,3) = (50) + (h/2) + 10*i + sin(rotate*rot);
-        point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i - (6*i)*sin(rotate*rot);
+        point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i - (i)*sin(rotate*rot);
         m_aorta.s_point(point);
         }
     }
