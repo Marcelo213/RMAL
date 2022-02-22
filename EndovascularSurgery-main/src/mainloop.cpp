@@ -40,8 +40,8 @@ MainLoop::MainLoop(Visualizer vis) {
 
 
     
-    /* Stl to Point Cloud 
-    ifstream inFile;
+    // Stl to Point Cloud 
+    /*ifstream inFile;
     string STRING;
     inFile.open("/home/marcelot/Desktop/Matlab/PointCloud.txt");
     Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);

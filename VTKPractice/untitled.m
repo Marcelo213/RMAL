@@ -2,7 +2,7 @@ clc
 clear
 
 % Converts the stl file into a point cloud
-stlData = stlread("Aorta.stl");
+stlData = stlread("AortaAssemblyv3.stl");
 points = stlData.Points;
 
 
