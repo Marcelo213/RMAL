@@ -314,6 +314,15 @@ Eigen3_DIR:PATH=/usr/share/eigen3/cmake
 //Eigen include directory
 Eigen3_INCLUDE_DIR:PATH=/usr/include/eigen3
 
+//Value Computed by CMake
+EndoSurg_BINARY_DIR:STATIC=/home/marcelot/Desktop/RMAL/EndovascularSurgery-main/build
+
+//Value Computed by CMake
+EndoSurg_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+EndoSurg_SOURCE_DIR:STATIC=/home/marcelot/Desktop/RMAL/EndovascularSurgery-main
+
 //FFMPEG's avcodec include directory
 FFMPEG_avcodec_INCLUDE_DIR:PATH=/usr/include
 
@@ -1085,7 +1094,7 @@ double-conversion_INCLUDE_DIR:PATH=/usr/include/double-conversion
 double-conversion_LIBRARY:FILEPATH=/usr/lib/libdouble-conversion.so
 
 //The directory containing a CMake configuration file for embree.
-embree_DIR:PATH=/usr/lib64/cmake/embree-3.13.2
+embree_DIR:PATH=/usr/lib64/cmake/embree-3.13.3
 
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=/usr/lib64/cmake/fmt
@@ -1383,11 +1392,11 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib64/cmake/Boost-1.78.0/Boost
 //Details about finding CGNS
 FIND_PACKAGE_MESSAGE_DETAILS_CGNS:INTERNAL=[/usr/include][/usr/lib/libcgns.so][v4.20(4.1.1)]
 //Details about finding EXPAT
-FIND_PACKAGE_MESSAGE_DETAILS_EXPAT:INTERNAL=[/usr/lib/libexpat.so][/usr/include][v2.4.4()]
+FIND_PACKAGE_MESSAGE_DETAILS_EXPAT:INTERNAL=[/usr/lib/libexpat.so][/usr/include][v2.4.6()]
 //Details about finding Eigen3
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[/usr/include/eigen3][v3.4.0()]
 //Details about finding FFMPEG
-FIND_PACKAGE_MESSAGE_DETAILS_FFMPEG:INTERNAL=[/usr/include][/usr/lib/libavformat.so;/usr/lib/libavcodec.so;/usr/lib/libavutil.so;/usr/lib/libswscale.so][cfound components: avformat avcodec avutil swscale ][v4.4.1(4.4)]
+FIND_PACKAGE_MESSAGE_DETAILS_FFMPEG:INTERNAL=[/usr/include][/usr/lib/libavformat.so;/usr/lib/libavcodec.so;/usr/lib/libavutil.so;/usr/lib/libswscale.so;/usr/lib/libswresample.so][cfound components: avformat avcodec avutil swscale swresample ][v5.0(5.0)]
 //Details about finding FontConfig
 FIND_PACKAGE_MESSAGE_DETAILS_FontConfig:INTERNAL=[/usr/lib/libfontconfig.so][/usr/include][v()]
 //Details about finding Freetype
@@ -1409,7 +1418,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_LZ4:INTERNAL=[/usr/lib/liblz4.so][/usr/include][v1.
 //Details about finding LZMA
 FIND_PACKAGE_MESSAGE_DETAILS_LZMA:INTERNAL=[/usr/lib/liblzma.so][/usr/include][v5.2.5()]
 //Details about finding LibArchive
-FIND_PACKAGE_MESSAGE_DETAILS_LibArchive:INTERNAL=[/usr/lib/libarchive.so][/usr/include][v3.5.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_LibArchive:INTERNAL=[/usr/lib/libarchive.so][/usr/include][v3.6.0()]
 //Details about finding LibHaru
 FIND_PACKAGE_MESSAGE_DETAILS_LibHaru:INTERNAL=[/usr/lib/libhpdf.so][/usr/include][v2.3.0-RC2(2.3.0)]
 //Details about finding LibPROJ
@@ -1443,13 +1452,13 @@ FIND_PACKAGE_MESSAGE_DETAILS_PNG:INTERNAL=[/usr/lib/libpng.so][/usr/include][v1.
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.0()]
 //Details about finding PostgreSQL
-FIND_PACKAGE_MESSAGE_DETAILS_PostgreSQL:INTERNAL=[/usr/lib/libpq.so][/usr/include][c ][v13.4()]
+FIND_PACKAGE_MESSAGE_DETAILS_PostgreSQL:INTERNAL=[/usr/lib/libpq.so][/usr/include][c ][v13.6()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.2()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][/usr/include/python3.10][cfound components: Interpreter Development.Module Development.Embed ][v3.10.2(3.10)]
 //Details about finding SQLite3
-FIND_PACKAGE_MESSAGE_DETAILS_SQLite3:INTERNAL=[/usr/include][/usr/lib/libsqlite3.so][v3.37.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_SQLite3:INTERNAL=[/usr/include][/usr/lib/libsqlite3.so][v3.38.0()]
 //Details about finding THEORA
 FIND_PACKAGE_MESSAGE_DETAILS_THEORA:INTERNAL=[/usr/lib/libtheora.so][/usr/lib/libtheoraenc.so][/usr/lib/libtheoradec.so][/usr/include][v()]
 //Details about finding TIFF

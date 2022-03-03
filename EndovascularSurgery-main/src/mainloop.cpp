@@ -40,8 +40,8 @@ MainLoop::MainLoop(Visualizer vis) {
 
 
     
-    // Stl to Point Cloud 
-    /*ifstream inFile;
+    /*// Stl to Point Cloud 
+    ifstream inFile;
     string STRING;
     inFile.open("/home/marcelot/Desktop/Matlab/PointCloud.txt");
     Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
@@ -230,7 +230,7 @@ MainLoop::MainLoop(Visualizer vis) {
         }
     }*/
     
-    // For Left-Side of Arch
+    /*// For Left-Side of Arch
     for (int i=0; i<(max+2); i++){
         
         Eigen::Matrix4d point = Eigen::MatrixXd::Identity(4,4);
@@ -246,7 +246,7 @@ MainLoop::MainLoop(Visualizer vis) {
         point(2,3) = (50) + (h/2) + (h/2)*25/max + 10*i - (i)*sin(rotate*rot);
         m_aorta.s_point(point);
         }
-    }
+    }*/
         
     
 

@@ -347,7 +347,7 @@ DVS: /usr/lib/libhdf5_hl.so
 DVS: /usr/lib/libhdf5.so
 DVS: /usr/lib/libsz.so
 DVS: /usr/lib/libz.so
-DVS: /usr/lib/libdl.so
+DVS: /usr/lib/libdl.a
 DVS: /usr/lib/libm.so
 DVS: /usr/lib/libcurl.so
 DVS: /usr/lib/libhdf5.so
