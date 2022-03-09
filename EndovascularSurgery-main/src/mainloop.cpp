@@ -55,8 +55,11 @@ MainLoop::MainLoop(Visualizer vis) {
     }
     inFile.close();*/
 
-    ////////////// For Object 1
-    
+    /* 
+    The following blocks are for object 1
+    */
+
+   
     /*
     // For first column
     for (int i=0; i<max; i++){
