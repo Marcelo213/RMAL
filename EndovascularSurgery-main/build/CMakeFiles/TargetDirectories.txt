@@ -1,3 +1,0 @@
-/home/marcelot/Desktop/RMAL/EndovascularSurgery-main/build/CMakeFiles/DVS.dir
-/home/marcelot/Desktop/RMAL/EndovascularSurgery-main/build/CMakeFiles/edit_cache.dir
-/home/marcelot/Desktop/RMAL/EndovascularSurgery-main/build/CMakeFiles/rebuild_cache.dir
