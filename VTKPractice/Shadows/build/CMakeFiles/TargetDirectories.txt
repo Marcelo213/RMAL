@@ -1,0 +1,3 @@
+/home/marcelot/Desktop/RMAL/VTKPractice/Shadows/build/CMakeFiles/Shadows.dir
+/home/marcelot/Desktop/RMAL/VTKPractice/Shadows/build/CMakeFiles/edit_cache.dir
+/home/marcelot/Desktop/RMAL/VTKPractice/Shadows/build/CMakeFiles/rebuild_cache.dir
