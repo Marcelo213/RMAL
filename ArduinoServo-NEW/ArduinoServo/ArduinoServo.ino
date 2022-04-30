@@ -3,56 +3,57 @@
 
 // PIN LABELS
 // BENDING
-byte pos1 = A1;     // Encoder +5V        (pin)
-byte enc1a = 5;    // Encoder A          (pin)
-byte enclb = 6;    // Encoder B          (pin)
-byte neg1 = A2;     // Encoder GND        (pin)
+byte pos1 = 50;     // Encoder +5V        (pin)
+byte enc1a = 48;    // Encoder A          (pin)
+byte enclb = 46;    // Encoder B          (pin)
+byte neg1 = 52;     // Encoder GND        (pin)
 long p1 = 0;        // Encoder Current Position   (internal)
 long np1O = 0;      // Encoder Previous Position  (internal)
 int center1 = 40;  // Encoder Steps 180 deg      (internal)
-byte pwm1 = 10;      // Motor PWM          (pin)
-byte dir1a = 8;     // Motor Direction A  (pin)
-byte dir1b = 9;     // Motor Direction B  (pin)
+byte pwm1 = 7;      // Motor PWM          (pin)
+byte dir1a = 6;     // Motor Direction A  (pin)
+byte dir1b = 5;     // Motor Direction B  (pin)
 int state1 = 0;     // Motor State [dead, left, right, shake] (internal)
 int dir1c = 0;      // Motor Direction                        (internal)
 int speed1 = 0;     // Motor Speed [0, 30-100]                (internal)
 Encoder en1(enc1a, enclb);  // Encoder Variable
 
 
-/*
+
 // ROTATIONp1
-byte pos2 = A4;     // Encoder +5V        (pin)
-byte enc2a = A5;    // Encoder A          (pin)
-byte enc2b = A6;    // Encoder B          (pin)
-byte neg2 = A7;     // Encoder GND        (pin)
+byte pos2 = 38;     // Encoder +5V        (pin)
+byte enc2a = 36;    // Encoder A          (pin)
+byte enc2b = 34;    // Encoder B          (pin)
+byte neg2 = 40;     // Encoder GND        (pin)
 long p2 = 0;        // Encoder Current Position   (internal)
 long np2O = 0;      // Encoder Previous Position  (internal)
 int center2 = 1225;  // Encoder Steps 180 deg      (internal)
-byte pwm2 = 5;      // Motor PWM          (pin)
-byte dir2a = 6;     // Motor Direction A  (pin)
-byte dir2b = 7;     // Motor Direction B  (pin)
+byte pwm2 = 10;      // Motor PWM          (pin)
+byte dir2a = 9;     // Motor Direction A  (pin)
+byte dir2b = 8;     // Motor Direction B  (pin)
 int state2 = 0;     // Motor State [dead, left, right, shake] (internal)
 int dir2c = 0;      // Motor Direction                        (internal)
 int speed2 = 0;     // Motor Speed [0, 30-100]                (internal)
 Encoder en2(enc2a, enc2b);  // Encoder Variable
 
+/*
 
-//byte enc2a = 5;  // Rotation
-//byte enc2b = 6;
-byte pos3 = A11;     // Encoder +5V        (pin)
-byte enc3a = A9;    // Encoder A          (pin)
-byte enc3b = A10;    // Encoder B          (pin)
-byte neg3 = A8;     // Encoder GND        (pin)
-long p3 = 0;        // Encoder Current Position   (internal)
-long np3O = 0;      // Encoder Previous Position  (internal)
-int center3 = 1225;  // Encoder Steps 180 deg      (internal)
-byte pwm3 = 5;      // Motor PWM          (pin)
-//byte dir3a = 6;     // Motor Direction A  (pin)
-//byte dir3b = 7;     // Motor Direction B  (pin)
-int state3 = 0;     // Motor State [dead, left, right, shake] (internal)
-int dir3c = 0;      // Motor Direction                        (internal)
-int speed3 = 0;     // Motor Speed [0, 30-100]                (internal)
-Encoder en3(enc3a, enc3b);
+  //byte enc2a = 5;  // Rotation
+  //byte enc2b = 6;
+  byte pos3 = A11;     // Encoder +5V        (pin)
+  byte enc3a = A9;    // Encoder A          (pin)
+  byte enc3b = A10;    // Encoder B          (pin)
+  byte neg3 = A8;     // Encoder GND        (pin)
+  long p3 = 0;        // Encoder Current Position   (internal)
+  long np3O = 0;      // Encoder Previous Position  (internal)
+  int center3 = 1225;  // Encoder Steps 180 deg      (internal)
+  byte pwm3 = 5;      // Motor PWM          (pin)
+  //byte dir3a = 6;     // Motor Direction A  (pin)
+  //byte dir3b = 7;     // Motor Direction B  (pin)
+  int state3 = 0;     // Motor State [dead, left, right, shake] (internal)
+  int dir3c = 0;      // Motor Direction                        (internal)
+  int speed3 = 0;     // Motor Speed [0, 30-100]                (internal)
+  Encoder en3(enc3a, enc3b);
 */
 
 void setup() {
@@ -72,8 +73,8 @@ void setup() {
   analogWrite(pwm1, 50);       // Always default to off state
   digitalWrite(dir1a, LOW);   // off state
   digitalWrite(dir1b, LOW);   // off state
-  
-  /*
+
+
   // ROTATION
   pinMode(pos2, OUTPUT);
   pinMode(neg2, OUTPUT);
@@ -86,19 +87,20 @@ void setup() {
   digitalWrite(dir2a, LOW);
   digitalWrite(dir2b, LOW);
 
-  // TRANSLATION
-  pinMode(pos3, OUTPUT);
-  pinMode(neg3, OUTPUT);
-  pinMode(pwm3, OUTPUT);
-  //pinMode(dir3a, OUTPUT);
-  //pinMode(dir3b, OUTPUT);
-  digitalWrite(pos3, HIGH);
-  digitalWrite(neg3, LOW);
-  //analogWrite(pwm1, 0);
-  //digitalWrite(dir1a, LOW);
-  //digitalWrite(dir1b, LOW);
-*/
-  
+  /*
+    // TRANSLATION
+    pinMode(pos3, OUTPUT);
+    pinMode(neg3, OUTPUT);
+    pinMode(pwm3, OUTPUT);
+    //pinMode(dir3a, OUTPUT);
+    //pinMode(dir3b, OUTPUT);
+    digitalWrite(pos3, HIGH);
+    digitalWrite(neg3, LOW);
+    //analogWrite(pwm1, 0);
+    //digitalWrite(dir1a, LOW);
+    //digitalWrite(dir1b, LOW);
+  */
+
 }
 
 
@@ -113,19 +115,21 @@ void loop() {
   }
 
 
-  /*
+
   // ROTATION
   long np2 = en2.read();
   if (np2 != np2O) {
     np2O = np2;
     p2 = np2;
   }
-  // TRANSLATION
-  long np3 = en3.read();
-  if (np3 != np3O) {
+
+  /*
+    // TRANSLATION
+    long np3 = en3.read();
+    if (np3 != np3O) {
     np3O = np3;
     p3 = np3;
-  }
+    }
   */
   // CHANGING MOTOR STATE
   // BENDING
@@ -142,7 +146,7 @@ void loop() {
       dir1c = 1;
     }
     //Serial.println(dir1c);
-  } /*
+  }
   else if (state2 == 0) {        // Setting off
     dir2c = 0;
   } else if (state2 == 1) {  // Setting Left
@@ -156,7 +160,7 @@ void loop() {
       dir2c = 1;
     }
     Serial.println(dir2c);
-  }*/
+  }
 
   // CHANGING DIRECTION
   // BENDING
@@ -169,7 +173,7 @@ void loop() {
   } else if (dir1c == 2) {       // Right
     digitalWrite(dir1a, LOW);
     digitalWrite(dir1b, HIGH);
-  } /*
+  }
   if (dir2c == 0) {             // Off
     digitalWrite(dir2a, LOW);
     digitalWrite(dir2b, LOW);
@@ -179,11 +183,11 @@ void loop() {
   } else if (dir2c == 2) {       // Right
     digitalWrite(dir2a, LOW);
     digitalWrite(dir2b, HIGH);
-  }*/
+  }
 
   // CHANGING SPEED
   analogWrite(pwm1, speed1);
-  //analogWrite(pwm2, speed2);
+  analogWrite(pwm2, speed2);
 
   if (Serial.available()) {
     // INCOMING TRANSMISSION
@@ -193,18 +197,18 @@ void loop() {
     char terminate = data.charAt(7);
     //M000000S
     if ( (engage == 'M') && (terminate == 'S')) {
-      state1 = data.charAt(1)-'0';
-      //state2 = data.charAt(2)-'0';
+      state1 = data.charAt(1) - '0';
+      state2 = data.charAt(2) - '0';
       //state3 = data.charAt(3);
-      speed1 = (data.charAt(4)-'0')*10;
-     // speed2 = (data.charAt(5)-'0')*10;
-      Serial.println(state1); 
-     // Serial.println(state2); 
+      speed1 = (data.charAt(4) - '0') * 10;
+      speed2 = (data.charAt(5) - '0') * 10;
+      Serial.println(state1);
+      // Serial.println(state2);
       Serial.println(speed1);
-     // Serial.println(speed2);
+      // Serial.println(speed2);
       //speed3 = data.charAt(6);
       //char engage = data.charAt(7);
-      
+
     }
 
     // OUTBOUND TRANSMISSION
@@ -219,33 +223,39 @@ void loop() {
     Serial.print(out_11);                 // Sending the 1st place value
     Serial.print(out_12);                 // Sending the 2nd place value
     Serial.print(out_13);                 // Sending the 3rd place value
-    
-    /*
+
+
     // ROTATION DATA
     double op2 = (double(p2 + center2) / center2) * 180;
     int out_21 = op2 / 100;
     int out_22 = int(op2 / 10) % 10;
     int out_23 = int(op2) % 10;
+    Serial.print(out_21);                 // Sending the 1st place value
+    Serial.print(out_22);                 // Sending the 2nd place value
+    Serial.print(out_23);                 // Sending the 3rd place value
+
+
+    /* // This block of code is so that we can test the first motor exclusively
+      int temp = 0;
+      Serial.print(temp);
+      Serial.print(temp);
+      Serial.print(temp);
+
+      /*
+      // TRANSLATION DATA
+      //double op3 = abs((double(p3 + center3) / center3));
+      double op3 = abs((double(p3) / center3)*100);
+      int out_31 = op3 / 100;
+      int out_32 = int(op3 / 10) % 10;
+      int out_33 = int(op3) % 10;
     */
+
     int temp = 0;
     Serial.print(temp);
     Serial.print(temp);
-    Serial.print(temp); 
+    Serial.print(temp);
 
-    /*
-    // TRANSLATION DATA
-    //double op3 = abs((double(p3 + center3) / center3));
-    double op3 = abs((double(p3) / center3)*100);
-    int out_31 = op3 / 100;
-    int out_32 = int(op3 / 10) % 10;
-    int out_33 = int(op3) % 10;
-    */
-    
-    Serial.print(temp);
-    Serial.print(temp);
-    Serial.print(temp);
-    
-    
+
     // ENDING TRANSMISSION COMMAND
     Serial.println("SSS");              // Transmission end data preset in code book. (technically it is only one "S" but I send 3 just for filling the buffer. and forward compatability, in case we need to send more bytes
   }
