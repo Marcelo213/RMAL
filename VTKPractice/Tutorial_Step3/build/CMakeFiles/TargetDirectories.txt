@@ -1,3 +1,0 @@
-/home/marcelot/Desktop/RMAL/VTKPractice/Tutorial_Step3/build/CMakeFiles/Tutorial_Step3.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/Tutorial_Step3/build/CMakeFiles/edit_cache.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/Tutorial_Step3/build/CMakeFiles/rebuild_cache.dir

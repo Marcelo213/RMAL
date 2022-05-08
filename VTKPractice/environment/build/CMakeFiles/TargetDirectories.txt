@@ -1,3 +1,0 @@
-/home/marcelot/Desktop/RMAL/VTKPractice/environment/build/CMakeFiles/main.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/environment/build/CMakeFiles/edit_cache.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/environment/build/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-/home/marcelot/Desktop/RMAL/VTKPractice/MotionBlur/build/CMakeFiles/MotionBlur.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/MotionBlur/build/CMakeFiles/edit_cache.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/MotionBlur/build/CMakeFiles/rebuild_cache.dir

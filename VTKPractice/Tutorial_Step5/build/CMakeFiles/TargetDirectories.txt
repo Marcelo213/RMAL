@@ -1,3 +1,0 @@
-/home/marcelot/Desktop/RMAL/VTKPractice/Tutorial_Step5/build/CMakeFiles/Tutorial_Step5.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/Tutorial_Step5/build/CMakeFiles/edit_cache.dir
-/home/marcelot/Desktop/RMAL/VTKPractice/Tutorial_Step5/build/CMakeFiles/rebuild_cache.dir
