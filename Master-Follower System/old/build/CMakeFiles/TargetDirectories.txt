@@ -1,0 +1,3 @@
+/home/marcelot/Desktop/RMAL/EndoTaha/EndovascularSurgery/build/CMakeFiles/EndoSurg.dir
+/home/marcelot/Desktop/RMAL/EndoTaha/EndovascularSurgery/build/CMakeFiles/edit_cache.dir
+/home/marcelot/Desktop/RMAL/EndoTaha/EndovascularSurgery/build/CMakeFiles/rebuild_cache.dir
