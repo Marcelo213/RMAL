@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
   Visualizer vis;
   vis.initScene(4);
 
-  // Create TDCR
+  // Set TDCR parameters
   std::array<double, 1> length;
   length[0] = 0.1;
   //length[1] = 0.1;
@@ -42,6 +42,8 @@ int main(int argc, char **argv) {
   double height_disks = 0.01;
   double ro = 0.001;
 
+
+  // Create TDCRModelDVS Object
   TDCRModelDVS tdcr_model(length, n_disks, pradius_disks, base_frame);
  
 
