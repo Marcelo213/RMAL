@@ -2,7 +2,7 @@ clc
 clear
 
 % Converts the stl file into a point cloud
-stlData = stlread("Aorta v14.stl");
+stlData = stlread("Human_Cardiovascular_System_Full_Body v4.stl");
 points = stlData.Points;
 
 patchStruct.Vertices = stlData.Points;
