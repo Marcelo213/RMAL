@@ -27,19 +27,29 @@ MainLoop::MainLoop(Visualizer *vis, TDCRModelDVS *tdcr, double timestep, int are
   uint8_t dxl_error = 0;
   int32_t dxl_present_position = 0;  // Read 4 byte Position data
 
+
+  // Opening Dynamixel Serial Port
   // Open port#include <iostream>
-#include <fstream>
+  #include <fstream>
   portHandler->openPort();
   portHandler->setBaudRate(BAUDRATE);
-  dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 0, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
-  dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 1, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
+
+
+  // Missing declaring packet twype/protocol?
+
+  // Enable motor 0 - Redundant
+ // dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 0, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   
+  // Enable motor 1
+  //dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 1, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   
+  // Enable motor 0
   dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 0, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   if (dxl_comm_result == COMM_SUCCESS) {
     printf("Succeeded enabling DYNAMIXEL Torque. 1\n");
   }
-
+  
+  // Enable motor 1
    dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 1, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   if (dxl_comm_result == COMM_SUCCESS) {
     printf("Succeeded enabling DYNAMIXEL Torque. 2\n");
