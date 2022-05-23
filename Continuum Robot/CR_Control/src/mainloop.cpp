@@ -35,12 +35,12 @@ MainLoop::MainLoop(Visualizer *vis, TDCRModelDVS *tdcr, double timestep, int are
   portHandler->setBaudRate(BAUDRATE);
 
 
-  // Missing declaring packet twype/protocol?
+  // Missing declaring packet type/protocol? IN MAINLOOP.H
 
   // Enable motor 0 - Redundant
  // dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 0, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   
-  // Enable motor 1
+  // Enable motor 1 - Also redundant
   //dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 1, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   
   // Enable motor 0
