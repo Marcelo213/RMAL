@@ -26,8 +26,8 @@ int TDCRModelDVS::getQ(){
 // robot's end-effector and disk frames) Inputs: q
 // 9x1 matrix/vector holding the tendon displacement (changes in tendon lengths)
 // for each tendon.
-//							The first three tendons
-// belong to
+// 
+// The first three tendons belong to
 // segment one etc (3 Tendons per 3 Segments).
 // A negative value indicates that the tendon is shortened (i.e. pulled).
 //

@@ -29,20 +29,10 @@ MainLoop::MainLoop(Visualizer *vis, TDCRModelDVS *tdcr, double timestep, int are
 
 
   // Opening Dynamixel Serial Port
-  // Open port#include <iostream>
   #include <fstream>
   portHandler->openPort();
   portHandler->setBaudRate(BAUDRATE);
 
-
-  // Missing declaring packet type/protocol? IN MAINLOOP.H
-
-  // Enable motor 0 - Redundant
- // dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 0, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
-  
-  // Enable motor 1 - Also redundant
-  //dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 1, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
-  
   // Enable motor 0
   dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, 0, ADDR_TORQUE_ENABLE, TORQUE_ENABLE, &dxl_error);
   if (dxl_comm_result == COMM_SUCCESS) {
