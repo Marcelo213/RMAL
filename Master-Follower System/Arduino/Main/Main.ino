@@ -115,14 +115,14 @@ void loop() {
   if (np1 != np1O) {
     np1O = np1;
     p1 = np1;
-  }
-
+    }
+Serial.println(p1);
   // BENDING
   long np2 = en2.read();
   if (np2 != np2O) {
     np2O = np2;
     p2 = np2;
-  }
+    }
 
   // ROTATION
     long np3 = en3.read();
@@ -130,7 +130,10 @@ void loop() {
     np3O = np3;
     p3 = np3;
     }
-  
+
+
+
+  /*
   // CHANGING MOTOR STATE
   // BENDING
   if (state1 == 0) {        // Setting off
@@ -162,9 +165,11 @@ void loop() {
     Serial.println(dir2c);
   }
 
+
   // CHANGING DIRECTION
-  // BENDING
-  if (dir1c == 0) {             // Off
+
+  // LINEAR
+  if (dir1c == 0) {             // Off; dir_c is a summation of the dir_a and dir_b 
     digitalWrite(dir1a, LOW);
     digitalWrite(dir1b, LOW);
   } else if (dir1c == 1) {       // Left
@@ -174,6 +179,7 @@ void loop() {
     digitalWrite(dir1a, LOW);
     digitalWrite(dir1b, HIGH);
   }
+  // BENDING
   if (dir2c == 0) {             // Off
     digitalWrite(dir2a, LOW);
     digitalWrite(dir2b, LOW);
@@ -184,30 +190,46 @@ void loop() {
     digitalWrite(dir2a, LOW);
     digitalWrite(dir2b, HIGH);
   }
+  // ROTATION
+  if (dir3c == 0) {             // Off
+    digitalWrite(dir3a, LOW);
+    digitalWrite(dir3b, LOW);
+  } else if (dir3c == 1) {       // Left
+    digitalWrite(dir3a, HIGH);
+    digitalWrite(dir3b, LOW);
+  } else if (dir3c == 2) {       // Right
+    digitalWrite(dir3a, LOW);
+    digitalWrite(dir3b, HIGH);
+  }
 
   // CHANGING SPEED
   analogWrite(pwm1, speed1);
   analogWrite(pwm2, speed2);
-
+  
+  
   if (Serial.available()) {
-    // INCOMING TRANSMISSION
-    //byte inByte = Serial.read();          // Reading data from the controller. (Depending on what it is actions will be taken)
-    String data = Serial.readString();
-    char engage = data.charAt(0);
-    char terminate = data.charAt(7);
+    //  INCOMING TRANSMISSION
+    
+    //byte inByte = Serial.read();          // Reading input from the controller. (Depending on what it is actions will be taken)
+    String input = Serial.readString();
+    char engage = input.charAt(0);
+    char terminate = input.charAt(7);
     //M000000S
     if ( (engage == 'M') && (terminate == 'S')) {
-      state1 = data.charAt(1) - '0';
-      state2 = data.charAt(2) - '0';
-      //state3 = data.charAt(3);
-      speed1 = (data.charAt(4) - '0') * 10;
-      speed2 = (data.charAt(5) - '0') * 10;
+      state1 = input.charAt(1) - '0';
+      state2 = input.charAt(2) - '0';
+      state3 = input.charAt(3);
+      
+      speed1 = (input.charAt(4) - '0') * 10;
+      speed2 = (input.charAt(5) - '0') * 10;
+      speed3 = (input.charAt(5) - '0') * 10;
+      
       Serial.println(state1);
       // Serial.println(state2);
       Serial.println(speed1);
       // Serial.println(speed2);
-      //speed3 = data.charAt(6);
-      //char engage = data.charAt(7);
+      //speed3 = input.charAt(6);
+      //char engage = input.charAt(7);
 
     }
 
@@ -246,5 +268,5 @@ void loop() {
 
     // ENDING TRANSMISSION COMMAND
     Serial.println("SSS");              // Transmission end data preset in code book. (technically it is only one "S" but I send 3 just for filling the buffer. and forward compatability, in case we need to send more bytes
-  }
+  }*/
 }
