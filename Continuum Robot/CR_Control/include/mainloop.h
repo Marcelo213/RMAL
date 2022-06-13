@@ -49,7 +49,7 @@
 
 #define PROTOCOL_VERSION  2.0
 #define DXL_ID  1
-#define DEVICENAME  "/dev/ttyUSB1"
+#define DEVICENAME  "/dev/ttyUSB1" // Have to change this for windows OS *****
 #define TORQUE_ENABLE                   1
 #define TORQUE_DISABLE                  0
 #define DXL_MOVING_STATUS_THRESHOLD     20  // DYNAMIXEL moving status threshold
