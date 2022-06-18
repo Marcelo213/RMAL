@@ -3,7 +3,7 @@
 // include OLED
 
 //  PIN LABELS
-
+char move1, move2, move3;
 
 // LINEAR TRANSLATION
 byte pos1 = 39;     // Encoder +5V        (pin)
@@ -18,7 +18,7 @@ byte dir1a = 27;     // Motor Direction A  (pin)
 byte dir1b = 26;     // Motor Direction B  (pin)
 int state1 = 0;     // Motor State [dead, left, right, shake] (internal)
 int dir1c = 0;      // Motor Direction                        (internal)
-int speed1 = 0;     // Motor Speed [0, 30-100]                (internal)
+int speed1 = 100;     // Motor Speed [0, 30-100]                (internal)
 Encoder en1(enc1a, enclb);  // Encoder Variable
 
 
@@ -36,7 +36,7 @@ byte dir2a = 25;     // Motor Direction A  (pin)
 byte dir2b = 24;     // Motor Direction B  (pin)
 int state2 = 0;     // Motor State [dead, left, right, shake] (internal)
 int dir2c = 0;      // Motor Direction                        (internal)
-int speed2 = 0;     // Motor Speed [0, 30-100]                (internal)
+int speed2 = 100;     // Motor Speed [0, 30-100]                (internal)
 Encoder en2(enc2a, enc2b);  // Encoder Variable
 
 
@@ -53,7 +53,7 @@ Encoder en2(enc2a, enc2b);  // Encoder Variable
   byte dir3b = 22;     // Motor Direction B  (pin)
   int state3 = 0;     // Motor State [dead, left, right, shake] (internal)
   int dir3c = 0;      // Motor Direction                        (internal)
-  int speed3 = 0;     // Motor Speed [0, 30-100]                (internal)
+  int speed3 = 100;     // Motor Speed [0, 30-100]                (internal)
   Encoder en3(enc3a, enc3b);
 
 
@@ -116,7 +116,7 @@ void loop() {
     np1O = np1;
     p1 = np1;
     }
-Serial.println(p1);
+
   // BENDING
   long np2 = en2.read();
   if (np2 != np2O) {
@@ -130,40 +130,11 @@ Serial.println(p1);
     np3O = np3;
     p3 = np3;
     }
-
-
-
-  /*
-  // CHANGING MOTOR STATE
-  // BENDING
-  if (state1 == 0) {        // Setting off
-    dir1c = 0;
-  } else if (state1 == 1) {  // Setting Left
-    dir1c = 1;
-  } else if (state1 == 2) {  // Setting Right
-    dir1c = 2;
-  } else if (state1 == 3) {  // Setting Shake
-    if (dir1c == 1) {         // If was left now right
-      dir1c = 2;
-    } else {                  // If was not left now left.
-      dir1c = 1;
-    }
-    //Serial.println(dir1c);
-  }
-  else if (state2 == 0) {        // Setting off
-    dir2c = 0;
-  } else if (state2 == 1) {  // Setting Left
-    dir2c = 1;
-  } else if (state2 == 2) {  // Setting Right
-    dir2c = 2;
-  } else if (state2 == 3) {  // Setting Shake
-    if (dir2c == 1) {         // If was left now right
-      dir2c = 2;
-    } else {                  // If was not left now left.
-      dir2c = 1;
-    }
-    Serial.println(dir2c);
-  }
+Serial.print(p1);
+Serial.print(" ");
+Serial.print(p2);
+Serial.print(" ");
+Serial.println(p3);
 
 
   // CHANGING DIRECTION
@@ -177,7 +148,7 @@ Serial.println(p1);
     digitalWrite(dir1b, LOW);
   } else if (dir1c == 2) {       // Right
     digitalWrite(dir1a, LOW);
-    digitalWrite(dir1b, HIGH);
+    digitalWrite(dir1b, HIGH);    
   }
   // BENDING
   if (dir2c == 0) {             // Off
@@ -185,10 +156,10 @@ Serial.println(p1);
     digitalWrite(dir2b, LOW);
   } else if (dir2c == 1) {       // Left
     digitalWrite(dir2a, HIGH);
-    digitalWrite(dir2b, LOW);
+    digitalWrite(dir2b, LOW);    
   } else if (dir2c == 2) {       // Right
     digitalWrite(dir2a, LOW);
-    digitalWrite(dir2b, HIGH);
+    digitalWrite(dir2b, HIGH);    
   }
   // ROTATION
   if (dir3c == 0) {             // Off
@@ -196,46 +167,57 @@ Serial.println(p1);
     digitalWrite(dir3b, LOW);
   } else if (dir3c == 1) {       // Left
     digitalWrite(dir3a, HIGH);
-    digitalWrite(dir3b, LOW);
+    digitalWrite(dir3b, LOW);    
   } else if (dir3c == 2) {       // Right
     digitalWrite(dir3a, LOW);
-    digitalWrite(dir3b, HIGH);
+    digitalWrite(dir3b, HIGH);    
   }
 
-  // CHANGING SPEED
+/*
+if (dir1c = 1){
   analogWrite(pwm1, speed1);
-  analogWrite(pwm2, speed2);
-  
-  
+  delay(200);
+}
+else if (dir1c = 0){
+  //analogWrite(pwm1, 0);
+  delay(200);
+}
+  else if (dir1c = 2){
+  analogWrite(pwm1, 2);
+  delay(200);
+  }
+*/
+
   if (Serial.available()) {
     //  INCOMING TRANSMISSION
-    
-    //byte inByte = Serial.read();          // Reading input from the controller. (Depending on what it is actions will be taken)
     String input = Serial.readString();
-    char engage = input.charAt(0);
-    char terminate = input.charAt(7);
-    //M000000S
+    char engage = input.charAt(0); // Security
+    char terminate = input.charAt(4); // Security
+    
+    //  Example: M000S
     if ( (engage == 'M') && (terminate == 'S')) {
-      state1 = input.charAt(1) - '0';
-      state2 = input.charAt(2) - '0';
-      state3 = input.charAt(3);
       
-      speed1 = (input.charAt(4) - '0') * 10;
-      speed2 = (input.charAt(5) - '0') * 10;
-      speed3 = (input.charAt(5) - '0') * 10;
-      
-      Serial.println(state1);
-      // Serial.println(state2);
-      Serial.println(speed1);
-      // Serial.println(speed2);
-      //speed3 = input.charAt(6);
-      //char engage = input.charAt(7);
+      dir1c = input.charAt(1) - '0';
+      dir2c = input.charAt(2) - '0';
+      dir3c = input.charAt(3) - '0';
 
+
+  if (dir1c = 1){
+      move1 = p1 - 10;
+    } else if (dir1c = 2){
+      move1 = p1 + 10;
     }
+  if (dir2c = 1){
+      move2 = p2 - 10;
+    } else if (dir2c = 2){
+      move2 = p2 + 10;
+    }
+
+    }}
 
     // OUTBOUND TRANSMISSION
     // STARTING TRANSMISSION COMMAND
-    Serial.print("G");                    // Transmission start data preset in code book
+    /*Serial.print("G");                    // Transmission start data preset in code book
 
     // TRANSLATION DATA
     //double op1 = abs((double(p3 + center3) / center3));
