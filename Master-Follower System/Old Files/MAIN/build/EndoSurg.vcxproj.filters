@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\aorta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\catheter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\mainloop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\qlearning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\serial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\src\visualizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\DOXY_mainpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\aorta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\catheter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\mainloop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\qlearning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\reinforcement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\serial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\include\visualizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marce\Desktop\RMAL\Master-Follower System\Old Files\MAIN\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{006055C2-DF0F-3D8D-B001-225255C568E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7775F8EA-CA59-36A6-9802-AC7A2CD45B28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

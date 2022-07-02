@@ -6,12 +6,14 @@ project(DVS)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 #VTK
-set(VTK_DIR "usr/local/lib")
+set(VTK_DIR "C:/Users/marce/source/repos/vtk/build")        
 find_package(VTK REQUIRED)
-include(${VTK_USE_FILE})
+#include(${VTK_USE_FILE})
+#include_directories(C:/Users/marce/source/repos/vtk/build)
 
 #Eigen
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+find_package (Eigen3 REQUIRED NO_MODULE)
+#find_package(C:Users/marce/Downloads/eigen-3.4.0/Eigen3)
 
 #Dynamixel
 #link_directories(/home/dvs/DynamixelSDK/c++/build/linux64)
@@ -22,7 +24,8 @@ find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 #include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR})
-include_directories(usr/local/include/vtk-8.2)
+
+
 
 #include source code
 file(GLOB H_FILES ${PROJECT_SOURCE_DIR}/include/*.h)
