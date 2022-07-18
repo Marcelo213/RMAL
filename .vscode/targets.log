@@ -7,12 +7,13 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu Jun 30 16:30:15 2022
+# Make data base, printed on Fri Jul 01 20:51:58 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -26,7 +27,7 @@ KINECTSDK10_DIR = C:\Program Files\Microsoft SDKs\Kinect\v1.8\
 # environment
 LOCALAPPDATA = C:\Users\marce\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-4ba00dc7-ccb8-4b4c-964b-1527ec3ba2b1-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-a9d12b01-b62f-4ffb-97e9-60d07bf356e7-sock
 # environment
 VSCODE_CWD = C:\Users\marce\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -42,10 +43,11 @@ PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\Wi
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
-@D = $ 
-(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16608_LZKNIYXIAGONIMVF
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2544_EDFYMASWMTJLMUUX
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -99,10 +101,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 16608
+VSCODE_PID = 2544
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
-# environment
+# e 
+nvironment
 __PSLOCKDOWNPOLICY = 0
 # environment
 ONLINESERVICES = Online Services
@@ -220,8 +223,7 @@ VSCODE_IPC_HOOK = \\.\pipe\820dd2343f7b537564c257a63abf9436-1.68.1-main-sock
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
-# environment 
-
+# environment
 SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
@@ -232,12 +234,11 @@ PROCESSOR_REVISION = 6001
 # environment
 PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 # variable set hash-table stats:
-# Load=108/1024=11%, Rehash=0, Collisions=11/132=8%
+# Load=110/1024=11%, Rehash=0, Collisions=12/134=9%
 
 # Pattern-specific Variable Values
 
-# No pattern-specific variab 
-le values.
+# No pattern-specific variable values.
 
 # Directories
 
@@ -306,6 +307,6 @@ GNUmakefile:
 # strcache performance: lookups = 16 / hit rate = 18%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
-# Finished Make data base on Thu Jun 30 16:30:15 2022
+# Finished Make data base on Fri Jul 01 20:51:58 2022
 
  
