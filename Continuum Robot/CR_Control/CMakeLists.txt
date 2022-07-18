@@ -14,18 +14,18 @@ find_package(VTK REQUIRED)
 find_package (Eigen3 REQUIRED NO_MODULE)
 
 #ROS
-set(roscpp_DIR "/opt/ros/noetic/share/roscpp/cmake/")
-find_package(catkin REQUIRED COMPONENTS
-    roscpp
-)
+#set(roscpp_DIR "/opt/ros/noetic/share/roscpp/cmake/")
+#find_package(catkin REQUIRED COMPONENTS
+ #   roscpp
+#)
 
 #catkin_package(
    #INCLUDE_DIRS include
    #LIBRARIES ${PROJECT_NAME}
   # CATKIN_DEPENDS roscpp
  #)
-include_directories(include ${PROJECT_SOURCE_DIR} ${catkin_INCLUDE_DIRS})
-
+#include_directories(include ${PROJECT_SOURCE_DIR} ${catkin_INCLUDE_DIRS})
+include_directories(include ${PROJECT_SOURCE_DIR})
 
 
 #Dynamixel
