@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 
 #Creates CMake Project
-project(DVS)
+project(DVS_Test)
 
 #Important CMAKE stuff
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
@@ -42,5 +42,6 @@ file(GLOB H_FILES ${PROJECT_SOURCE_DIR}/include/*.h)
 file(GLOB CPP_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
 add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SRCS})
-add_executable(DVS main.cpp ${H_FILES} ${CPP_FILES})
-target_link_libraries(DVS ${VTK_LIBRARIES} Eigen3::Eigen catkin)
+add_executable(DVS_Test main.cpp ${H_FILES} ${CPP_FILES})
+#target_link_libraries(DVS ${VTK_LIBRARIES} Eigen3::Eigen catkin)
+target_link_libraries(DVS_Test ${VTK_LIBRARIES} Eigen3::Eigen)

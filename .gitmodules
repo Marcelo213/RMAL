@@ -1,0 +1,3 @@
+[submodule "Continuum"]
+	path = Continuum
+	url = https://github.com/ROBOTIS-GIT/DynamixelSDK.git

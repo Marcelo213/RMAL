@@ -1,7 +1,6 @@
-make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory 'c:/Users/marce/Desktop/RMAL'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/marcelo/Desktop/RMAL'
+make: Leaving directory '/home/marcelo/Desktop/RMAL'
  
 make: *** No targets specified and no makefile found.  Stop.
 
-make: Leaving directory 'c:/Users/marce/Desktop/RMAL'
- 
