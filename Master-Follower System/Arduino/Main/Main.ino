@@ -2,6 +2,17 @@
 #define ENCODER_DO_NOT_USE_INTERRUPTS
 // include OLED
 
+
+// From Linear Actuator Code
+#define STEPPIN 8
+#define DIRPIN 9
+#define ENAPIN 10
+
+const int STEPTIME = 5;
+
+
+
+
 //  PIN LABELS
 char move1, move2, move3;
 
@@ -58,6 +69,14 @@ Encoder en2(enc2a, enc2b);  // Encoder Variable
 
 
 void setup() {
+
+   // Code from Linear Actuator
+  pinMode(STEPPIN,OUTPUT);
+  pinMode(DIRPIN,OUTPUT);
+  pinMode(ENAPIN,OUTPUT); // I disabled the code about the enable line because this code is using a TB6600 but we have a different IC
+
+
+  
   Serial.begin(115200);
   Serial.println("Getting Started ");
   Serial.setTimeout(2);
@@ -103,10 +122,41 @@ void setup() {
   digitalWrite(dir3b, LOW);
   
 
+
+
+
+  
+
 }
 
 
 void loop() {
+ 
+  
+  /*analogWrite(pwm1, 255);       // Always default to off state
+  digitalWrite(dir1a, HIGH);   // off state
+  digitalWrite(dir1b, LOW);   // off state
+  delay(1500);
+  analogWrite(pwm1, 100);       // Always default to off state
+  digitalWrite(dir1a, HIGH);   // off state
+  digitalWrite(dir1b, HIGH);   // off state
+  delay(3000);*/
+  analogWrite(pwm1, 50);       // Always default to off state
+  digitalWrite(dir1a, LOW);   // off state
+  digitalWrite(dir1b, HIGH);   // off state
+  
+  analogWrite(pwm2, 50);       // Always default to off state
+  digitalWrite(dir2a, HIGH);   // off state
+  digitalWrite(dir2b, LOW);   // off state
+  
+  //analogWrite(pwm3, 100);       // Always default to off state
+  digitalWrite(dir3a, HIGH);   // off state
+  digitalWrite(dir3b, LOW);   // off state
+
+
+
+
+
 
   //    READING ENCODERS
   
@@ -136,7 +186,7 @@ Serial.print(p2);
 Serial.print(" ");
 Serial.println(p3);
 
-
+/*
   // CHANGING DIRECTION
 
   // LINEAR
@@ -172,7 +222,7 @@ Serial.println(p3);
     digitalWrite(dir3a, LOW);
     digitalWrite(dir3b, HIGH);    
   }
-
+*/
 /*
 if (dir1c = 1){
   analogWrite(pwm1, speed1);
@@ -188,7 +238,7 @@ else if (dir1c = 0){
   }
 */
 
-  if (Serial.available()) {
+  /*if (Serial.available()) {
     //  INCOMING TRANSMISSION
     String input = Serial.readString();
     char engage = input.charAt(0); // Security
@@ -213,7 +263,7 @@ else if (dir1c = 0){
       move2 = p2 + 10;
     }
 
-    }}
+    }}*/
 
     // OUTBOUND TRANSMISSION
     // STARTING TRANSMISSION COMMAND
@@ -251,4 +301,34 @@ else if (dir1c = 0){
     // ENDING TRANSMISSION COMMAND
     Serial.println("SSS");              // Transmission end data preset in code book. (technically it is only one "S" but I send 3 just for filling the buffer. and forward compatability, in case we need to send more bytes
   }*/
+}
+
+
+
+
+
+void forward(int steps){
+  int i;
+  //digitalWrite(ENAPIN,LOW);//ENABLE IS ACTIVE LOW
+  digitalWrite(DIRPIN,HIGH);//SET DIRECTION 
+  for(i=0;i<steps;i++){
+    digitalWrite(STEPPIN,HIGH);
+    delay(STEPTIME);
+    digitalWrite(STEPPIN,LOW);
+    delay(STEPTIME);
+  }
+ // digitalWrite(ENAPIN,HIGH);//DISABLE STEPPER
+}
+
+void reverse(int steps){
+  int i;
+  //digitalWrite(ENAPIN,LOW);//ENABLE IS ACTIVE LOW
+  digitalWrite(DIRPIN,LOW);//SET DIRECTION 
+  for(i=0;i<steps;i++){
+    digitalWrite(STEPPIN,HIGH);
+    delay(STEPTIME);
+    digitalWrite(STEPPIN,LOW);
+    delay(STEPTIME);
+  }
+  //digitalWrite(ENAPIN,HIGH);//DISABLE STEPPER
 }

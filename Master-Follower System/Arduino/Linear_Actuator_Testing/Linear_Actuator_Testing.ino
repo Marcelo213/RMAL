@@ -11,7 +11,7 @@ void setup() {
   pinMode(DIRPIN,OUTPUT);
   pinMode(ENAPIN,OUTPUT); // I disabled the code about the enable line because this code is using a TB6600 but we have a different IC
   forward(800);
-  reverse(8 00);
+  reverse(800);
 }
 
 void loop() {
