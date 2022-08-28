@@ -139,7 +139,7 @@ void setup() {
   
   // Bending
  // bending_cw(500);
-  //bending_ccw(500); // There is currently no inputs to the bending function
+  bending_ccw(500); // There is currently no inputs to the bending function
   
   // Rotation
   //rotating_ccw(500); //parameter is in duration of microseconds
