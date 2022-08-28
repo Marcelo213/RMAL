@@ -1,7 +1,7 @@
 //Globals
 // Need to change this pins wrt the setup
-#define STEPPIN 3
-#define DIRPIN 2
+#define STEPPIN 8
+#define DIRPIN 9
 #define ENAPIN 10
 
 const int STEPTIME = 5;
@@ -21,20 +21,20 @@ void loop() {
 
 void forward(int steps){
   int i;
-  //digitalWrite(ENAPIN,LOW);//ENABLE IS ACTIVE LOW
+  digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
   digitalWrite(DIRPIN,HIGH);//SET DIRECTION 
   for(i=0;i<steps;i++){
     digitalWrite(STEPPIN,HIGH);
-    delay(STEPTIME);
+    delayMicroseconds(STEPTIME);
     digitalWrite(STEPPIN,LOW);
-    delay(STEPTIME);
+    delayMicroseconds(STEPTIME);
   }
- // digitalWrite(ENAPIN,HIGH);//DISABLE STEPPER
+ // digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
 }
 
 void reverse(int steps){
   int i;
-  //digitalWrite(ENAPIN,LOW);//ENABLE IS ACTIVE LOW
+  digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
   digitalWrite(DIRPIN,LOW);//SET DIRECTION 
   for(i=0;i<steps;i++){
     digitalWrite(STEPPIN,HIGH);
@@ -42,5 +42,5 @@ void reverse(int steps){
     digitalWrite(STEPPIN,LOW);
     delay(STEPTIME);
   }
-  //digitalWrite(ENAPIN,HIGH);//DISABLE STEPPER
+  //digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
 }
