@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 14 20:57:35 2022
+# Make data base, printed on Sat Aug 20 22:59:20 2022
 
 # Variables
 
@@ -45,11 +45,11 @@ CURDIR := /home/marcelo/Desktop/RMAL
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/104
+SNAP_DATA = /var/snap/code/105
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:30762
+JOURNAL_STREAM = 8:31496
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -71,11 +71,11 @@ ROS_ETC_DIR = /opt/ros/noetic/etc/ros
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-_ = /snap/code/104/usr/share/code/code
+_ = /snap/code/105/usr/share/code/code
 # environment
 ROS_PACKAGE_PATH = /opt/ros/noetic/share
 # environment
-MANAGERPID = 745
+MANAGERPID = 781
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
@@ -83,7 +83,7 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/marcelo
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/104/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/105/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -93,17 +93,17 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/marcelo-VirtualBox:@/tmp/.ICE-unix/1074,unix/marcelo-VirtualBox:/tmp/.ICE-unix/1074
+SESSION_MANAGER = local/marcelo-VirtualBox:@/tmp/.ICE-unix/1138,unix/marcelo-VirtualBox:/tmp/.ICE-unix/1138
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/marcelo/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/104
+SNAP = /snap/code/105
 # environment
 ROS_ROOT = /opt/ros/noetic/share/ros
 # environment
-SNAP_VERSION = 6d9b74a7
+SNAP_VERSION = e4503b30
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -111,9 +111,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 7b46350744d7443dbe021241427636a9
+INVOCATION_ID = 21ac227a5b584514b0c15e8d47eca122
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/104/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/105/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -125,7 +125,7 @@ ROS_DISTRO = noetic
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1996
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2273
 # automatic
 %F = $(notdir $%)
 # environment
@@ -137,7 +137,7 @@ PWD = /home/marcelo/Desktop/RMAL
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1032
+SSH_AGENT_PID = 1070
 # environment
 PKG_CONFIG_PATH = /opt/ros/noetic/lib/pkgconfig
 # environment
@@ -155,7 +155,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/marcelo/.config/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
+VSCODE_CODE_CACHE_PATH = /home/marcelo/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 LOGNAME = marcelo
 # environment
@@ -185,7 +185,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/marcelo/snap/code/104
+SNAP_USER_DATA = /home/marcelo/snap/code/105
 # environment
 SHLVL = 0
 # environment
@@ -195,7 +195,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = marcelo
 # environment
-SNAP_REVISION = 104
+SNAP_REVISION = 105
 # makefile
 .DEFAULT_GOAL := 
 # environment
@@ -213,7 +213,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = en_CA:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-8e24412a-1.70.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-8e24412a-1.70.2-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
@@ -267,7 +267,7 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2052
+VSCODE_PID = 2315
 # variable set hash-table stats:
 # Load=128/1024=12%, Rehash=0, Collisions=18/150=12%
 
@@ -277,9 +277,9 @@ VSCODE_PID = 2052
 
 # Directories
 
-# . (device 2053, inode 2630667): 6 files, no impossibilities.
+# . (device 2053, inode 2630667): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
  
 # Implicit Rules
@@ -330,12 +330,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 142 B / avg = 10 B
-# current buf: size = 8162 B / used = 142 B / count = 14 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 154 B / avg = 10 B
+# current buf: size = 8162 B / used = 154 B / count = 15 / avg = 10 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Sun Aug 14 20:57:35 2022
+# Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
+# Finished Make data base on Sat Aug 20 22:59:20 2022
 
  
