@@ -1,9 +1,9 @@
-make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
-# GNU Make 4.3
-# Built for Windows32
-# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
@@ -49,99 +49,97 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # automatic
-%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
-# automatic
-^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+?F = $(notdir $?)
 # environment
-VSCODE_LOG_STACK = false
-# automatic
-%F = $(notdir $%)
-# environment
-VSCODE_CODE_CACHE_PATH = C:\Users\marce\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
-# environment
-LANG = C
-# default
-.LOADED := 
-# environment
-TMP = C:\Users\marce\AppData\Local\Temp
-# default
-.INCLUDE_DIRS = .
-# environment
-PROCESSOR_ARCHITEW6432 = AMD64
-# makefile
-MAKEFLAGS = pqrR
-# environment
-ONEDRIVE = C:\Users\marce\OneDrive
-# makefile
-CURDIR := c:/Users/marce/Desktop/RMAL
-# environment
-VSCODE_PIPE_LOGGING = true
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# automatic
-*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
-# environment
-PROGRAMFILES = C:\Program Files (x86)
-# environment
-MFLAGS = -pqrR
+DESKTOP_SESSION = ubuntu
 # default
 .SHELLFLAGS := -c
 # environment
-COMMONPROGRAMW6432 = C:\Program Files\Common Files
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
 # automatic
-+D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/marcelo/Desktop/RMAL
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/105
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+JOURNAL_STREAM = 8:31496
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
 # makefile
 MAKEFILE_LIST := 
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
 VSCODE_PID = 28612
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
-__PSLOCKDOWNPOLICY = 0
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-ONLINESERVICES = Online Services
-# automatic
-*F = $(notdir $*)
-# automatic
-<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+ROS_ETC_DIR = /opt/ros/noetic/etc/ros
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+_ = /snap/code/105/usr/share/code/code
+# environment
+ROS_PACKAGE_PATH = /opt/ros/noetic/share
+# environment
+MANAGERPID = 781
+# environment
+ROS_PYTHON_VERSION = 3
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /home/marcelo
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/105/usr/share/glib-2.0/schemas
 # default
-MAKE_HOST := Windows32
+MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PROGRAMDATA = C:\ProgramData
-# default
-SHELL := sh.exe
+PATH = /opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
-HOMEPATH = \Users\marce
+XDG_SESSION_DESKTOP = ubuntu
 # environment
-PLATFORMIO_CALLER = vscode
-# default
-MAKECMDGOALS := all
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+SESSION_MANAGER = local/marcelo-VirtualBox:@/tmp/.ICE-unix/1138,unix/marcelo-VirtualBox:/tmp/.ICE-unix/1138
 # environment
-COMSPEC = C:\WINDOWS\system32\cmd.exe
+XDG_RUNTIME_DIR = /run/user/1000
 # environment
-WINDIR = C:\WINDOWS
+GDK_PIXBUF_MODULE_FILE = /home/marcelo/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-MAKELEVEL := 0
-# default
-MAKE = $(MAKE_COMMAND)
+SNAP = /snap/code/105
 # environment
-FTSDK_DIR = C:\Program Files\Microsoft SDKs\Kinect\Developer Toolkit v1.8.0\
+ROS_ROOT = /opt/ros/noetic/share/ros
 # environment
 PATH = C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2021a\bin;C;C:\Program Files\dotnet\;C:\Program Files\CMake\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\marce\anaconda3\condabin;C:\Users\marce\anaconda3\Scripts;C:\Users\marce\anaconda3\Library\bin;C:\Users\marce\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\marce\AppData\Local\Programs\Python\Python310\;C:\Users\marce\AppData\Local\Microsoft\WindowsApps;C:\Users\marce\AppData\Local\Programs\Microsoft VS Code\bin;C:\altera\13.0sp1\modelsim_ase\win32aloem;C:\Users\marce\.dotnet\tools
 # environment
-COMPUTERNAME = DESKTOP-BGCTICV
-# default
-MAKEFILES := 
-# automatic
-^F = $(notdir $^)
+XDG_MENU_PREFIX = gnome-
 # environment
 PROMPT = $P$G
 # environment
@@ -207,13 +205,145 @@ COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-TEMP = C:\Users\marce\AppData\Local\Temp
+INVOCATION_ID = 21ac227a5b584514b0c15e8d47eca122
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\820dd2343f7b537564c257a63abf9436-1.68.1-main-sock
+GDK_PIXBUF_MODULEDIR = /snap/code/105/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
-.RECIPEPREFIX := 
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+CMAKE_PREFIX_PATH = /opt/ros/noetic
+# environment
+LS_COLORS = 
+# environment
+ROS_DISTRO = noetic
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2273
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/marcelo/Desktop/RMAL
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 1070
+# environment
+PKG_CONFIG_PATH = /opt/ros/noetic/lib/pkgconfig
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/marcelo
+# environment
+LD_LIBRARY_PATH = /opt/ros/noetic/lib
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/marcelo/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
+# environment
+LOGNAME = marcelo
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = aMQC6j-q92POSxunkiK1gXyR6kyDgaiJ3k3G_ACceA_caUg7tyHa
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/marcelo/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# environment
+SNAP_REAL_HOME = /home/marcelo
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SNAP_USER_DATA = /home/marcelo/snap/code/105
+# environment
+SHLVL = 0
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = marcelo
+# environment
+SNAP_REVISION = 105
+# makefile
+.DEFAULT_GOAL := 
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+ROSLISP_PACKAGE_DIRECTORIES = 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_CA:en
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-8e24412a-1.70.2-main.sock
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+PYTHONPATH = /opt/ros/noetic/lib/python3/dist-packages
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+ROS_VERSION = 1
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# automatic
++F = $(notdir $+)
+# environment
+QT_ACCESSIBILITY = 1
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = aMQC6j-q92POSxunkiK1gXyR6kyDgaiJ3k3G_ACceA_caUg7tyHa
 # automatic
 <F = $(notdir $<)
+# environment
+ROS_MASTER_URI = http://localhost:11311
+# environment
+SNAP_NAME = code
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# automatic
+^F = $(notdir $^)
 # default
 SUFFIXES := 
 # environment
@@ -221,15 +351,17 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
-REGIONCODE = NA
+GJS_DEBUG_OUTPUT = stderr
+# default
+.RECIPEPREFIX := 
 # environment
-PROCESSOR_REVISION = 6001
+LANG = C
 # environment
-PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
+VSCODE_PID = 2315
 # variable set hash-table stats:
-# Load=108/1024=11%, Rehash=0, Collisions=11/132=8%
+# Load=128/1024=12%, Rehash=0, Collisions=18/150=12%
 
 # Pattern-specific Variable Values
 
@@ -237,10 +369,11 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 
 # Directories
 
-# . (key c:/Users/marce/Desktop/RMAL, mtime 1656024395): 6 files, no impossibilities.
+# . (device 2053, inode 2630667): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
+ 
 # Implicit Rules
 
 # No implicit rules.
@@ -248,7 +381,21 @@ PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
 # Files
 
 # Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -261,27 +408,6 @@ Makefile:
 #  File has not been updated.
 
 # Not a target:
-all:
-#  Command line target.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-makefile.mak:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
 GNUmakefile:
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -289,17 +415,17 @@ GNUmakefile:
 #  Failed to be updated.
 
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/16=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 13 / storage = 123 B / avg = 9 B
-# current buf: size = 8174 B / used = 123 B / count = 13 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 154 B / avg = 10 B
+# current buf: size = 8162 B / used = 154 B / count = 15 / avg = 10 B
 
-# strcache performance: lookups = 16 / hit rate = 18%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=0/16=0%
 # Finished Make data base on Mon Jul 18 21:25:53 2022

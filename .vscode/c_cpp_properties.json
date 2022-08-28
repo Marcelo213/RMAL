@@ -11,7 +11,7 @@
             "cppStandard": "gnu++14",
             "intelliSenseMode": "linux-gcc-x64",
             "compileCommands": "${workspaceFolder}/Continuum Robot/CR_Control/build/compile_commands.json",
-            "configurationProvider": "go2sh.cmake-integration"
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4
