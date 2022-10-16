@@ -23,30 +23,24 @@
 * IN THE SOFTWARE.
 */
 
-#include "mpu9250.h"
-
-/* Mpu9250 object */
-bfs::Mpu9250 imu;
-
-
-int SDA_PIN = 27;
-int SCL_PIN = 32;
-
+/*
 void setup() {
-  /* Serial to display data */
+  // Serial to display data 
   Serial.begin(115200);
   while(!Serial) {}
-  /* Start the I2C bus */
-  Wire.begin(SDA_PIN,SCL_PIN);
+  // Start the I2C bus 
+  Wire.begin(SDA_PIN, SCL_PIN);
+  // We need to add the SDA and SCL pins in Wire.begin because ESP32 needs to be intialized that way
+
   Wire.setClock(400000);
-  /* I2C bus,  0x68 address */
+  // I2C bus,  0x68 address 
   imu.Config(&Wire, bfs::Mpu9250::I2C_ADDR_PRIM);
-  /* Initialize and configure IMU */
+  // Initialize and configure IMU 
   if (!imu.Begin()) {
     Serial.println("Error initializing communication with IMU");
     while(1) {}
   }
-  /* Set the sample rate divider */
+  // Set the sample rate divider 
   if (!imu.ConfigSrd(19)) {
     Serial.println("Error configured SRD");
     while(1) {}
@@ -54,7 +48,7 @@ void setup() {
 }
 
 void loop() {
-  /* Check if data read */
+  // Check if data read 
   if (imu.Read()) {
     Serial.print(imu.new_imu_data());
     Serial.print("\t");
@@ -81,4 +75,4 @@ void loop() {
     Serial.print(imu.die_temp_c());
     Serial.print("\n");
   }
-}
+}*/
