@@ -25,20 +25,19 @@
 
 #include "mpu9250.h"
 
-int I2C_SDA = 27;
-int I2C_SCL = 32;
-
-
 /* Mpu9250 object */
 bfs::Mpu9250 imu;
+
+
+int SDA_PIN = 27;
+int SCL_PIN = 32;
 
 void setup() {
   /* Serial to display data */
   Serial.begin(115200);
   while(!Serial) {}
   /* Start the I2C bus */
-  Wire.begin(I2C_SDA, I2C_SCL);
-
+  Wire.begin(SDA_PIN,SCL_PIN);
   Wire.setClock(400000);
   /* I2C bus,  0x68 address */
   imu.Config(&Wire, bfs::Mpu9250::I2C_ADDR_PRIM);
