@@ -11,5 +11,5 @@ bfs::Mpu9250 imu;
 
 
 
-const char* ssid = "grandvilla23-5GHz";
+const char* ssid = "grandvilla23-2.4GHz";
 const char* password = "ancientsea079";
