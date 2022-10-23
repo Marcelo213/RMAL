@@ -2,78 +2,57 @@
 void setup() {
 
    // Code from Linear Actuator
-  pinMode(STEPPIN,OUTPUT);
-  pinMode(DIRPIN,OUTPUT);
-  pinMode(ENAPIN,OUTPUT); // I disabled the code about the enable line because this code is using a TB6600 but we have a different IC
+    pinMode(STEPPIN, OUTPUT);
+    pinMode(DIRPIN, OUTPUT);
+    pinMode(ENAPIN, OUTPUT); // I disabled the code about the enable line because this code is using a TB6600 but we have a different IC
 
-
-  
-  Serial.begin(115200);
-  Serial.println("Getting Started ");
-  Serial.setTimeout(2);
-
-  // PIN SETUP
+    Serial.begin(115200);
+    Serial.println("Getting Started ");
+    Serial.setTimeout(2);
   
   // LINEAR TRANSLATION
-  pinMode(pos1, OUTPUT);
-  pinMode(neg1, OUTPUT);
-  pinMode(pwm1, OUTPUT);
-  pinMode(dir1a, OUTPUT);
-  pinMode(dir1b, OUTPUT);
-  digitalWrite(pos1, HIGH);   // +5V
-  digitalWrite(neg1, LOW);    // GND
-  analogWrite(pwm1, 0);       // Always default to off state
-  digitalWrite(dir1a, LOW);   // off state
-  digitalWrite(dir1b, LOW);   // off state
+    pinMode(CATHETER_LINEAR_POSITIVE_PIN, OUTPUT);
+    pinMode(CATHETER_LINEAR_GROUND_PIN, OUTPUT);
+    pinMode(CATHERER_LINEAR_PWM_PIN, OUTPUT);
+    pinMode(CATHETER_LINEAR_DIR_A_PIN, OUTPUT);
+    pinMode(CATHETER_LINEAR_DIR_B_PIN, OUTPUT);
+
+    digitalWrite(CATHETER_LINEAR_POSITIVE_PIN, HIGH);   // +5V
+    digitalWrite(CATHETER_LINEAR_GROUND_PIN, LOW);    // GND
+    analogWrite(CATHERER_LINEAR_PWM_PIN, 0);       // Always default to off state
+    digitalWrite(CATHETER_LINEAR_DIR_A_PIN, LOW);   // off state
+    digitalWrite(CATHETER_LINEAR_DIR_B_PIN, LOW);   // off state
 
 
   // BENDING
-  pinMode(pos2, OUTPUT);
-  pinMode(neg2, OUTPUT);
-  pinMode(pwm2, OUTPUT);
-  pinMode(dir2a, OUTPUT);
-  pinMode(dir2b, OUTPUT);
-  digitalWrite(pos2, HIGH);
-  digitalWrite(neg2, LOW);
-  analogWrite(pwm2, 0);
-  digitalWrite(dir2a, LOW);
-  digitalWrite(dir2b, LOW);
+    pinMode(CATHETER_BENDING_POSITIVE_PIN, OUTPUT);
+    pinMode(CATHETER_BENDING_GROUND_PIN, OUTPUT);
+    pinMode(CATHERER_BENDING_PWM_PIN, OUTPUT);
+    pinMode(CATHETER_BENDING_DIR_A_PIN, OUTPUT);
+    pinMode(CATHETER_BENDING_DIR_B_PIN, OUTPUT);
+
+    digitalWrite(CATHETER_BENDING_POSITIVE_PIN, HIGH);   // +5V
+    digitalWrite(CATHETER_BENDING_GROUND_PIN, LOW);    // GND
+    analogWrite(CATHERER_BENDING_PWM_PIN, 0);       // Always default to off state
+    digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);   // off state
+    digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);   // off state
 
   
-  // ROTATION
-  pinMode(pos3, OUTPUT);
-  pinMode(neg3, OUTPUT);
-  pinMode(pwm3, OUTPUT);
-  pinMode(dir3a, OUTPUT);
-  pinMode(dir3b, OUTPUT);
-  digitalWrite(pos3, HIGH);
-  digitalWrite(neg3, LOW);
-  analogWrite(pwm3, 0);
-  digitalWrite(dir3a, LOW);
-  digitalWrite(dir3b, LOW);
+  // ROTATION PINS SETUP
+    pinMode(CATHETER_ROTATION_POSITIVE_PIN, OUTPUT);
+    pinMode(CATHETER_ROTATION_GROUND_PIN, OUTPUT);
+    pinMode(CATHERER_ROTATION_PWM_PIN, OUTPUT);
+    pinMode(CATHETER_ROTATION_DIR_A_PIN, OUTPUT);
+    pinMode(CATHETER_ROTATION_DIR_B_PIN, OUTPUT);
+
+    digitalWrite(CATHETER_ROTATION_POSITIVE_PIN, HIGH);   // +5V
+    digitalWrite(CATHETER_ROTATION_GROUND_PIN, LOW);    // GND
+    analogWrite(CATHERER_ROTATION_PWM_PIN, 0);       // Always default to off state
+    digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);   // off state
+    digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);   // off state
   
-
-
-
-
-  // TESTING MOVEMENT:
 
   delay(500); // This delay allows the system time to settle and to accurately execute commands 
   
-  // Linear Actuator
- // linear_forward(500);
-  //linear_backward(500);
 
-  // Taut Mechanism
-  //taut_forward(500);
-  //taut_backward(500);
-  
-  // Bending
- // bending_cw(500);
-  bending_ccw(500); // There is currently no inputs to the bending function
-  
-  // Rotation
-  //rotating_ccw(500); //parameter is in duration of microseconds
-  rotating_cw(500);
-}
 

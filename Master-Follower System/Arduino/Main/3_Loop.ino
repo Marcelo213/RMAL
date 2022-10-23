@@ -2,7 +2,7 @@ void loop() {
  read_encoder();
   
 
-/*
+  /*
   // CHANGING DIRECTION
 
   // LINEAR

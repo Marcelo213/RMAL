@@ -1,31 +1,31 @@
-// From Linear Actuator Code
+// Linear Actuator Pins
 #define STEPPIN 8
 #define DIRPIN 9
 #define ENAPIN 10
 
 // Linear Motion Pins
-  byte pos1 = 39;     // Encoder +5V        (pin)
-  byte enc1a = 48;    // Encoder A          (pin)
-  byte enclb = 49;    // Encoder B          (pin)
-  byte neg1 = 38;     // Encoder GND        (pin)
-  byte pwm1 = 3;      // Motor PWM          (pin)
-  byte dir1a = 27;     // Motor Direction A  (pin)
-  byte dir1b = 26;     // Motor Direction B  (pin)
+#define CATHETER_LINEAR_POSITIVE_PIN 39
+#define CATHETER_LINEAR_GROUND_PIN 38
+#define CATHETER_LINEAR_ENCODER_A_PIN 48
+#define CATHETER_LINEAR_ENCODER_B_PIN 49
+#define CATHERER_LINEAR_PWM_PIN 3
+#define CATHETER_LINEAR_DIR_A_PIN 27
+#define CATHETER_LINEAR_DIR_B_PIN 26
 
 // Bending Motion Pins
-  byte pos2 = 37;     // Encoder +5V        (pin)
-  byte enc2a = 46;    // Encoder A          (pin)
-  byte enc2b = 47;    // Encoder B          (pin)
-  byte neg2 = 36;     // Encoder GND        (pin)
-  byte pwm2 = 4;      // Motor PWM          (pin)
-  byte dir2a = 25;     // Motor Direction A  (pin)
-  byte dir2b = 24;     // Motor Direction B  (pin)
+#define CATHETER_BENDING_POSITIVE_PIN 37
+#define CATHETER_BENDING_GROUND_PIN 36
+#define CATHETER_BENDING_ENCODER_A_PIN 46
+#define CATHETER_BENDING_ENCODER_B_PIN 47
+#define CATHERER_BENDING_PWM_PIN 4
+#define CATHETER_BENDING_DIR_A_PIN 25
+#define CATHETER_BENDING_DIR_B_PIN 24
 
 // Rotation Pins
-  byte pos3 = 35;     // Encoder +5V        (pin)
-  byte enc3a = 44;    // Encoder A          (pin)
-  byte enc3b = 45;    // Encoder B          (pin)
-  byte neg3 = 34;     // Encoder GND        (pin)
-  byte pwm3 = 5;      // Motor PWM          (pin)
-  byte dir3a = 23;     // Motor Direction A  (pin)
-  byte dir3b = 22;     // Motor Direction B  (pin)
+#define CATHETER_ROTATION_POSITIVE_PIN 35
+#define CATHETER_ROTATION_GROUND_PIN 34
+#define CATHETER_ROTATION_ENCODER_A_PIN 44
+#define CATHETER_ROTATION_ENCODER_B_PIN 45
+#define CATHERER_ROTATION_PWM_PIN 5
+#define CATHETER_ROTATION_DIR_A_PIN 23
+#define CATHETER_ROTATION_DIR_B_PIN 22
