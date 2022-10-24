@@ -1,4 +1,4 @@
-void loop() {
+void loop(){
  read_encoder();
   
 

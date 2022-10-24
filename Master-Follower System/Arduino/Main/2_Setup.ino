@@ -62,6 +62,6 @@ void setup() {
 
   
   delay(500); // This delay allows the system time to settle and to accurately execute commands 
-  
-
+  delay(2000); // This delay is for safety in demo purposes 
+}
 
