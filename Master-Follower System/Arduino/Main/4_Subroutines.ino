@@ -62,9 +62,29 @@ void read_encoder(){
     Serial.println(p3);
 }
 
+// FOR CATHETER ASSEMBLY
+void CATHETER_BENDING_CW(int duration){
+    analogWrite(CATHERER_BENDING_PWM_PIN,255);
+    digitalWrite(CATHETER_BENDING_DIR_A_PIN, HIGH);
+    digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW); 
+    delay(duration);
+    analogWrite(CATHERER_BENDING_PWM_PIN,0);
+    digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
+    digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
+}
+void CATHETER_BENDING_CCW(int duration){
+    analogWrite(CATHERER_BENDING_PWM_PIN,255);
+    digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
+    digitalWrite(CATHETER_BENDING_DIR_B_PIN, HIGH); 
+    delay(duration);
+    analogWrite(CATHERER_BENDING_PWM_PIN,0);
+    digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
+    digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
+}
+
 // FOR ASSIST SUBASSEMBLY
 void ASSIST_LINEAR_FORWARD(int duration) {
-    analogWrite(ASSIST_LINEAR_PWM_PIN,150);
+    analogWrite(ASSIST_LINEAR_PWM_PIN,255);
     digitalWrite(ASSIST_LINEAR_DIR_A_PIN, HIGH);
     digitalWrite(ASSIST_LINEAR_DIR_B_PIN, LOW); 
     delay(duration);
@@ -74,7 +94,7 @@ void ASSIST_LINEAR_FORWARD(int duration) {
 }
 
 void ASSIST_LINEAR_BACKWARD(int duration) {
-  analogWrite(ASSIST_LINEAR_PWM_PIN,150);
+  analogWrite(ASSIST_LINEAR_PWM_PIN,255);
   digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);
   digitalWrite(ASSIST_LINEAR_DIR_B_PIN, HIGH); 
   delay(duration);
@@ -84,7 +104,7 @@ void ASSIST_LINEAR_BACKWARD(int duration) {
 }
 
 void ASSIST_ROTATING_CW(int duration) {
-  analogWrite(ASSIST_ROTATION_PWM_PIN,150);
+  analogWrite(ASSIST_ROTATION_PWM_PIN,255);
   digitalWrite(ASSIST_ROTATION_DIR_A_PIN, HIGH);
   digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW); 
   delay(duration);
@@ -94,7 +114,7 @@ void ASSIST_ROTATING_CW(int duration) {
 }
   
 void ASSIST_ROTATING_CCW(int duration) {
-  analogWrite(ASSIST_ROTATION_PWM_PIN, 150);
+  analogWrite(ASSIST_ROTATION_PWM_PIN, 255);
   digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(ASSIST_ROTATION_DIR_B_PIN, HIGH); 
   delay(duration);

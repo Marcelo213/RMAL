@@ -1,7 +1,7 @@
 
 void setup() {
 
-
+  //Serial.println("Here ");
   // CATHETER ASSEMBLY
 
     // Code from Linear Actuator
@@ -11,10 +11,11 @@ void setup() {
 
       Serial.begin(115200);
       Serial.println("Getting Started ");
-      Serial.setTimeout(2);
+      //  Serial.setTimeout(2);
     //
 
     // BENDING
+    //Serial.println("Here");
       pinMode(CATHETER_BENDING_POSITIVE_PIN, OUTPUT);
       pinMode(CATHETER_BENDING_GROUND_PIN, OUTPUT);
       pinMode(CATHERER_BENDING_PWM_PIN, OUTPUT);
@@ -28,7 +29,8 @@ void setup() {
       digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);   // off state
     //
   //
-    
+  Serial.println("Check 1");
+
 
   // ASSIST ASSEMBLY
     // LINEAR TRANSLATION
@@ -44,6 +46,7 @@ void setup() {
       digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);   // off state
       digitalWrite(ASSIST_LINEAR_DIR_B_PIN, LOW);   // off state
     //
+    Serial.println("Check 2");
 
     // ROTATION PINS SETUP
       pinMode(ASSIST_ROTATION_POSITIVE_PIN, OUTPUT);
@@ -59,9 +62,28 @@ void setup() {
       digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW);   // off state
     //
   //
+  //Serial.println("Check 3");
+  //delay(2000); 
+  //Serial.println("Check 4");
+  //ASSIST_ROTATING_CW(3000);
+  /*delay(1000);
+  ASSIST_ROTATING_CCW(3000);
+  delay(1500);
+  ASSIST_LINEAR_FORWARD(1500);
+  delay(1000);
+  ASSIST_LINEAR_BACKWARD(1500);
+  delay(1000);
+  CATHETER_BENDING_CCW(250);*/
+  //delay(1000);
+  CATHETER_BENDING_CW(250);
+
+  Serial.println("After cath");
+  //delay(2000);
+  //CATHETER_BENDING_CCW(500);
+
 
   
-  delay(500); // This delay allows the system time to settle and to accurately execute commands 
-  delay(2000); // This delay is for safety in demo purposes 
+  
+
 }
 

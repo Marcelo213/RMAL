@@ -1,6 +1,8 @@
 void loop(){
- read_encoder();
-  
+ //read_encoder();
+  // CATHETER_BENDING_CW(1500);
+
+ // (1000);
 
   /*
   // CHANGING DIRECTION
