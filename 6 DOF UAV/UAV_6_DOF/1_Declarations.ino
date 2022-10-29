@@ -13,6 +13,8 @@
   // our servo # counter
   uint8_t servonum = 0; 
 
+  int pin_state = 0;
+
 
   int pwmValue;  // pwm value
   int potValue; // potentiometer value

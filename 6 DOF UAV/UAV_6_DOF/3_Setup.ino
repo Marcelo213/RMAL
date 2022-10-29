@@ -4,6 +4,7 @@ void setup() {
   //Keyboard.begin();
   //motor_1.attach(MOTOR_1_PWM, 1000, 2000); // attaches the servo on pin 18 to the servo object
 
+  pinMode(SWITCH_PIN, INPUT_PULLUP);
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(SERVO_FREQ);  // Analog servos run at ~50 Hz updates

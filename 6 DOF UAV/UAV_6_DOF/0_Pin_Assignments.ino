@@ -8,3 +8,5 @@
 
 #define MOTOR_1_PWM 3
 #define potPin A2
+
+#define SWITCH_PIN 8
