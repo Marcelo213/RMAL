@@ -2,14 +2,10 @@
 // ------- DECLARATIONS -- ------- ------- ------- ------- ------- ------- ------- -------
 // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
  
+ #include <Servo.h>
+  Servo motor_1;  // create servo object to control a servo
+ 
+  int pwmValue;  // pwm value
+  int potValue; // potentiometer value
+ 
 
-#include "mpu9250.h"
-
-
-/* Mpu9250 object */
-bfs::Mpu9250 imu;
-
-
-
-const char* ssid = "grandvilla23-2.4GHz";
-const char* password = "ancientsea079";
