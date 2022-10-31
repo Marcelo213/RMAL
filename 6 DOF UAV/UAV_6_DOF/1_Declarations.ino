@@ -18,7 +18,8 @@
 
   int pwmValue;  // pwm value
   int potValue; // potentiometer value
-  int motor_select;
+  long motor_select = 0;
+  long motor_speed = 0;
  
   Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 

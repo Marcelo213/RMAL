@@ -1,11 +1,7 @@
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Wire.begin();
   
-  //stream.flush();
-  //Keyboard.begin();
-  //motor_1.attach(MOTOR_1_PWM, 1000, 2000); // attaches the servo on pin 18 to the servo object
-
   pinMode(SWITCH_PIN, INPUT_PULLUP);
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
@@ -13,9 +9,7 @@ void setup() {
   Serial.println("Program Starting...");
   delay(1000);
 
-
-
-
+  // For MPU9250
   byte status = mpu.begin();
   Serial.print(F("MPU6050 status: "));
   Serial.println(status);
