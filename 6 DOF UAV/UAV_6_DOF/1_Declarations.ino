@@ -26,3 +26,13 @@
   #define SERVOMAX  600 // This is the 'maximum' pulse length count (out of 4096)
   #define SERVO_FREQ 50 // Analog servos run at ~50 Hz updates
 
+
+
+
+  #include "Wire.h"
+#include <MPU6050_light.h>
+
+MPU6050 mpu(Wire);
+unsigned long timer = 0;
+
+
