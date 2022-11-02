@@ -5,18 +5,17 @@ void setup() {
   while(Serial.read() >= 0) ;
 
 
-  //Serial.println("Here ");
+  // Code from Linear Actuator
+    pinMode(STEPPIN, OUTPUT);
+    pinMode(DIRPIN, OUTPUT);
+    pinMode(ENAPIN, OUTPUT); 
+
+    Serial.begin(38400);
+    Serial.println("Getting Started ");
+    //  Serial.setTimeout(2);
+
+
   // CATHETER ASSEMBLY
-
-    // Code from Linear Actuator
-      pinMode(STEPPIN, OUTPUT);
-      pinMode(DIRPIN, OUTPUT);
-      pinMode(ENAPIN, OUTPUT); // I disabled the code about the enable line because this code is using a TB6600 but we have a different IC
-
-      Serial.begin(115200);
-      Serial.println("Getting Started ");
-      //  Serial.setTimeout(2);
-    //
 
     // BENDING
     //Serial.println("Here");
@@ -46,8 +45,6 @@ void setup() {
       digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);   // off state
   //
   Serial.println("Check 1");
-
-
   // ASSIST ASSEMBLY
     // LINEAR TRANSLATION
      // pinMode(ASSIST_LINEAR_POSITIVE_PIN, OUTPUT);
@@ -78,20 +75,26 @@ void setup() {
       digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW);   // off state
     //
   //
+
+while(Serial.read() >= 0) ;
+
+
   Serial.println("Check 3");
+  ACTUATOR_FORWARD(1000);
+  ACTUATOR_BACKWARD(1000);
   //delay(2000); 
   //Serial.println("Check 4");
-  ASSIST_ROTATING_CW(1000);
-  delay(1000);
+  //ASSIST_ROTATING_CCW(1000);
+  /*delay(1000);
   ASSIST_ROTATING_CCW(1000);
-  delay(1500);
-  ASSIST_LINEAR_FORWARD(1500);
-  //delay(1000);
-  //ASSIST_LINEAR_BACKWARD(1500);
-  //delay(1000);
-  //CATHETER_BENDING_CCW(1000);
-  //delay(1000);
-  //CATHETER_BENDING_CW(1000);
+  delay(1000);
+  ASSIST_LINEAR_FORWARD(1000);
+  delay(1000);
+  ASSIST_LINEAR_BACKWARD(1000);
+  delay(1000);
+  CATHETER_BENDING_CCW(1000);
+  delay(1000);
+  CATHETER_BENDING_CW(1000);*/
   
   Serial.println("Movement Example Complete.");
   //delay(2000);

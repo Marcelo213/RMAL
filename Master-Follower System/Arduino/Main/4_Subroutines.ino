@@ -1,36 +1,4 @@
 
-// FOR LINEAR ACTUATOR
-  /*void linear_forward(int steps){
-    int i;
-    digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
-    digitalWrite(DIRPIN,HIGH);//SET DIRECTION 
-    for(i=0;i<steps;i++){
-      digitalWrite(STEPPIN,HIGH);
-      delayMicroseconds(STEPTIME);
-      digitalWrite(STEPPIN,LOW);
-      delayMicroseconds(STEPTIME);
-    }
-    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
-
-
-        // MOVING THE TAUT MECHANISM FORWARD
-      analogWrite(pwm1, 100);       // Always default to off state
-      digitalWrite(dir1a, HIGH);   // off state
-      digitalWrite(dir1b, LOW);   // off state
-      
-  }
-  void linear_backward(int steps){
-    int i;
-    digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
-    digitalWrite(DIRPIN,LOW);//SET DIRECTION 
-    for(i=0;i<steps;i++){
-      digitalWrite(STEPPIN,HIGH);
-      delayMicroseconds(STEPTIME);
-      digitalWrite(STEPPIN,LOW);
-      delayMicroseconds(STEPTIME);
-    }
-    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
-*/
 
 // FOR ENCODER
 void read_encoder(){
@@ -74,6 +42,37 @@ void read_encoder(){
     Serial.println(p4);
 }
 
+// FOR LINEAR ACTUATOR
+  void ACTUATOR_FORWARD(int steps){
+    int i;
+    digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
+    digitalWrite(DIRPIN,HIGH);//SET DIRECTION 
+    for(i=0;i<steps;i++){
+      digitalWrite(STEPPIN,HIGH);
+      delayMicroseconds(STEPTIME);
+      digitalWrite(STEPPIN,LOW);
+      delayMicroseconds(STEPTIME);
+    }
+    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
+
+
+     
+      
+  }
+  void ACTUATOR_BACKWARD(int steps){
+    int i;
+    digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
+    digitalWrite(DIRPIN,LOW);//SET DIRECTION 
+    for(i=0;i<steps;i++){
+      digitalWrite(STEPPIN,HIGH);
+      delayMicroseconds(STEPTIME);
+      digitalWrite(STEPPIN,LOW);
+      delayMicroseconds(STEPTIME);
+    }
+    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
+  }
+
+
 // FOR CATHETER ASSEMBLY
 void CATHETER_BENDING_CW(int duration){
     analogWrite(CATHERER_BENDING_PWM_PIN,255);
@@ -101,8 +100,7 @@ void CATHETER_ROTATING_CW(int duration) {
   analogWrite(CATHETER_ROTATION_PWM_PIN,0);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
-}
-  
+} 
 void CATHETER_ROTATING_CCW(int duration) {
   analogWrite(CATHETER_ROTATION_PWM_PIN,255);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
@@ -155,26 +153,3 @@ void ASSIST_ROTATING_CCW(int duration) {
   digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW); 
 }
-//
-
-// FOR CATHETER-ASSEMBLY
- /* void bending_cw(int duration){
-    analogWrite(pwm2,100);
-    digitalWrite(dir2a, HIGH);
-    digitalWrite(dir2b, LOW); 
-    delay(duration);
-    analogWrite(pwm2,0);
-    digitalWrite(dir2a, LOW);
-    digitalWrite(dir2b, LOW);
-  }
-  void bending_ccw(int duration){
-      analogWrite(pwm2,255);
-    digitalWrite(dir2a, LOW);
-    digitalWrite(dir2b, HIGH); 
-    delay(duration);
-    analogWrite(pwm2,0);
-    digitalWrite(dir2a, LOW);
-    digitalWrite(dir2b, LOW); 
-  }*/
-  
-
