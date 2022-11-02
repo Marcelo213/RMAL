@@ -55,11 +55,23 @@ void read_encoder(){
       np3O = np3;
       p3 = np3;
       }
+
+      // - ROTATION
+      long np4 = CATHETER_ROTATION_ENCODER.read();
+      if (np4 != np4O) {
+      np4O = np4;
+      p4 = np4;
+      }
+
+
+
     Serial.print(p1);
     Serial.print(" ");
     Serial.print(p2);
     Serial.print(" ");
-    Serial.println(p3);
+    Serial.print(p3);
+    Serial.print(" ");
+    Serial.println(p4);
 }
 
 // FOR CATHETER ASSEMBLY
@@ -81,6 +93,27 @@ void CATHETER_BENDING_CCW(int duration){
     digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
 }
+void CATHETER_ROTATING_CW(int duration) {
+  analogWrite(CATHETER_ROTATION_PWM_PIN,255);
+  digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
+  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW); 
+  delay(duration);
+  analogWrite(CATHETER_ROTATION_PWM_PIN,0);
+  digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
+  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
+}
+  
+void CATHETER_ROTATING_CCW(int duration) {
+  analogWrite(CATHETER_ROTATION_PWM_PIN,255);
+  digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
+  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, HIGH); 
+  delay(duration);
+  analogWrite(CATHETER_ROTATION_PWM_PIN,0);
+  digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
+  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
+}
+
+
 
 // FOR ASSIST SUBASSEMBLY
 void ASSIST_LINEAR_FORWARD(int duration) {
