@@ -50,6 +50,8 @@ const int STEPTIME = 1000; // in microseconds; controls the speed of the linear 
 
 //
 
-
-
-
+uint64_t loop1Time100Hz = 0;
+long ASSIST_LINEAR_ENCODER_POSITION = 0;
+long ASSIST_ROTATION_ENCODER_POSITION = 0;
+long CATHETER_BENDING_ENCODER_POSITION = 0;
+long CATHETER_ROTATION_ENCODER_POSITION = 0;

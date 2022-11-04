@@ -76,30 +76,59 @@ void setup() {
     //
   //
 
-while(Serial.read() >= 0) ;
 
+  //ASSIST_ROTATING_CW(1000);
 
   Serial.println("Check 3");
-  ACTUATOR_FORWARD(1000);
-  ACTUATOR_BACKWARD(1000);
+  //delay(2000);
+
+  //CATHETER_ROTATING_CW(200);
+  
+  //ACTUATOR_FORWARD(1000);
+  //ACTUATOR_BACKWARD(1000);
+
   //delay(2000); 
   //Serial.println("Check 4");
+  //ASSIST_ROTATING_CW(1000);
+  //delay(1000);
   //ASSIST_ROTATING_CCW(1000);
-  /*delay(1000);
-  ASSIST_ROTATING_CCW(1000);
+
+
+  //delay(1000);
+  /*ASSIST_LINEAR_FORWARD(1000);
+  delay(1000);
+  ASSIST_LINEAR_BACKWARD(1000);
   delay(1000);
   ASSIST_LINEAR_FORWARD(1000);
   delay(1000);
   ASSIST_LINEAR_BACKWARD(1000);
   delay(1000);
-  CATHETER_BENDING_CCW(1000);
+  ASSIST_LINEAR_FORWARD(1000);
   delay(1000);
-  CATHETER_BENDING_CW(1000);*/
-  
-  Serial.println("Movement Example Complete.");
-  //delay(2000);
-  //CATHETER_BENDING_CCW(500);
+  ASSIST_LINEAR_BACKWARD(1000);
+  delay(1000);
+  ASSIST_LINEAR_FORWARD(1000);
+  delay(1000);
+  ASSIST_LINEAR_BACKWARD(1000);
+  delay(1000);
+  ASSIST_LINEAR_FORWARD(1000);
+  delay(1000);
+  ASSIST_LINEAR_BACKWARD(1000);
 
+
+  //delay(1000);
+  //CATHETER_BENDING_CCW(1000);
+  //delay(1000);
+  //CATHETER_BENDING_CW(1000);
+  
+  //delay(1000);
+  //CATHETER_ROTATING_CW(1000);
+  //delay(1000);
+  //CATHETER_ROTATING_CCW(1000);
+  
+  //
+  Serial.println("Movement Example Complete.");
+  
 
   
   

@@ -31,15 +31,24 @@ void read_encoder(){
       p4 = np4;
       }
 
+    
+long ASSIST_LINEAR_ENCODER_POSITION = p1;
+long ASSIST_ROTATION_ENCODER_POSITION = p3;
+long CATHETER_BENDING_ENCODER_POSITION = p2;
+long CATHETER_ROTATION_ENCODER_POSITION = p4;
 
-
-    Serial.print(p1);
-    Serial.print(" ");
-    Serial.print(p2);
-    Serial.print(" ");
-    Serial.print(p3);
-    Serial.print(" ");
-    Serial.println(p4);
+  /*
+    Serial.print("Assist Assembly  ");
+    Serial.print("Linear: ");
+    Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
+    Serial.print("\t Rotation: ");
+    Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
+    Serial.print("\t\tCatheter Assembly  ");
+    Serial.print("Bending: ");
+    Serial.print(CATHETER_BENDING_ENCODER_POSITION);
+    Serial.print(" Rotation: ");
+    Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
+    */
 }
 
 // FOR LINEAR ACTUATOR
@@ -93,14 +102,22 @@ void CATHETER_BENDING_CCW(int duration){
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
 }
 void CATHETER_ROTATING_CW(int duration) {
+  
+  //int target = ASSIST_ROTATION_ENCODER_POSITION + duration;
+
   analogWrite(CATHETER_ROTATION_PWM_PIN,255);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW); 
+  
+  //if (ASSIST_ROTATION_ENCODER_POSITION != target){
+    
+  
   delay(duration);
   analogWrite(CATHETER_ROTATION_PWM_PIN,0);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
-} 
+  }
+
 void CATHETER_ROTATING_CCW(int duration) {
   analogWrite(CATHETER_ROTATION_PWM_PIN,255);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
