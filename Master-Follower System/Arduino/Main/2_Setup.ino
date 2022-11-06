@@ -2,7 +2,8 @@
 void setup() {
 
   // Clear out buffer.
-  while(Serial.read() >= 0) ;
+  //while(Serial.read() >= 0) ;
+  
 
 
   // Code from Linear Actuator
@@ -10,7 +11,7 @@ void setup() {
     pinMode(DIRPIN, OUTPUT);
     pinMode(ENAPIN, OUTPUT); 
 
-    Serial.begin(38400);
+    Serial.begin(9600);
     Serial.println("Getting Started ");
     //  Serial.setTimeout(2);
 
@@ -59,7 +60,7 @@ void setup() {
       digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);   // off state
       digitalWrite(ASSIST_LINEAR_DIR_B_PIN, LOW);   // off state
     //
-    Serial.println("Check 2");
+    
 
     // ROTATION PINS SETUP
       //pinMode(ASSIST_ROTATION_POSITIVE_PIN, OUTPUT);
@@ -78,7 +79,7 @@ void setup() {
 
 
   //ASSIST_ROTATING_CW(1000);
-
+  Serial.println("Check 2");
   Serial.println("Check 3");
   //delay(2000);
 
@@ -126,7 +127,7 @@ void setup() {
   //delay(1000);
   //CATHETER_ROTATING_CCW(1000);
   
-  //
+  //*/
   Serial.println("Movement Example Complete.");
   
 
