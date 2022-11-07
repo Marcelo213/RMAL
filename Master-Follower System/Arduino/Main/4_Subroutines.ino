@@ -37,7 +37,7 @@ long ASSIST_ROTATION_ENCODER_POSITION = p3;
 long CATHETER_BENDING_ENCODER_POSITION = p2;
 long CATHETER_ROTATION_ENCODER_POSITION = p4;
 
-  /*
+  
     Serial.print("Assist Assembly  ");
     Serial.print("Linear: ");
     Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
@@ -48,7 +48,7 @@ long CATHETER_ROTATION_ENCODER_POSITION = p4;
     Serial.print(CATHETER_BENDING_ENCODER_POSITION);
     Serial.print(" Rotation: ");
     Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
-    */
+    
 }
 
 // FOR LINEAR ACTUATOR
@@ -103,22 +103,29 @@ void CATHETER_BENDING_CCW(int duration){
 }
 void CATHETER_ROTATING_CW(int duration) {
   
-  //int target = ASSIST_ROTATION_ENCODER_POSITION + duration;
+  int target = CATHETER_ROTATION_ENCODER_POSITION + duration; // Sign changes for CW or CCW
+  Serial.print("The target position is: ");
+  Serial.println(target);
 
-  analogWrite(CATHETER_ROTATION_PWM_PIN,255);
-  digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
-  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW); 
-  
-  //if (ASSIST_ROTATION_ENCODER_POSITION != target){
-    
-  
-  delay(duration);
-  analogWrite(CATHETER_ROTATION_PWM_PIN,0);
-  digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
-  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
-  }
+  if (CATHETER_ROTATION_ENCODER_POSITION != target){
+    analogWrite(CATHETER_ROTATION_PWM_PIN,255);
+    digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
+    digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
+    Serial.print("The current position is");
+    Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
+    }
+  //delay(duration);
+  else if (abs(target-CATHETER_ROTATION_ENCODER_POSITION) < 5 ){
+    analogWrite(CATHETER_ROTATION_PWM_PIN,0);
+    digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
+    digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
 
+}
+
+}
 void CATHETER_ROTATING_CCW(int duration) {
+  int target = CATHETER_ROTATION_ENCODER_POSITION - duration;
+  Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
   analogWrite(CATHETER_ROTATION_PWM_PIN,255);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, HIGH); 

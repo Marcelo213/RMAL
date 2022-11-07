@@ -12,6 +12,7 @@ void setup() {
     pinMode(ENAPIN, OUTPUT); 
 
     Serial.begin(9600);
+    //elay(3000);
     Serial.println("Getting Started ");
     //  Serial.setTimeout(2);
 
