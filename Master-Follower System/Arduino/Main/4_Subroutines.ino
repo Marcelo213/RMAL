@@ -52,81 +52,51 @@ long CATHETER_ROTATION_ENCODER_POSITION = p4;
 }
 
 // FOR LINEAR ACTUATOR
-  void ACTUATOR_FORWARD(int steps){
-    int i;
-    digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
-    digitalWrite(DIRPIN,HIGH);//SET DIRECTION 
-    for(i=0;i<steps;i++){
+  void ACTUATOR_MOVE(int steps){
+      if (steps < 0){
+      digitalWrite(DIRPIN,HIGH);//SET DIRECTION 
+      } else {
+      digitalWrite(DIRPIN,LOW);//SET DIRECTION 
+      }    
+     int i;
+      digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
+      for(i=0;i<steps;i++){
       digitalWrite(STEPPIN,HIGH);
       delayMicroseconds(STEPTIME);
       digitalWrite(STEPPIN,LOW);
       delayMicroseconds(STEPTIME);
-    }
-    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
-
-
-     
-      
+      }
+    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER  
   }
-  void ACTUATOR_BACKWARD(int steps){
-    int i;
-    digitalWrite(ENAPIN,HIGH);//ENABLE IS ACTIVE HIGH
-    digitalWrite(DIRPIN,LOW);//SET DIRECTION 
-    for(i=0;i<steps;i++){
-      digitalWrite(STEPPIN,HIGH);
-      delayMicroseconds(STEPTIME);
-      digitalWrite(STEPPIN,LOW);
-      delayMicroseconds(STEPTIME);
-    }
-    digitalWrite(ENAPIN,LOW);//DISABLE STEPPER
-  }
-
 
 // FOR CATHETER ASSEMBLY
-void CATHETER_BENDING_CW(int duration){
-    analogWrite(CATHERER_BENDING_PWM_PIN,255);
+void CATHETER_BENDING_MOVE(int duration){
+  if (duration < 0){
     digitalWrite(CATHETER_BENDING_DIR_A_PIN, HIGH);
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW); 
-    delay(duration);
-    analogWrite(CATHERER_BENDING_PWM_PIN,0);
-    digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
-    digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
-}
-void CATHETER_BENDING_CCW(int duration){
-    analogWrite(CATHERER_BENDING_PWM_PIN,255);
+  } else {
     digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, HIGH); 
+  }
+    analogWrite(CATHERER_BENDING_PWM_PIN,255);
     delay(duration);
     analogWrite(CATHERER_BENDING_PWM_PIN,0);
     digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
 }
-void CATHETER_ROTATING_CW(int duration) {
-  
-  int target = CATHETER_ROTATION_ENCODER_POSITION + duration; // Sign changes for CW or CCW
-  Serial.print("The target position is: ");
-  Serial.println(target);
 
-  if (CATHETER_ROTATION_ENCODER_POSITION != target){
-    analogWrite(CATHETER_ROTATION_PWM_PIN,255);
-    digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
-    digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
-    Serial.print("The current position is");
-    Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
-    }
-  //delay(duration);
-  else if (abs(target-CATHETER_ROTATION_ENCODER_POSITION) < 5 ){
-    analogWrite(CATHETER_ROTATION_PWM_PIN,0);
+void CATHETER_ROTATION_MOVE(int duration){
+  Serial.println(duration);
+  if (duration < 0){
     digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
-    digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
+  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, HIGH); 
+  } else {
+    digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
+  digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW); 
+  }
 
-}
 
-}
-void CATHETER_ROTATING_CCW(int duration) {
-  int target = CATHETER_ROTATION_ENCODER_POSITION - duration;
-  Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
-  analogWrite(CATHETER_ROTATION_PWM_PIN,255);
+   analogWrite(CATHETER_ROTATION_PWM_PIN,255);
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, HIGH); 
   delay(duration);
@@ -135,45 +105,37 @@ void CATHETER_ROTATING_CCW(int duration) {
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);
 }
 
-
-
 // FOR ASSIST SUBASSEMBLY
-void ASSIST_LINEAR_FORWARD(int duration) {
-    analogWrite(ASSIST_LINEAR_PWM_PIN,255);
+void ASSIST_LINEAR_MOVE(int duration) {
+  Serial.println(duration);
+  if (duration < 0){
     digitalWrite(ASSIST_LINEAR_DIR_A_PIN, HIGH);
     digitalWrite(ASSIST_LINEAR_DIR_B_PIN, LOW); 
+  } else {
+    digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);
+    digitalWrite(ASSIST_LINEAR_DIR_B_PIN, HIGH);
+
+  }
+    duration = abs(duration);
+    Serial.println(duration);
+    analogWrite(ASSIST_LINEAR_PWM_PIN,255);
     delay(duration);
     analogWrite(ASSIST_LINEAR_PWM_PIN,0);
     digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);
     digitalWrite(ASSIST_LINEAR_DIR_B_PIN, LOW);
 }
 
-void ASSIST_LINEAR_BACKWARD(int duration) {
-  analogWrite(ASSIST_LINEAR_PWM_PIN,255);
-  digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);
-  digitalWrite(ASSIST_LINEAR_DIR_B_PIN, HIGH); 
-  delay(duration);
-  analogWrite(ASSIST_LINEAR_PWM_PIN,0);
-  digitalWrite(ASSIST_LINEAR_DIR_A_PIN, LOW);
-  digitalWrite(ASSIST_LINEAR_DIR_B_PIN, LOW);
-}
-
-void ASSIST_ROTATING_CW(int duration) {
+void ASSIST_ROTATION_MOVE(int duration) {
+  if (duration < 0){
+    digitalWrite(ASSIST_ROTATION_DIR_A_PIN, HIGH);
+  digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW);  
+  } else {
+    digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
+  digitalWrite(ASSIST_ROTATION_DIR_B_PIN, HIGH); 
+  }
   analogWrite(ASSIST_ROTATION_PWM_PIN,255);
-  digitalWrite(ASSIST_ROTATION_DIR_A_PIN, HIGH);
-  digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW); 
   delay(duration);
   analogWrite(ASSIST_ROTATION_PWM_PIN,0);
   digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW);
-}
-  
-void ASSIST_ROTATING_CCW(int duration) {
-  analogWrite(ASSIST_ROTATION_PWM_PIN, 255);
-  digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
-  digitalWrite(ASSIST_ROTATION_DIR_B_PIN, HIGH); 
-  delay(duration);
-  analogWrite(ASSIST_ROTATION_PWM_PIN,0);
-  digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
-  digitalWrite(ASSIST_ROTATION_DIR_B_PIN, LOW); 
 }
