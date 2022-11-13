@@ -2,7 +2,7 @@ void setup() {
   Serial.begin(9600);
   Wire.begin();
   
-  pinMode(SWITCH_PIN, INPUT_PULLUP);
+  //pinMode(SWITCH_PIN, INPUT_PULLUP);
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(SERVO_FREQ);  // Analog servos run at ~50 Hz updates

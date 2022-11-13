@@ -1,28 +1,12 @@
-void moveMotor(){
+void move_Motor(){
   
-  Serial.print("Current Motor: ");
-  Serial.print(motor_select);
   
-  Serial.print("\tCurrent Speed (Duty Cycle): ");
-  Serial.print(motor_speed);
   
-  /*int potValue = analogRead(potPin);  
-  Serial.print("\tADC analog value = ");
-  Serial.print(potValue);
-  */
-  /*pwmValue = map(potValue, 0, 1023, 900, 2000);   // scale it to use it with the servo library (value between 0 and 180)
-  Serial.print("\tThe PWM value = ");
-  Serial.println(pwmValue);
-  */
-  pwmValue = map(motor_speed, 0, 100, 900, 2000);   // scale it to use it with the servo library (value between 0 and 180)
-  Serial.print("\tThe PWM value = ");
-  Serial.println(pwmValue);
 
-  //motor_1.write(pwmValue);    // Send the signal to the ESC
-  //pwm.setPWM(servonum, 2100, pwmValue);
-  //pwm.writeMicroseconds(servonum, pwmValue);
+  pwmValue = map(pin_value, 0, 100, 900, 2000);   // scale it to use it with the servo library (value between 0 and 180)
+  // The pin_value must be within 0-100 as a duty value percent; 900-2000 is the duration the wave is on in microseconds per 50 Hz
 
-  pwm.writeMicroseconds(motor_select, pwmValue);
+  pwm.writeMicroseconds(pin_select, pwmValue);
 
 
 }

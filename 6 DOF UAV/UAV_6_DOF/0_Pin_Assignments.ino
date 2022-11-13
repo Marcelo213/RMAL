@@ -6,7 +6,7 @@
 #define SDA_PIN 27
 #define SCL_PIN 32
 
-#define MOTOR_1_PWM 3
-#define potPin A2
+//#define MOTOR_1_PWM 3
+//#define potPin A2
 
-#define SWITCH_PIN 8
+//#define SWITCH_PIN 8
