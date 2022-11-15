@@ -11,7 +11,7 @@ void setup() {
     pinMode(DIRPIN, OUTPUT);
     pinMode(ENAPIN, OUTPUT); 
 
-    Serial.begin(9600);
+    Serial.begin(115200);
     //elay(3000);
     Serial.println("Getting Started ");
     //  Serial.setTimeout(2);
@@ -80,8 +80,8 @@ void setup() {
 
 
   //ASSIST_ROTATING_CW(1000);
-  Serial.println("Check 2");
-  Serial.println("Check 3");
+ // Serial.println("Check 2");
+  //Serial.println("Check 3");
   //delay(2000);
 
   //CATHETER_ROTATING_CW(200);
@@ -129,8 +129,8 @@ void setup() {
   //CATHETER_ROTATING_CCW(1000);
   
   //*/
-  Serial.println("Movement Example Complete.");
-  
+  //Serial.println("Movement Example Complete.");
+  Serial.println("Ready.");
 
   
   
