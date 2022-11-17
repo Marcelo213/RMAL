@@ -1,17 +1,15 @@
 
 void setup() {
 
-  // Clear out buffer.
-  //while(Serial.read() >= 0) ;
-  
-
 
   // Code from Linear Actuator
     pinMode(STEPPIN, OUTPUT);
     pinMode(DIRPIN, OUTPUT);
     pinMode(ENAPIN, OUTPUT); 
 
-    Serial.begin(115200);
+    Serial.begin(57600);
+    Serial.end();
+    Serial.begin(57600);
     //elay(3000);
     Serial.println("Getting Started ");
     //  Serial.setTimeout(2);
@@ -78,58 +76,6 @@ void setup() {
     //
   //
 
-
-  //ASSIST_ROTATING_CW(1000);
- // Serial.println("Check 2");
-  //Serial.println("Check 3");
-  //delay(2000);
-
-  //CATHETER_ROTATING_CW(200);
-  
-  //ACTUATOR_FORWARD(1000);
-  //ACTUATOR_BACKWARD(1000);
-
-  //delay(2000); 
-  //Serial.println("Check 4");
-  //ASSIST_ROTATING_CW(1000);
-  //delay(1000);
-  //ASSIST_ROTATING_CCW(1000);
-
-
-  //delay(1000);
-  /*ASSIST_LINEAR_FORWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_BACKWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_FORWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_BACKWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_FORWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_BACKWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_FORWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_BACKWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_FORWARD(1000);
-  delay(1000);
-  ASSIST_LINEAR_BACKWARD(1000);
-
-
-  //delay(1000);
-  //CATHETER_BENDING_CCW(1000);
-  //delay(1000);
-  //CATHETER_BENDING_CW(1000);
-  
-  //delay(1000);
-  //CATHETER_ROTATING_CW(1000);
-  //delay(1000);
-  //CATHETER_ROTATING_CCW(1000);
-  
-  //*/
-  //Serial.println("Movement Example Complete.");
   Serial.println("Ready.");
 
   
