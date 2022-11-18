@@ -1,8 +1,11 @@
 void loop(){
 
-  //read_encoder();
+  read_encoder();
 
   //  Format is A_B_C_D_          _ means duration in +/- direction
+
+
+  // 
 
   if (Serial.available() > 0){
    
@@ -18,13 +21,7 @@ void loop(){
     // Copy it over 
     str.toCharArray(char_array, str_len);
 
-    // character arrays for the different motor speeds 
-    /*char motor_1_speed[];
-    char motor_2_speed[];
-    char motor_3_speed[];
-    char motor_4_speed[];
-    char motor_5_speed[];*/
-
+  
     
     /*  NOTE: The motors are named as follows:
       Motor 1 = Assist Linear Motor
@@ -70,7 +67,8 @@ void loop(){
         Serial.println(motor_5_speed_int);
         Serial.println(" ");
 
-        ASSIST_LINEAR_MOVE(motor_1_speed_int);
+        //ASSIST_LINEAR_MOVE(motor_1_speed_int);
+        ASSIST_LINEAR_MOVE_THETA(motor_1_speed_int);
         ASSIST_ROTATION_MOVE(motor_2_speed_int);
         CATHETER_BENDING_MOVE(motor_3_speed_int);
         CATHETER_ROTATION_MOVE(motor_4_speed_int);

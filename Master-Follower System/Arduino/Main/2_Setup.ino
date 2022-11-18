@@ -7,9 +7,8 @@ void setup() {
     pinMode(DIRPIN, OUTPUT);
     pinMode(ENAPIN, OUTPUT); 
 
-    Serial.begin(57600);
-    Serial.end();
-    Serial.begin(57600);
+    
+    Serial.begin(19200);
     //elay(3000);
     Serial.println("Getting Started ");
     //  Serial.setTimeout(2);
