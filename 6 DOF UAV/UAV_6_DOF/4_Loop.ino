@@ -51,7 +51,7 @@ void loop() {
   Serial.print("\tCurrent Speed (Duty Cycle) or Angle: ");
   Serial.println(pin_value);
 
-  
+  send_command();
 
   get_Angle();
  // moveMotor();

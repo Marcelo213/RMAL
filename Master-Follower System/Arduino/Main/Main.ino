@@ -10,7 +10,7 @@
 // Notes:
 // The design of the Follower is split into 2 subassemblies: the Catheter Assembly and the Assist Assembly.
 // The Catheter Assembly controls the linear, bending, and rotational movement of the catheter body, while the Assist Assembly
-// controls the end effector' linear and rotational movement.
+// controls the end effector's linear and rotational movement.
 
 // This sketch has been partitioned into separate files for easier editing:
 /* 

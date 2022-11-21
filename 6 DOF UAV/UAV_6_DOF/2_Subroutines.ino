@@ -1,57 +1,3 @@
-
-
-// -------- Processes the counts for the encoders for all motors except the linear actuator
-void read_encoder(){
-  // READING ENCODERS: 
-    // - LINEAR TRANSLATION
-    long np1 = ASSIST_LINEAR_ENCODER.read();
-    if (np1 != np1O) {
-      np1O = np1;
-      p1 = np1;
-      }
-
-    // - BENDING
-    long np2 = CATHETER_BENDING_ENCODER.read();
-    if (np2 != np2O) {
-      np2O = np2;
-      p2 = np2;
-      }
-
-    // - ROTATION
-      long np3 = ASSIST_ROTATION_ENCODER.read();
-      if (np3 != np3O) {
-      np3O = np3;
-      p3 = np3;
-      }
-
-      // - ROTATION
-      long np4 = CATHETER_ROTATION_ENCODER.read();
-      if (np4 != np4O) {
-      np4O = np4;
-      p4 = np4;
-      }
-
-    
-  ASSIST_LINEAR_ENCODER_POSITION = p1;
-  ASSIST_ROTATION_ENCODER_POSITION = p3;
-  CATHETER_BENDING_ENCODER_POSITION = p2;
-  CATHETER_ROTATION_ENCODER_POSITION = p4;
-
-  
-    
-    Serial.print("A: ");
-    Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
-    Serial.print("\tB: ");
-    Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
-    Serial.print("\tC  ");
-    Serial.print(CATHETER_BENDING_ENCODER_POSITION);
-    Serial.print("\tD ");
-    Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
-    
-}
-
-// ------ For communication with the serial port to send commands to motors simultaneously
-//                   Format is A_B_C_D_S         Place the direction in means duration in +/- direction
 void send_command(){
 
    
@@ -134,6 +80,3 @@ void send_command(){
 
 
 }
-
-
-
