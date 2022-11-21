@@ -58,3 +58,17 @@ long CATHETER_ROTATION_ENCODER_POSITION = 0;
 
 int motor_select = 0;
 int motor_speed = 0;
+
+
+
+//int setPoint = 0;  
+double kp = 50;
+double ki = 50;
+double kd = 50;
+ 
+unsigned long currentTime, previousTime;
+double elapsedTime;
+double error;
+double lastError;
+double input, output, Setpoint;
+double cumError, rateError;

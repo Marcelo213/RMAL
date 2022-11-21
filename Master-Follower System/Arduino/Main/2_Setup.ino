@@ -65,9 +65,9 @@ void setup() {
   //
 
   Serial.println("Ready.");
-
+ 
   
-  
+  //setPoint = 0;                          //set point at zero degrees
 
 }
 

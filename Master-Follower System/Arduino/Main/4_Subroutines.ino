@@ -98,6 +98,7 @@ void send_command(){
 
         int motor_1_speed_int = motor_1_speed_string.toInt();
         int motor_2_speed_int = motor_2_speed_string.toInt();
+        Setpoint = motor_2_speed_int;
         int motor_3_speed_int = motor_3_speed_string.toInt();
         int motor_4_speed_int = motor_4_speed_string.toInt();
         int motor_5_speed_int = motor_5_speed_string.toInt();
@@ -114,11 +115,11 @@ void send_command(){
         Serial.println(" ");
 
         //ASSIST_LINEAR_MOVE(motor_1_speed_int);
-        ASSIST_LINEAR_MOVE_THETA(motor_1_speed_int);
-        ASSIST_ROTATION_MOVE(motor_2_speed_int);
-        CATHETER_BENDING_MOVE(motor_3_speed_int);
-        CATHETER_ROTATION_MOVE(motor_4_speed_int);
-        ACTUATOR_MOVE(motor_5_speed_int);
+        //ASSIST_LINEAR_MOVE_THETA(motor_1_speed_int);
+        //ASSIST_ROTATION_MOVE(motor_2_speed_int);
+        //CATHETER_BENDING_MOVE(motor_3_speed_int);
+        //CATHETER_ROTATION_MOVE(motor_4_speed_int);
+        //ACTUATOR_MOVE(motor_5_speed_int);
 
 
         motor_1_speed_int = 0;
