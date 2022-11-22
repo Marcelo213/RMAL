@@ -75,8 +75,6 @@ void send_command(){
       Motor 3 = Catheter Bending Motor
       Motor 4 = Catheter Rotation Motor
       Motor 5 = Linear Actuator
-
-
     */
 
 
@@ -96,37 +94,18 @@ void send_command(){
         String motor_4_speed_string = str.substring(str.indexOf('D') + 1, str.indexOf('E'));
         String motor_5_speed_string = str.substring(str.indexOf('E') + 1, str.indexOf('S'));
 
-        int motor_1_speed_int = motor_1_speed_string.toInt();
-        int motor_2_speed_int = motor_2_speed_string.toInt();
-        Setpoint = motor_2_speed_int;
-        int motor_3_speed_int = motor_3_speed_string.toInt();
-        int motor_4_speed_int = motor_4_speed_string.toInt();
-        int motor_5_speed_int = motor_5_speed_string.toInt();
+        Motor_1_Theta_Rad = motor_1_speed_string.toDouble();
+        Motor_2_Theta_Rad = motor_2_speed_string.toDouble();
+        Motor_3_Theta_Rad = motor_3_speed_string.toDouble();
+        Motor_4_Theta_Rad = motor_4_speed_string.toDouble();
+        Motor_5_Theta_Rad = motor_5_speed_string.toDouble();
+        
       
 
-        // Test Command: A1B2C3D4E5S
+        
 
+     
 
-        Serial.println(motor_1_speed_int);
-        Serial.println(motor_2_speed_int);
-        Serial.println(motor_3_speed_int);
-        Serial.println(motor_4_speed_int);
-        Serial.println(motor_5_speed_int);
-        Serial.println(" ");
-
-        //ASSIST_LINEAR_MOVE(motor_1_speed_int);
-        //ASSIST_LINEAR_MOVE_THETA(motor_1_speed_int);
-        //ASSIST_ROTATION_MOVE(motor_2_speed_int);
-        //CATHETER_BENDING_MOVE(motor_3_speed_int);
-        //CATHETER_ROTATION_MOVE(motor_4_speed_int);
-        //ACTUATOR_MOVE(motor_5_speed_int);
-
-
-        motor_1_speed_int = 0;
-        motor_2_speed_int = 0;
-        motor_3_speed_int = 0;
-        motor_4_speed_int = 0;
-        motor_5_speed_int = 0;
       
 
         }
