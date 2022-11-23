@@ -37,16 +37,16 @@ void read_encoder(){
   CATHETER_BENDING_ENCODER_POSITION = p2;
   CATHETER_ROTATION_ENCODER_POSITION = p4;
 
-  
     
-    Serial.print("A: ");
-    Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
-    Serial.print("\tB: ");
-    Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
-    Serial.print("\tC  ");
+    
+    //Serial.print("A: ");
+    //Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
+    //Serial.print("\tB: ");
+    //Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
+    /*Serial.print("\tC  ");
     Serial.print(CATHETER_BENDING_ENCODER_POSITION);
     Serial.print("\tD ");
-    Serial.println(CATHETER_ROTATION_ENCODER_POSITION);
+    Serial.println(CATHETER_ROTATION_ENCODER_POSITION);*/
     
 }
 
@@ -88,17 +88,16 @@ void send_command(){
         if (start_char == 'A') {
         Serial.println("Made it!");
 
-        String motor_1_speed_string = str.substring(str.indexOf('A') + 1, str.indexOf('B'));
-        String motor_2_speed_string = str.substring(str.indexOf('B') + 1, str.indexOf('C'));
-        String motor_3_speed_string = str.substring(str.indexOf('C') + 1, str.indexOf('D'));
-        String motor_4_speed_string = str.substring(str.indexOf('D') + 1, str.indexOf('E'));
-        String motor_5_speed_string = str.substring(str.indexOf('E') + 1, str.indexOf('S'));
+        String linear_position_string = str.substring(str.indexOf('A') + 1, str.indexOf('B'));
+        String theta_position_string = str.substring(str.indexOf('B') + 1, str.indexOf('C'));
+        String phi_position_string = str.substring(str.indexOf('C') + 1, str.indexOf('S'));
+        
+        
 
-        Motor_1_Theta_Rad = motor_1_speed_string.toDouble();
-        Motor_2_Theta_Rad = motor_2_speed_string.toDouble();
-        Motor_3_Theta_Rad = motor_3_speed_string.toDouble();
-        Motor_4_Theta_Rad = motor_4_speed_string.toDouble();
-        Motor_5_Theta_Rad = motor_5_speed_string.toDouble();
+        Target_Pose.x = linear_position_string.toDouble();
+        Target_Pose.theta = theta_position_string.toDouble();
+        Target_Pose.phi = phi_position_string.toDouble();
+      
         
       
 
@@ -115,5 +114,64 @@ void send_command(){
 
 }
 
+
+
+
+
+/*
+  Motor 1: 350 rating
+  Motor 2: 350 rating
+  Motor 3: 1000 rating
+  Motor 4: 1000 rating
+    
+  Encoder value calculation
+  Encoder pulse per revolution = 28
+  so one rotation of output shaft = Encoder pulse per revolution X Gear Ratio
+  So pulse per one rotation = 28 X 100
+  = 2800 Pulse per revolution
+
+
+  Note: By testing (not recorded), all the N20 motors used have a 28 encoder pulse count per revolution
+
+  Pulse Per Revolution Values:
+  Motor 1: 28 * 350 = 9800
+  Motor 2: 28 * 350 = 9800
+  Motor 3: 28 * 1000 = 28000
+  Motor 4: 28 * 1000 = 28000
+  Motor 5: -----> Is a stepper motor. TBD
+
+
+
+  Note:            2*PI / 9800 = Radians per pulse
+
+  PID Information Link: https://www.teachmemicro.com/arduino-pid-control-tutorial/#:~:text=To%20implement%20a%20PID%20controller,value%20and%20set%20point%20value.&text=1-,output%20%3D%20Kp%20*%20error%20%2B%20Ki%20*%20cumError%20%2B%20Kd%20*,Kd%20are%20the%20predetermined%20constants.
+*/
+
+// Returns the encoder count in rads
+double get_rad_350(int encoder_count){
+  double rad = ((2*PI) / 9800) * encoder_count;
+
+  return rad;
+
+}
+
+
+double get_rad_1000(int encoder_count){
+  double RAD_PER_ENCODER_COUNT_1000_RATING = 2*PI / 28000;
+  double rad = RAD_PER_ENCODER_COUNT_1000_RATING * encoder_count;
+
+  return rad;
+}
+
+
+
+// Converts theta change in rad to lienar change in mm
+// This is done by comparing the change in angular position of wheel to angular position of motor
+
+double get_linear_from_rad_350 (double rad){
+
+
+
+}
 
 

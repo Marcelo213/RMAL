@@ -55,18 +55,25 @@ double Motor_4_Theta_Rad = 0;
 double Motor_5_Theta_Rad = 0;
 
 
-double PI = 3.1415926535897932384626;
+//double PI = 3.1415926535897932384626;
 
-int P_constant = 1; 
 int ENCODER_RESOLUTION = 100;
 
-
-
 struct pos {
-  double linear_position_1;
-  double theta2;
-  double theta3;
-  double theta4;
-  double linear_position_2;
+  double x;                           // Linear Position
+  double theta;                       // Rotation Position
+  double phi;                         // Bending position
 };
 typedef struct pos Pose;
+/*
+  Note that the following poses are organized as follows:
+
+  Motor 1 = Assist Linear Motor
+  Motor 2 = Assist Rotation Motor
+  Motor 3 = Catheter Bending Motor
+  Motor 4 = Catheter Rotation Motor
+  Motor 5 = Linear Actuator
+    
+*/
+Pose Current_Pose = {0, 0, 0};
+Pose Target_Pose = {0, 0, 0};
