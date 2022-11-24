@@ -100,3 +100,13 @@ Pose Target_Pose = {0, 0, 0};
   double lastError_2;
   //double input, output, setPoint;
   double cumError_2, rateError_2;
+
+
+  double error_temp;
+  double lastError_temp;
+  //double input, output, setPoint;
+  double cumError_temp, rateError_temp;
+
+
+  int motor_select;
+  double rad_increment;

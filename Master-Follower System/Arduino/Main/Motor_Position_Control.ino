@@ -5,7 +5,7 @@
 
 
 
- void PID_Controller(){
+ void PID_Position_Controller(){
 
   /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     
@@ -45,13 +45,13 @@
   digitalWrite(ASSIST_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(ASSIST_ROTATION_DIR_B_PIN, HIGH); 
    
-    }
+  }
 
 
   PID_output = abs(PID_output);
   PID_output = constrain(PID_output, 0, PI);               // Resolution is being improved by increasing the constrain limits
   PID_output = map(PID_output, 0, PI, 0, 255);
-    analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output);
+  analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output);
 
 
 
@@ -66,27 +66,21 @@
   previousTime = currentTime;                        //remember current time
 
 
-  
+  /*  ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+  Same PID as above but targeted for catheter assembly. Note that they use different PID coefficients
+
+  */// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
   double PID_output_2 = kp_2*THETA_ERROR_2 + ki_2*cumError_2 + kd_2*rateError_2;                //PID output; error in rad    
   
   if (PID_output_2 < 0){
-  
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, LOW);  
-
   } else {
-  
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, LOW);
   digitalWrite(CATHETER_ROTATION_DIR_B_PIN, HIGH);  
-    }
-
-
-
-
-
-
-
+  }
 
   PID_output_2 = abs(PID_output_2);
   PID_output_2 = constrain(PID_output_2, 0, PI);               // Resolution is being improved by increasing the constrain limits
@@ -98,7 +92,6 @@
 
   Serial.print("\tTHETA_2 ERROR in rads: ");
   Serial.print(THETA_ERROR_2);
-
   
   Serial.print("\tCurrent 'PID_output' in PWM ");
   Serial.println(PID_output);

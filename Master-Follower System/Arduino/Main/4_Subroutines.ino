@@ -54,62 +54,53 @@ void read_encoder(){
 //                   Format is A_B_C_D_S         Place the direction in means duration in +/- direction
 void send_command(){
 
-   
-      // Define 
-    String str = Serial.readString();
-    
-    // Length (with one extra character for the null terminator)
-    int str_len = str.length() + 1; 
+  
+    // Define 
+  String str = Serial.readString();
+  
+  // Length (with one extra character for the null terminator)
+  int str_len = str.length() + 1; 
 
-    // Prepare the character array (the buffer) 
-    char char_array[str_len];
+  // Prepare the character array (the buffer) 
+  char char_array[str_len];
 
-    // Copy it over 
-    str.toCharArray(char_array, str_len);
+  // Copy it over 
+  str.toCharArray(char_array, str_len);
+
 
   
-    
-    /*  NOTE: The motors are named as follows:
-      Motor 1 = Assist Linear Motor
-      Motor 2 = Assist Rotation Motor
-      Motor 3 = Catheter Bending Motor
-      Motor 4 = Catheter Rotation Motor
-      Motor 5 = Linear Actuator
-    */
+  /*  NOTE: The motors are named as follows:
+    Motor 1 = Assist Linear Motor
+    Motor 2 = Assist Rotation Motor
+    Motor 3 = Catheter Bending Motor
+    Motor 4 = Catheter Rotation Motor
+    Motor 5 = Linear Actuator
+  */
 
+  for(int i =0; i < str_len; i++ ) {
 
+    // Confirms if the serial message is a command
+    char start_char = char_array[i];
+    if (start_char == 'A') {
 
-    
-    
-    for(int i =0; i < str_len; i++ ) {
+    String linear_position_string = str.substring(str.indexOf('A') + 1, str.indexOf('B'));
+    String theta_position_string = str.substring(str.indexOf('B') + 1, str.indexOf('C'));
+    String phi_position_string = str.substring(str.indexOf('C') + 1, str.indexOf('S'));
 
-      // Confirms if the serial message is a command
-        char start_char = char_array[i];
-        if (start_char == 'A') {
-        Serial.println("Made it!");
+    Target_Pose.x = linear_position_string.toDouble();
+    Target_Pose.theta = theta_position_string.toDouble();
+    Target_Pose.phi = phi_position_string.toDouble();
 
-        String linear_position_string = str.substring(str.indexOf('A') + 1, str.indexOf('B'));
-        String theta_position_string = str.substring(str.indexOf('B') + 1, str.indexOf('C'));
-        String phi_position_string = str.substring(str.indexOf('C') + 1, str.indexOf('S'));
-        
-        
+    } else if (start_char == 'I'){
+    String motor_select_string = str.substring(str.indexOf('A') + 1, str.indexOf('B'));
+    String rad_increment_string = str.substring(str.indexOf('B') + 1, str.indexOf('C'));
 
-        Target_Pose.x = linear_position_string.toDouble();
-        Target_Pose.theta = theta_position_string.toDouble();
-        Target_Pose.phi = phi_position_string.toDouble();
+    motor_select = motor_select_string.toInt();
+    rad_increment = rad_increment_string.toDouble();
       
-        
-      
-
-        
-
-     
-
-      
-
-        }
     }
-    
+  }
+  
 
 
 }
