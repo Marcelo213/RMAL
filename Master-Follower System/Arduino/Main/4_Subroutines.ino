@@ -177,8 +177,15 @@ r1*theta1/r*2 = theta2
 
 */
 double get_rad_convert_ASSIST_ASSEMBLY(double rad_in){
-
+  // FOR ROTATION
   double rad = 14*rad_in/50;
+  return rad;
+}
+
+
+double get_rad_convert_CATHETER_ASSEMBLY(double rad_in){
+  // FOR ROTATION
+  double rad = 22*rad_in/66;
   return rad;
 }
 
