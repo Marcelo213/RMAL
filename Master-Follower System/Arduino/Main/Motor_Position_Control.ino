@@ -14,23 +14,9 @@
   */
   // ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
 
-  
-
 
   currentTime = millis();                //get current time
   elapsedTime = (double)(currentTime - previousTime); 
-
-
-
-
-
-  
-
-  
-
-
-
-
 
   // ------ Reads the current encoder data in rads
   Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_350( ASSIST_ROTATION_ENCODER.read())) ; 
@@ -66,8 +52,8 @@
 
 
   PID_output = abs(PID_output);
-  PID_output = constrain(PID_output, 0, 2*PI );
-  PID_output = map(PID_output, 0, 2*PI, 0, 255);
+  PID_output = constrain(PID_output, 0, PI );
+  PID_output = map(PID_output, 0, PI, 0, 255);
   analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output);
 
   // NEED P CONSTANT OF 50 IN CATH ASSEMVLY
