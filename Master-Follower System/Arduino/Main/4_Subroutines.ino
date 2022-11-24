@@ -165,11 +165,28 @@ double get_rad_1000(int encoder_count){
 
 
 
+
+/*
+where  is  s the length of the arc, r  is the radius, and  theta is the measure of the angle in radians.
+
+s = r*theta
+s1 = s2
+r1*theta1 = r2*theta*2
+r1*theta1/r*2 = theta2 
+14*theta1/50 = theta2
+
+*/
+double get_rad_convert_ASSIST_ASSEMBLY(double rad_in){
+
+  double rad = 14*rad_in/50;
+  return rad;
+}
+
+
 // Converts theta change in rad to lienar change in mm
 // This is done by comparing the change in angular position of wheel to angular position of motor
 
 double get_linear_from_rad_350 (double rad){
-
 
 
 }

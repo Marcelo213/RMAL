@@ -6,7 +6,7 @@ void loop(){
     loop1Time100Hz = millis(); //Update timer
     //P_Controller();
   }
-  P_Controller();
+  PID_Controller();
 
   //read_encoder();
   // ---------- The command is always being expected at the registered baud rate

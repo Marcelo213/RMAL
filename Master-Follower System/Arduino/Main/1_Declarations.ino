@@ -77,3 +77,15 @@ typedef struct pos Pose;
 */
 Pose Current_Pose = {0, 0, 0};
 Pose Target_Pose = {0, 0, 0};
+
+
+  double kp = 3;
+  double ki = 0;
+  double kd = 1;
+  
+  unsigned long currentTime, previousTime;
+  double elapsedTime;
+  double error;
+  double lastError;
+  double input, output, setPoint;
+  double cumError, rateError;
