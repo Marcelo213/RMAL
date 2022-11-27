@@ -50,7 +50,7 @@
 
   PID_output = abs(PID_output);
   PID_output = constrain(PID_output, 0, PI);               // Resolution is being improved by increasing the constrain limits
-  PID_output = map(PID_output, 0, PI, 0, 255);
+  PID_output = map(PID_output, 0, PI, 100, 255);
   analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output);
 
 
@@ -84,7 +84,7 @@
 
   PID_output_2 = abs(PID_output_2);
   PID_output_2 = constrain(PID_output_2, 0, PI);               // Resolution is being improved by increasing the constrain limits
-  PID_output_2 = map(PID_output_2, 0, PI, 0, 255);
+  PID_output_2 = map(PID_output_2, 0, PI, 100, 255);
   analogWrite(CATHETER_ROTATION_PWM_PIN, PID_output_2);
 
   Serial.print("\tTHETA_1 ERROR in rads: ");
