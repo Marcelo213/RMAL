@@ -103,7 +103,7 @@ void PID_Position_Controller_Individual(int motor, double rad_increment){
 
   PID_output_temp = abs(PID_output_temp);
   PID_output_temp = constrain(PID_output_temp, 0, PI);               // Resolution is being improved by increasing the constrain limits
-  PID_output_temp = map(PID_output_temp, 0, PI, 0, 255);
+  PID_output_temp = map(PID_output_temp, 0, PI, 100, 255);
   analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output_temp);
 
 }
