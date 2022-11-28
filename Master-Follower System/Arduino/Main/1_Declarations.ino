@@ -79,14 +79,6 @@ Pose Current_Pose = {0, 0, 0};
 Pose Target_Pose = {0, 0, 0};
 
 
-  double kp = 3;
-  double ki = 0; // Using I tends to cause a problem where it bounces around the target angle
-  double kd = 1;
-  
-  double kp_2 = 8;
-  double ki_2 = 0;
-  double kd_2 = 1;
-
   unsigned long currentTime, previousTime;
   double elapsedTime;
   double error;

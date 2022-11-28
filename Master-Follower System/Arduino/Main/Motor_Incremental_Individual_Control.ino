@@ -30,10 +30,10 @@ void PID_Position_Controller_Individual(int motor, double rad_increment){
     case 0:
     break;
     case 1:
-      Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_350( ASSIST_LINEAR_ENCODER.read())) ;    // This is the theta of the assist assembly
+      Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_300( ASSIST_LINEAR_ENCODER.read())) ;    // This is the theta of the assist assembly
       break;
     case 2:
-      Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_350( ASSIST_ROTATION_ENCODER.read())) ;    // This is the theta of the assist assembly
+      Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_300( ASSIST_ROTATION_ENCODER.read())) ;    // This is the theta of the assist assembly
       break;
     case 3:
       Current_Pose.theta = get_rad_convert_CATHETER_ASSEMBLY(get_rad_1000( -1* CATHETER_BENDING_ENCODER.read()));

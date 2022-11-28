@@ -41,8 +41,8 @@ void read_encoder(){
     
     //Serial.print("A: ");
     //Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
-    //Serial.print("\tB: ");
-    //Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
+    Serial.print("\tB: ");
+    Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
     /*Serial.print("\tC  ");
     Serial.print(CATHETER_BENDING_ENCODER_POSITION);
     Serial.print("\tD ");
@@ -126,7 +126,7 @@ void send_command(){
 
   Pulse Per Revolution Values:
   Motor 1: 28 * 350 = 9800
-  Motor 2: 28 * 350 = 9800
+  Motor 2: 28 * 300 = 8400
   Motor 3: 28 * 1000 = 28000
   Motor 4: 28 * 1000 = 28000
   Motor 5: -----> Is a stepper motor. TBD
@@ -139,8 +139,8 @@ void send_command(){
 */
 
 // Returns the encoder count in rads
-double get_rad_350(int encoder_count){
-  double rad = ((2*PI) / 9800) * encoder_count;
+double get_rad_300(int encoder_count){
+  double rad = ((2*PI) / 8400) * encoder_count;
 
   return rad;
 
