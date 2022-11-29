@@ -1,18 +1,14 @@
  void PID_Position_Controller(){
 
 
-  double kp = 3;
-  double ki = 0.0004; // Using Integral tends to cause a problem where it bounces around the target angle
-  double kd = 0;
-  /*
-  double kp_2 = 8;
-  double ki_2 = 0;
-  double kd_2 = 1;
-  */
-
-  double kp_2 = 10;
-  double ki_2 = 0.00004;
+  double kp_2 = 3;
+  double ki_2 = 0.0004; // Using Integral tends to cause a problem where it bounces around the target angle
   double kd_2 = 0;
+  
+
+  double kp_4 = 10;
+  double ki_4 = 0.00004;
+  double kd_4 = 0;
   /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     
     The following is the work on the development of PID control of theta for both assemblies
@@ -36,7 +32,7 @@
   lastError = THETA_ERROR;                                //remember current error
   previousTime = currentTime;                        //remember current time
 
-  double PID_output = kp*THETA_ERROR + ki*cumError + kd*rateError;                //PID output; error in rad          
+  double PID_output = kp_2*THETA_ERROR + ki_2*cumError + kd_2*rateError;                //PID output; error in rad          
 
   // ------ Allows the motor to rotate both ways
   if (PID_output < 0){
@@ -74,7 +70,7 @@
 
   */// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
   
-  double PID_output_2 = kp_2*THETA_ERROR_2 + ki_2*cumError_2 + kd_2*rateError_2;                //PID output; error in rad    
+  double PID_output_2 = kp_4*THETA_ERROR_2 + ki_4*cumError_2 + kd_4*rateError_2;                //PID output; error in rad    
   
   if (PID_output_2 < 0){
   digitalWrite(CATHETER_ROTATION_DIR_A_PIN, HIGH);
