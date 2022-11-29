@@ -41,8 +41,8 @@ void read_encoder(){
     
     //Serial.print("A: ");
     //Serial.print(ASSIST_LINEAR_ENCODER_POSITION);
-    Serial.print("\tB: ");
-    Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
+   // Serial.print("\tB: ");
+    //Serial.print(ASSIST_ROTATION_ENCODER_POSITION);
     /*Serial.print("\tC  ");
     Serial.print(CATHETER_BENDING_ENCODER_POSITION);
     Serial.print("\tD ");

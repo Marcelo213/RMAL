@@ -1,14 +1,18 @@
  void PID_Position_Controller(){
 
 
-  double kp = 1;
-  double ki = 0; // Using Integral tends to cause a problem where it bounces around the target angle
-  double kd = 1;
-  
+  double kp = 3;
+  double ki = 0.0004; // Using Integral tends to cause a problem where it bounces around the target angle
+  double kd = 0;
+  /*
   double kp_2 = 8;
   double ki_2 = 0;
   double kd_2 = 1;
+  */
 
+  double kp_2 = 10;
+  double ki_2 = 0.0004;
+  double kd_2 = 0;
   /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     
     The following is the work on the development of PID control of theta for both assemblies
@@ -19,12 +23,10 @@
   elapsedTime = (double)(currentTime - previousTime); 
 
   // ------ Reads the current encoder data in rads
-  //Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_350( ASSIST_ROTATION_ENCODER.read())) ;    // This is the theta of the assist assembly
-  Current_Pose.theta = get_rad_300( ASSIST_ROTATION_ENCODER.read()) ;    // This is the theta of the assist assembly
+  Current_Pose.theta = get_rad_convert_ASSIST_ASSEMBLY(get_rad_300( ASSIST_ROTATION_ENCODER.read())) ;    // This is the theta of the assist assembly
+  //Current_Pose.theta = get_rad_300( ASSIST_ROTATION_ENCODER.read()) ;    // This is the theta of the assist assembly
   double theta2 =  get_rad_convert_CATHETER_ASSEMBLY(get_rad_1000( -1* CATHETER_ROTATION_ENCODER.read()));   // This is what the Catheter assembly rad should be; there is a -1 because the encoders are wired the opposite way so the count is in the opposite way
 
-  Serial.print("\tCurrent theta in rads: ");
-  Serial.print(Current_Pose.theta, 5);                          // ---- Prints with 5 decimal accuracy
 
   // ------ Calculates the steady-state error
   double THETA_ERROR = Target_Pose.theta - Current_Pose.theta;
@@ -50,14 +52,12 @@
 
 
   PID_output = abs(PID_output);
-  
-  PID_output = constrain(PID_output, 0, PI);               // Resolution is being improved by increasing the constrain limits
+  PID_output = constrain(PID_output, 0, 2*PI);               // Resolution is being improved by increasing the constrain limits
 
   
-  PID_output = map(PID_output, 0, PI,0 , 255);
+  PID_output = map(PID_output, 0, 2*PI, 0 , 255);
 
-  Serial.print("\tCurrent 'PID_output' PWM: ");
-  Serial.print(PID_output);
+  
   analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output);
 
   // ----- Repeating everything but for catheter rotation
@@ -73,7 +73,7 @@
   Same PID as above but targeted for catheter assembly. Note that they use different PID coefficients
 
   */// ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
-
+  
   double PID_output_2 = kp_2*THETA_ERROR_2 + ki_2*cumError_2 + kd_2*rateError_2;                //PID output; error in rad    
   
   if (PID_output_2 < 0){
@@ -85,20 +85,24 @@
   }
 
   PID_output_2 = abs(PID_output_2);
-  PID_output_2 = constrain(PID_output_2, 0, PI);               // Resolution is being improved by increasing the constrain limits
-  PID_output_2 = map(PID_output_2, 0, PI, 0, 255);
+  PID_output_2 = constrain(PID_output_2, 0, 2*PI);               // Resolution is being improved by increasing the constrain limits
+  PID_output_2 = map(PID_output_2, 0, 2*PI, 0, 255);
   analogWrite(CATHETER_ROTATION_PWM_PIN, PID_output_2);
+  
+
+  Serial.print("Target theta (rads): ");
+  Serial.print(Target_Pose.theta);
 
   Serial.print("\tTHETA_1 ERROR in rads: ");
-  Serial.println(THETA_ERROR);
+  Serial.print(THETA_ERROR);
 
- // Serial.print("\tTHETA_2 ERROR in rads: ");
-  //Serial.println(THETA_ERROR_2);
+  Serial.print("\tTHETA_2 ERROR in rads: ");
+  Serial.print(THETA_ERROR_2);
   
   //Serial.print("\tCurrent 'PID_output' in PWM ");
   //Serial.println(PID_output);
 
- 
+  Serial.print("\n");
 
 
 

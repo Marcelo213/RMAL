@@ -7,13 +7,13 @@ Motor Options:
 5 = Linear_actuator
 
 Rad: Position is in absolute; can be negative 
-
 */
 
-void PID_Position_Controller_Individual(int motor, double rad_increment){
-  double kp_temp = 2;
-  double ki_temp = 0;
-  double kd_temp = 1;
+/*
+void PID_Position_Controller_Individual(){
+  double kp_temp = 0.001;
+  double ki_temp = 0.00001;
+  double kd_temp = 0;
 
   currentTime = millis();                //get current time
   elapsedTime = (double)(currentTime - previousTime); 
@@ -24,9 +24,9 @@ void PID_Position_Controller_Individual(int motor, double rad_increment){
   WARNING: Be careful of motor direction. IT HAS NOT BEEN TESTED
 
   */
-
+/*
   // ------ Reads the current encoder data in rads
-  switch (motor){
+  switch (motor_select){
     case 0:
     break;
     case 1:
@@ -59,7 +59,7 @@ void PID_Position_Controller_Individual(int motor, double rad_increment){
 
   // ------ Allows the motor to rotate both ways
   
-  switch (motor){
+  switch (motor_select){
     case 0:
     break;
     case 1:
@@ -102,8 +102,8 @@ void PID_Position_Controller_Individual(int motor, double rad_increment){
 
 
   PID_output_temp = abs(PID_output_temp);
-  PID_output_temp = constrain(PID_output_temp, 0, PI);               // Resolution is being improved by increasing the constrain limits
-  PID_output_temp = map(PID_output_temp, 0, PI, 100, 255);
+  PID_output_temp = constrain(PID_output_temp, 0, 2*PI);               // Resolution is being improved by increasing the constrain limits
+  PID_output_temp = map(PID_output_temp, 0, 2*PI, 0, 255);
   analogWrite(ASSIST_ROTATION_PWM_PIN, PID_output_temp);
 
-}
+}*/
