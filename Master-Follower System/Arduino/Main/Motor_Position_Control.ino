@@ -1,10 +1,17 @@
  void PID_Position_Controller(){
 
 
+  double kp_1 = 3;
+  double ki_1 = 0.0004; // Using Integral tends to cause a problem where it bounces around the target angle
+  double kd_1 = 0;
+
   double kp_2 = 3;
   double ki_2 = 0.0004; // Using Integral tends to cause a problem where it bounces around the target angle
   double kd_2 = 0;
-  
+ 
+  double kp_3 = 3;
+  double ki_3 = 0.0004; // Using Integral tends to cause a problem where it bounces around the target angle
+  double kd_3 = 0;
 
   double kp_4 = 10;
   double ki_4 = 0.00004;
