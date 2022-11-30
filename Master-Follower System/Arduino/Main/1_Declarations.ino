@@ -81,26 +81,35 @@ Pose Target_Pose = {0, 0, 0};
 
   unsigned long currentTime, previousTime;
   double elapsedTime;
+
+
+
+
+
+
+
   double error;
   double lastError;
-  //double input, output, setPoint;
-  double cumError, rateError;
+  double cumError_theta1, rateError_theta1;
 
-
-  
   double error_2;
-  double lastError_2;
-  //double input, output, setPoint;
-  double cumError_2, rateError_2;
+  double lastError_theta2;
+  double cumError_theta2, rateError_theta2;
 
 
   double error_temp;
   double lastError_temp;
-  //double input, output, setPoint;
   double cumError_temp, rateError_temp;
 
 
   int motor_select;
   double rad_increment;
 
+
+
+
+
+  double LAST_ERROR_LINEAR_1;
+   double INTEGRAL_ERROR_LINEAR_1;
+   double DERIVATIVE_ERROR_LINEAR_1;
 
