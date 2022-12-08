@@ -16,12 +16,12 @@ void setup() {
 
     // BENDING
     
-      pinMode(CATHERER_BENDING_PWM_PIN, OUTPUT);
+      pinMode(CATHETER_BENDING_PWM_PIN, OUTPUT);
       pinMode(CATHETER_BENDING_DIR_A_PIN, OUTPUT);
       pinMode(CATHETER_BENDING_DIR_B_PIN, OUTPUT);
 
       
-      analogWrite(CATHERER_BENDING_PWM_PIN, 0);       // Always default to off state
+      analogWrite(CATHETER_BENDING_PWM_PIN, 0);       // Always default to off state
       digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);   // off state
       digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);   // off state
     
@@ -64,8 +64,9 @@ void setup() {
     //
   //
 
-  Serial.println("Ready.");
+  //Serial.println("Ready.");
  
+  //ACTUATOR_MOVE(1000); // 1000 steps is about 27mm
   
   //setPoint = 0;                          //set point at zero degrees
 

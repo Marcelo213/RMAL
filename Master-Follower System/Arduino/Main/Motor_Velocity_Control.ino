@@ -28,9 +28,9 @@ void CATHETER_BENDING_MOVE(int duration){
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, HIGH); 
   }
     duration = abs(duration);
-    analogWrite(CATHERER_BENDING_PWM_PIN,255);
+    analogWrite(CATHETER_BENDING_PWM_PIN,255);
     delay(duration);
-    analogWrite(CATHERER_BENDING_PWM_PIN,0);
+    analogWrite(CATHETER_BENDING_PWM_PIN,0);
     digitalWrite(CATHETER_BENDING_DIR_A_PIN, LOW);
     digitalWrite(CATHETER_BENDING_DIR_B_PIN, LOW);
 }

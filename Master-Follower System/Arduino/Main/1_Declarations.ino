@@ -60,8 +60,8 @@ double Motor_5_Theta_Rad = 0;
 int ENCODER_RESOLUTION = 100;
 
 struct pos {
-  double x;                           // Linear Position
-  double theta;                       // Rotation Position
+  double x;                           // Linear Position in mm
+  double theta;                       // Rotation Position in rads
   double phi;                         // Bending position
 };
 typedef struct pos Pose;
@@ -109,7 +109,15 @@ Pose Target_Pose = {0, 0, 0};
 
 
 
-  double LAST_ERROR_LINEAR_1;
+    double LAST_ERROR_LINEAR_1;
    double INTEGRAL_ERROR_LINEAR_1;
    double DERIVATIVE_ERROR_LINEAR_1;
 
+  double LAST_ERROR_PHI;
+   double INTEGRAL_ERROR_PHI;
+   double DERIVATIVE_ERROR_PHI;
+
+
+
+  double x2_lastPosition = 0;
+  double x2 = 0; 
