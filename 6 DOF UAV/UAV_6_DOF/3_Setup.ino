@@ -20,4 +20,49 @@ void setup() {
   // mpu.upsideDownMounting = true; // uncomment this line if the MPU6050 is mounted upside-down
   mpu.calcOffsets(); // gyro and accelero
   Serial.println("Done!\n");
+
+
+  for (int i = 0; i <= 10; i++){
+    pin_select = i;
+    pin_value = 0;
+    switch (pin_select) {
+    case 0:
+      move_Motor();
+      break;
+    case 1:
+      move_Motor();
+      break;
+    case 2:
+      pin_value = 90;
+      move_Servo();
+      break;
+    case 3: // Empty Slot
+      break;
+    case 4:
+      move_Motor();
+      break;
+    case 5:
+      move_Motor();
+      break;
+    case 6:
+      pin_value = 90;
+      move_Servo();
+      break;
+    case 7: // Empty Slot
+      break;
+    case 8:
+      move_Motor();
+      break;
+    case 9:
+      move_Motor();
+      break;
+    case 10:
+      pin_value = 90;
+      move_Servo();
+      break;
+    delay(1000);
+  }
+  }
+
+
 }

@@ -27,7 +27,7 @@ void send_command(){
 
 
 
-    
+    /*
     
     for(int i =0; i < str_len; i++ ) {
 
@@ -77,6 +77,6 @@ void send_command(){
         }
     }
     
-
+*/
 
 }

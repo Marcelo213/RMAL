@@ -3,8 +3,8 @@
 // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
 
 
-#define SDA_PIN 27
-#define SCL_PIN 32
+//#define SDA_PIN 27
+//#define SCL_PIN 32
 
 //#define MOTOR_1_PWM 3
 //#define potPin A2
