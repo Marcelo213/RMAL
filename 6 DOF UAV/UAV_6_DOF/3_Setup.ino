@@ -1,7 +1,27 @@
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   Wire.begin();
+  Wire.setClock(400000); // use 400 kHz I2C
   
+
+  //sensor.setTimeout(500);
+  if (!sensor.init())
+  {
+    Serial.println("Failed to detect and initialize sensor!");
+    while (1);
+  }
+  // Use long distance mode and allow up to 50000 us (50 ms) for a measurement.
+  // You can change these settings to adjust the performance of the sensor, but
+  // the minimum timing budget is 20 ms for short distance mode and 33 ms for
+  // medium and long distance modes. See the VL53L1X datasheet for more
+  // information on range and timing limits.
+  sensor.setDistanceMode(VL53L1X::Long);
+  sensor.setMeasurementTimingBudget(50000);
+  // Start continuous readings at a rate of one measurement every 50 ms (the
+  // inter-measurement period). This period should be at least as long as the
+  // timing budget.
+  sensor.startContinuous(50);
+
   //pinMode(SWITCH_PIN, INPUT_PULLUP);
   pwm.begin();
   pwm.setOscillatorFrequency(27000000);
@@ -9,7 +29,7 @@ void setup() {
   Serial.println("Program Starting...");
   delay(1000);
 
-  // For MPU9250
+  /*// For MPU9250
   byte status = mpu.begin();
   Serial.print(F("MPU6050 status: "));
   Serial.println(status);
@@ -20,49 +40,12 @@ void setup() {
   // mpu.upsideDownMounting = true; // uncomment this line if the MPU6050 is mounted upside-down
   mpu.calcOffsets(); // gyro and accelero
   Serial.println("Done!\n");
+  */
 
-
-  for (int i = 0; i <= 10; i++){
-    pin_select = i;
-    pin_value = 0;
-    switch (pin_select) {
-    case 0:
-      move_Motor();
-      break;
-    case 1:
-      move_Motor();
-      break;
-    case 2:
-      pin_value = 90;
-      move_Servo();
-      break;
-    case 3: // Empty Slot
-      break;
-    case 4:
-      move_Motor();
-      break;
-    case 5:
-      move_Motor();
-      break;
-    case 6:
-      pin_value = 90;
-      move_Servo();
-      break;
-    case 7: // Empty Slot
-      break;
-    case 8:
-      move_Motor();
-      break;
-    case 9:
-      move_Motor();
-      break;
-    case 10:
-      pin_value = 90;
-      move_Servo();
-      break;
-    delay(1000);
+  
+  
+  
   }
-  }
+  
 
 
-}

@@ -8,57 +8,21 @@ void loop() {
 
     // Motors are 0,1 | 4,5 | 8,9
     // Servos are 2 | 6 | 10
-      
-      //TBD: Safety 
-      // M for motor
-      // S for speed
-      // Ex. M3S50 is motor 3 for 50 percent full speed
 
-    // Instructions:
-      // pin_selects selects either motor or servo pins
-      // pin_value has to be between 0-100 for motor pins (duty cycle value)
-      // pin_value has to be between 0-180 for servo pins (angle value)
-    // read incoming serial data:
+    Arm_1.Upper_Motor_Duty_Cycle = Serial.parseInt();
+    Arm_1.Lower_Motor_Duty_Cycle = Serial.parseInt();
+    Arm_1.Servo_Angle = Serial.parseInt();
 
-    pin_select = Serial.parseInt(); // Reads first integer
+    Arm_2.Upper_Motor_Duty_Cycle = Serial.parseInt();
+    Arm_2.Lower_Motor_Duty_Cycle = Serial.parseInt();
+    Arm_2.Servo_Angle = Serial.parseInt();
 
-    pin_value = Serial.parseInt(); // Reads second integer
+    Arm_3.Upper_Motor_Duty_Cycle = Serial.parseInt();
+    Arm_3.Lower_Motor_Duty_Cycle = Serial.parseInt();
+    Arm_3.Servo_Angle = Serial.parseInt();
    
   }
   
-  switch (pin_select) {
-    case 0:
-      move_Motor();
-      break;
-    case 1:
-      move_Motor();
-      break;
-    case 2:
-      move_Servo();
-      break;
-    case 3: // Empty Slot
-      break;
-    case 4:
-      move_Motor();
-      break;
-    case 5:
-      move_Motor();
-      break;
-    case 6:
-      move_Servo();
-      break;
-    case 7: // Empty Slot
-      break;
-    case 8:
-      move_Motor();
-      break;
-    case 9:
-      move_Motor();
-      break;
-    case 10:
-      move_Servo();
-      break;
-  }
   
   Serial.print("X : ");
 	Serial.print(mpu.getAngleX());
@@ -67,17 +31,36 @@ void loop() {
 	Serial.print("\tZ : ");
 	Serial.print(mpu.getAngleZ());
 
-  Serial.print("\tCurrent Motor: ");
-  Serial.print(pin_select);
-  
-  Serial.print("\tCurrent Speed (Duty Cycle) or Angle: ");
-  Serial.println(pin_value);
+  Serial.print(Arm_1.Upper_Motor_Duty_Cycle);
+  Serial.print("\t");
+  Serial.print(Arm_1.Lower_Motor_Duty_Cycle);
+  Serial.print("\t");
+  Serial.print(Arm_1.Servo_Angle);
+  Serial.print("\t");
+  Serial.print(Arm_2.Upper_Motor_Duty_Cycle);
+  Serial.print("\t");
+  Serial.print(Arm_2.Lower_Motor_Duty_Cycle);
+  Serial.print("\t");
+  Serial.print(Arm_2.Servo_Angle);
+  Serial.print("\t");
+  Serial.print(Arm_3.Upper_Motor_Duty_Cycle);
+  Serial.print("\t");
+  Serial.print(Arm_3.Lower_Motor_Duty_Cycle);
+  Serial.print("\t");
+  Serial.print(Arm_3.Servo_Angle);
+  Serial.print("\t");
+
+  Serial.print("Sensor Reading (mm): ");
+  Serial.print(sensor.read());
+  if (sensor.timeoutOccurred()) { Serial.print(" TIMEOUT"); }
+
+
+  Serial.println();
 
   //send_command();
 
-  get_Angle();
- // moveMotor();
-  //moveServo();
+  //get_Angle();
+  Write();
   
 
 
