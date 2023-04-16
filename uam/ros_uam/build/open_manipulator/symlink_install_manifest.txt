@@ -1,0 +1,15 @@
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/ament_index/resource_index/package_run_dependencies/open_manipulator
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/ament_index/resource_index/parent_prefix_path/open_manipulator
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/environment/ament_prefix_path.sh
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/environment/ament_prefix_path.dsv
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/environment/path.sh
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/environment/path.dsv
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/local_setup.bash
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/local_setup.sh
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/local_setup.zsh
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/local_setup.dsv
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/package.dsv
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/ament_index/resource_index/packages/open_manipulator
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/cmake/open_manipulatorConfig.cmake
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/cmake/open_manipulatorConfig-version.cmake
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator/share/open_manipulator/package.xml

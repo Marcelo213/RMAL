@@ -1,0 +1,151 @@
+[0.205s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs
+[0.376s] -- The C compiler identification is GNU 9.4.0
+[0.440s] -- The CXX compiler identification is GNU 9.4.0
+[0.444s] -- Check for working C compiler: /usr/bin/cc
+[0.529s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.531s] -- Detecting C compiler ABI info
+[0.617s] -- Detecting C compiler ABI info - done
+[0.630s] -- Detecting C compile features
+[0.630s] -- Detecting C compile features - done
+[0.632s] -- Check for working CXX compiler: /usr/bin/c++
+[0.728s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.730s] -- Detecting CXX compiler ABI info
+[0.831s] -- Detecting CXX compiler ABI info - done
+[0.841s] -- Detecting CXX compile features
+[0.842s] -- Detecting CXX compile features - done
+[0.845s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.872s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.872s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.026s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.060s] -- Found dynamixel_workbench_toolbox: 2.2.3 (/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/share/dynamixel_workbench_toolbox/cmake)
+[1.102s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.108s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.200s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.226s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.296s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.347s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.349s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.350s] -- Looking for pthread.h
+[1.451s] -- Looking for pthread.h - found
+[1.452s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.560s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.560s] -- Looking for pthread_create in pthreads
+[1.661s] -- Looking for pthread_create in pthreads - not found
+[1.661s] -- Looking for pthread_create in pthread
+[1.761s] -- Looking for pthread_create in pthread - found
+[1.762s] -- Found Threads: TRUE  
+[1.904s] -- Found robotis_manipulator: 1.0.0 (/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/cmake)
+[1.979s] -- Configuring done
+[2.006s] -- Generating done
+[2.008s] -- Build files have been written to: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs
+[2.014s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs
+[2.018s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs -- -j6 -l6
+[2.065s] [35m[1mScanning dependencies of target open_manipulator_x_libs[0m
+[2.223s] [ 20%] [32mBuilding CXX object CMakeFiles/open_manipulator_x_libs.dir/src/dynamixel.cpp.o[0m
+[2.227s] [ 40%] [32mBuilding CXX object CMakeFiles/open_manipulator_x_libs.dir/src/kinematics.cpp.o[0m
+[2.229s] [ 60%] [32mBuilding CXX object CMakeFiles/open_manipulator_x_libs.dir/src/open_manipulator_x.cpp.o[0m
+[2.230s] [ 80%] [32mBuilding CXX object CMakeFiles/open_manipulator_x_libs.dir/src/custom_trajectory.cpp.o[0m
+[3.196s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:[m[K In member function ‘[01m[Kvirtual void custom_trajectory::Line::setOption(const void*)[m[K’:
+[3.196s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:93:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.197s]    93 | void Line::setOption([01;35m[Kconst void *arg[m[K) {}
+[3.197s]       |                      [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.198s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:[m[K In member function ‘[01m[Kvirtual void custom_trajectory::Circle::setOption(const void*)[m[K’:
+[3.198s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:167:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.198s]   167 | void Circle::setOption([01;35m[Kconst void *arg[m[K){}
+[3.198s]       |                        [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.199s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:[m[K In member function ‘[01m[Kvirtual void custom_trajectory::Rhombus::setOption(const void*)[m[K’:
+[3.199s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:260:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.200s]   260 | void Rhombus::setOption([01;35m[Kconst void *arg[m[K){}
+[3.200s]       |                         [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.201s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:[m[K In member function ‘[01m[Kvirtual void custom_trajectory::Heart::setOption(const void*)[m[K’:
+[3.201s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/custom_trajectory.cpp:334:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.201s]   334 | void Heart::setOption([01;35m[Kconst void *arg[m[K){}
+[3.201s]       |                       [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.218s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:[m[K In member function ‘[01m[Kvirtual void kinematics::SolverUsingCRAndJacobian::setOption(const void*)[m[K’:
+[3.218s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:25:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.218s]    25 | void SolverUsingCRAndJacobian::setOption([01;35m[Kconst void *arg[m[K){}
+[3.219s]       |                                          [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.237s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:[m[K In member function ‘[01m[Kbool dynamixel::JointDynamixel::write_goal_position(std::vector<unsigned char>, std::vector<double>)[m[K’:
+[3.238s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:268:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kid_array[m[K’ [[01;35m[K-Wvla[m[K]
+[3.238s]   268 |   uint8_t [01;35m[Kid_array[m[K[actuator_id.size()];
+[3.238s]       |           [01;35m[K^~~~~~~~[m[K
+[3.238s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:269:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kgoal_position[m[K’ [[01;35m[K-Wvla[m[K]
+[3.238s]   269 |   int32_t [01;35m[Kgoal_position[m[K[actuator_id.size()];
+[3.238s]       |           [01;35m[K^~~~~~~~~~~~~[m[K
+[3.239s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:[m[K In member function ‘[01m[Kstd::vector<robotis_manipulator::_Point> dynamixel::JointDynamixel::receive_all_dynamixel_value(std::vector<unsigned char>)[m[K’:
+[3.239s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:293:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kid_array[m[K’ [[01;35m[K-Wvla[m[K]
+[3.239s]   293 |   uint8_t [01;35m[Kid_array[m[K[actuator_id.size()];
+[3.239s]       |           [01;35m[K^~~~~~~~[m[K
+[3.239s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:297:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kget_current[m[K’ [[01;35m[K-Wvla[m[K]
+[3.239s]   297 |   int32_t [01;35m[Kget_current[m[K[actuator_id.size()];
+[3.239s]       |           [01;35m[K^~~~~~~~~~~[m[K
+[3.239s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:298:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kget_velocity[m[K’ [[01;35m[K-Wvla[m[K]
+[3.239s]   298 |   int32_t [01;35m[Kget_velocity[m[K[actuator_id.size()];
+[3.239s]       |           [01;35m[K^~~~~~~~~~~~[m[K
+[3.240s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:299:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kget_position[m[K’ [[01;35m[K-Wvla[m[K]
+[3.240s]   299 |   int32_t [01;35m[Kget_position[m[K[actuator_id.size()];
+[3.240s]       |           [01;35m[K^~~~~~~~~~~~[m[K
+[3.242s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:[m[K In member function ‘[01m[Kbool dynamixel::JointDynamixelProfileControl::write_goal_profiling_control_value(std::vector<unsigned char>, std::vector<robotis_manipulator::_Point>)[m[K’:
+[3.242s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:604:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kid_array[m[K’ [[01;35m[K-Wvla[m[K]
+[3.242s]   604 |   uint8_t [01;35m[Kid_array[m[K[actuator_id.size()];
+[3.242s]       |           [01;35m[K^~~~~~~~[m[K
+[3.242s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:605:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kgoal_value[m[K’ [[01;35m[K-Wvla[m[K]
+[3.243s]   605 |   int32_t [01;35m[Kgoal_value[m[K[actuator_id.size()];
+[3.243s]       |           [01;35m[K^~~~~~~~~~[m[K
+[3.250s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:[m[K In member function ‘[01m[Kstd::vector<robotis_manipulator::_Point> dynamixel::JointDynamixelProfileControl::receive_all_dynamixel_value(std::vector<unsigned char>)[m[K’:
+[3.250s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:641:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kid_array[m[K’ [[01;35m[K-Wvla[m[K]
+[3.250s]   641 |   uint8_t [01;35m[Kid_array[m[K[actuator_id.size()];
+[3.250s]       |           [01;35m[K^~~~~~~~[m[K
+[3.250s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:645:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kget_current[m[K’ [[01;35m[K-Wvla[m[K]
+[3.250s]   645 |   int32_t [01;35m[Kget_current[m[K[actuator_id.size()];
+[3.250s]       |           [01;35m[K^~~~~~~~~~~[m[K
+[3.251s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:646:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kget_velocity[m[K’ [[01;35m[K-Wvla[m[K]
+[3.251s]   646 |   int32_t [01;35m[Kget_velocity[m[K[actuator_id.size()];
+[3.251s]       |           [01;35m[K^~~~~~~~~~~~[m[K
+[3.251s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/dynamixel.cpp:647:11:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kget_position[m[K’ [[01;35m[K-Wvla[m[K]
+[3.251s]   647 |   int32_t [01;35m[Kget_position[m[K[actuator_id.size()];
+[3.251s]       |           [01;35m[K^~~~~~~~~~~~[m[K
+[3.355s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:[m[K In member function ‘[01m[Kvirtual void kinematics::SolverUsingCRAndSRJacobian::setOption(const void*)[m[K’:
+[3.356s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:179:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.356s]   179 | void SolverUsingCRAndSRJacobian::setOption([01;35m[Kconst void *arg[m[K){}
+[3.356s]       |                                            [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.458s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:[m[K In member function ‘[01m[Kvirtual void kinematics::SolverUsingCRAndSRPositionOnlyJacobian::setOption(const void*)[m[K’:
+[3.458s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:445:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.459s]   445 | void SolverUsingCRAndSRPositionOnlyJacobian::setOption([01;35m[Kconst void *arg[m[K){}
+[3.459s]       |                                                        [01;35m[K~~~~~~~~~~~~^~~[m[K
+[3.510s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:[m[K In member function ‘[01m[Kvirtual void kinematics::SolverCustomizedforOMChain::setOption(const void*)[m[K’:
+[3.510s] [01m[K/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator/open_manipulator_x_libs/src/kinematics.cpp:711:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.510s]   711 | void SolverCustomizedforOMChain::setOption([01;35m[Kconst void *arg[m[K){}
+[3.510s]       |                                            [01;35m[K~~~~~~~~~~~~^~~[m[K
+[9.779s] [100%] [32m[1mLinking CXX shared library libopen_manipulator_x_libs.so[0m
+[10.158s] [100%] Built target open_manipulator_x_libs
+[10.174s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs -- -j6 -l6
+[10.212s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs
+[10.223s] -- Install configuration: ""
+[10.223s] -- Execute custom install script
+[10.224s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/lib/libopen_manipulator_x_libs.so
+[10.237s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/include//open_manipulator_x_libs/custom_trajectory.hpp
+[10.251s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/include//open_manipulator_x_libs/dynamixel.hpp
+[10.259s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/include//open_manipulator_x_libs/kinematics.hpp
+[10.272s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/include//open_manipulator_x_libs/open_manipulator_x.hpp
+[10.286s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/environment/library_path.sh
+[10.300s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/environment/library_path.dsv
+[10.315s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/ament_index/resource_index/package_run_dependencies/open_manipulator_x_libs
+[10.330s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/ament_index/resource_index/parent_prefix_path/open_manipulator_x_libs
+[10.343s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/environment/ament_prefix_path.sh
+[10.358s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/environment/ament_prefix_path.dsv
+[10.373s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/environment/path.sh
+[10.387s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/environment/path.dsv
+[10.399s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/local_setup.bash
+[10.414s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/local_setup.sh
+[10.429s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/local_setup.zsh
+[10.442s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/local_setup.dsv
+[10.455s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/package.dsv
+[10.469s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/ament_index/resource_index/packages/open_manipulator_x_libs
+[10.484s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.492s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.507s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/cmake/ament_cmake_export_libraries-extras.cmake
+[10.523s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/cmake/open_manipulator_x_libsConfig.cmake
+[10.535s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/cmake/open_manipulator_x_libsConfig-version.cmake
+[10.550s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_libs/share/open_manipulator_x_libs/package.xml
+[10.566s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_workbench_toolbox/lib:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs

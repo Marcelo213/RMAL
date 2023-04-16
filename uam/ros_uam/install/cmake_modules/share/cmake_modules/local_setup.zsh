@@ -1,0 +1,1 @@
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules/ament_cmake_environment_hooks/local_setup.zsh

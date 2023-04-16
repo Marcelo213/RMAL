@@ -1,0 +1,9 @@
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/install/strip.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/install/local.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/install.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/list_install_components.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/rebuild_cache.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/edit_cache.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/test.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/dynamixel_workbench_uninstall.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/dynamixel_workbench/CMakeFiles/uninstall.dir

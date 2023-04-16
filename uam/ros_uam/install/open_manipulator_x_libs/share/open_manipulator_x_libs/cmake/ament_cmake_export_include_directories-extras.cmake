@@ -1,0 +1,1 @@
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_libs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake

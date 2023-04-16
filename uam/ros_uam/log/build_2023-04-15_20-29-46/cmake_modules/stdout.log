@@ -1,0 +1,49 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindGSL.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindGflags.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindNUMPY.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindPoco.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTBB.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTinyXML.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTinyXML2.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindUUID.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindXenomai.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/ament_index/resource_index/package_run_dependencies/cmake_modules
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/ament_index/resource_index/parent_prefix_path/cmake_modules
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/ament_prefix_path.sh
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/ament_prefix_path.dsv
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/path.sh
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/path.dsv
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.bash
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.sh
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.zsh
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.dsv
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/package.dsv
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/ament_index/resource_index/packages/cmake_modules
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/cmake_modules-extras.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig-version.cmake
+-- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/package.xml

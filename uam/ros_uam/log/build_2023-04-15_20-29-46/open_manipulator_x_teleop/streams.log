@@ -1,0 +1,25 @@
+[0.603s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop/prefix_override:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/lib/python3.8/site-packages:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop/build --no-deps install_data
+[0.795s] running develop
+[0.904s] running egg_info
+[0.905s] creating open_manipulator_x_teleop.egg-info
+[0.905s] writing open_manipulator_x_teleop.egg-info/PKG-INFO
+[0.905s] writing dependency_links to open_manipulator_x_teleop.egg-info/dependency_links.txt
+[0.905s] writing entry points to open_manipulator_x_teleop.egg-info/entry_points.txt
+[0.906s] writing requirements to open_manipulator_x_teleop.egg-info/requires.txt
+[0.906s] writing top-level names to open_manipulator_x_teleop.egg-info/top_level.txt
+[0.906s] writing manifest file 'open_manipulator_x_teleop.egg-info/SOURCES.txt'
+[0.933s] reading manifest file 'open_manipulator_x_teleop.egg-info/SOURCES.txt'
+[0.934s] writing manifest file 'open_manipulator_x_teleop.egg-info/SOURCES.txt'
+[0.963s] running build_ext
+[0.963s] Creating /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/lib/python3.8/site-packages/site.py
+[0.965s] Creating /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/lib/python3.8/site-packages/open-manipulator-x-teleop.egg-link (link to .)
+[0.966s] Installing teleop_keyboard script to /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/lib/open_manipulator_x_teleop
+[0.967s] 
+[0.967s] Installed /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop
+[0.968s] running install_data
+[0.968s] creating /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/share/ament_index
+[0.968s] creating /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/share/ament_index/resource_index
+[0.968s] creating /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/share/ament_index/resource_index/packages
+[0.968s] copying resource/open_manipulator_x_teleop -> /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/share/ament_index/resource_index/packages
+[0.968s] copying package.xml -> /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/share/open_manipulator_x_teleop
+[1.002s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs LD_LIBRARY_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop/prefix_override:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_x_teleop/lib/python3.8/site-packages:/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/open_manipulator_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_teleop/build --no-deps install_data

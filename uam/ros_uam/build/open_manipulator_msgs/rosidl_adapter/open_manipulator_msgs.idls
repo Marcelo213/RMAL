@@ -1,0 +1,9 @@
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:msg/JointPosition.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:msg/KinematicsPose.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:msg/OpenManipulatorState.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/GetJointPosition.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/GetKinematicsPose.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetJointPosition.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetKinematicsPose.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetDrawingTrajectory.idl
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/rosidl_adapter/open_manipulator_msgs:srv/SetActuatorState.idl

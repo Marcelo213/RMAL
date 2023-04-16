@@ -1,0 +1,10 @@
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/install/strip.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/install.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/list_install_components.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/rebuild_cache.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/edit_cache.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/test.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/install/local.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/open_manipulator_x_controller.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/open_manipulator_x_controller_uninstall.dir
+/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_x_controller/CMakeFiles/uninstall.dir

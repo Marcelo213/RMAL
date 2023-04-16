@@ -1,0 +1,83 @@
+[0.026s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy /usr/bin/cmake /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/robotis_manipulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator
+[0.078s] -- The C compiler identification is GNU 9.4.0
+[0.139s] -- The CXX compiler identification is GNU 9.4.0
+[0.143s] -- Check for working C compiler: /usr/bin/cc
+[0.216s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.218s] -- Detecting C compiler ABI info
+[0.287s] -- Detecting C compiler ABI info - done
+[0.298s] -- Detecting C compile features
+[0.299s] -- Detecting C compile features - done
+[0.299s] -- Check for working CXX compiler: /usr/bin/c++
+[0.368s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.369s] -- Detecting CXX compiler ABI info
+[0.445s] -- Detecting CXX compiler ABI info - done
+[0.457s] -- Detecting CXX compile features
+[0.457s] -- Detecting CXX compile features - done
+[0.461s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.484s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.484s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.641s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.653s] -- Found cmake_modules: 0.4.1 (/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake)
+[0.656s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.721s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.728s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.970s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.993s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.068s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.153s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.155s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.159s] -- Looking for pthread.h
+[1.355s] -- Looking for pthread.h - found
+[1.355s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.547s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.547s] -- Looking for pthread_create in pthreads
+[1.690s] -- Looking for pthread_create in pthreads - not found
+[1.690s] -- Looking for pthread_create in pthread
+[1.819s] -- Looking for pthread_create in pthread - found
+[1.820s] -- Found Threads: TRUE  
+[2.229s] -- Configuring done
+[2.245s] -- Generating done
+[2.247s] -- Build files have been written to: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator
+[2.262s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy /usr/bin/cmake /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/robotis_manipulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator
+[2.264s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator -- -j6 -l6
+[2.320s] [35m[1mScanning dependencies of target robotis_manipulator[0m
+[2.464s] [ 14%] [32mBuilding CXX object CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator_common.cpp.o[0m
+[2.485s] [ 28%] [32mBuilding CXX object CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator.cpp.o[0m
+[2.491s] [ 42%] [32mBuilding CXX object CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator_trajectory_generator.cpp.o[0m
+[2.504s] [ 57%] [32mBuilding CXX object CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator_log.cpp.o[0m
+[2.509s] [ 71%] [32mBuilding CXX object CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator_math.cpp.o[0m
+[2.513s] [ 85%] [32mBuilding CXX object CMakeFiles/robotis_manipulator.dir/src/robotis_manipulator/robotis_manipulator_manager.cpp.o[0m
+[11.707s] [100%] [32m[1mLinking CXX shared library librobotis_manipulator.so[0m
+[12.089s] [100%] Built target robotis_manipulator
+[12.137s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator -- -j6 -l6
+[12.172s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator
+[12.183s] -- Install configuration: ""
+[12.184s] -- Execute custom install script
+[12.184s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/lib/librobotis_manipulator.so
+[12.198s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/include//robotis_manipulator/robotis_manipulator.h
+[12.207s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/include//robotis_manipulator/robotis_manipulator_common.h
+[12.219s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/include//robotis_manipulator/robotis_manipulator_log.h
+[12.227s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/include//robotis_manipulator/robotis_manipulator_manager.h
+[12.234s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/include//robotis_manipulator/robotis_manipulator_math.h
+[12.242s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/include//robotis_manipulator/robotis_manipulator_trajectory_generator.h
+[12.250s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/environment/library_path.sh
+[12.259s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/environment/library_path.dsv
+[12.271s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/ament_index/resource_index/package_run_dependencies/robotis_manipulator
+[12.279s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/ament_index/resource_index/parent_prefix_path/robotis_manipulator
+[12.287s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/environment/ament_prefix_path.sh
+[12.294s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/environment/ament_prefix_path.dsv
+[12.303s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/environment/path.sh
+[12.310s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/environment/path.dsv
+[12.319s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/local_setup.bash
+[12.333s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/local_setup.sh
+[12.345s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/local_setup.zsh
+[12.356s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/local_setup.dsv
+[12.368s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/package.dsv
+[12.376s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/ament_index/resource_index/packages/robotis_manipulator
+[12.385s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.393s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.400s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/cmake/ament_cmake_export_libraries-extras.cmake
+[12.407s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/cmake/robotis_manipulatorConfig.cmake
+[12.414s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/cmake/robotis_manipulatorConfig-version.cmake
+[12.421s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/robotis_manipulator/share/robotis_manipulator/package.xml
+[12.431s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator' returned '0': AMENT_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules:/opt/ros/foxy /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/robotis_manipulator

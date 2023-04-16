@@ -1,0 +1,55 @@
+[0.073s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_dependencies/cmake_modules -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules
+[0.289s] -- The C compiler identification is GNU 9.4.0
+[0.377s] -- The CXX compiler identification is GNU 9.4.0
+[0.381s] -- Check for working C compiler: /usr/bin/cc
+[0.452s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.454s] -- Detecting C compiler ABI info
+[0.519s] -- Detecting C compiler ABI info - done
+[0.541s] -- Detecting C compile features
+[0.542s] -- Detecting C compile features - done
+[0.543s] -- Check for working CXX compiler: /usr/bin/c++
+[0.642s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.643s] -- Detecting CXX compiler ABI info
+[0.721s] -- Detecting CXX compiler ABI info - done
+[0.737s] -- Detecting CXX compile features
+[0.737s] -- Detecting CXX compile features - done
+[0.737s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.753s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.753s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.927s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.003s] -- Configuring done
+[1.005s] -- Generating done
+[1.006s] -- Build files have been written to: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules
+[1.011s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_dependencies/cmake_modules -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules
+[1.012s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules -- -j6 -l6
+[1.058s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules -- -j6 -l6
+[1.133s] Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules
+[1.149s] -- Install configuration: ""
+[1.149s] -- Execute custom install script
+[1.150s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindGSL.cmake
+[1.200s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindGflags.cmake
+[1.220s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindNUMPY.cmake
+[1.241s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindPoco.cmake
+[1.251s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTBB.cmake
+[1.260s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTinyXML.cmake
+[1.278s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindTinyXML2.cmake
+[1.303s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindUUID.cmake
+[1.324s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/Modules/FindXenomai.cmake
+[1.332s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/ament_index/resource_index/package_run_dependencies/cmake_modules
+[1.357s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/ament_index/resource_index/parent_prefix_path/cmake_modules
+[1.383s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/ament_prefix_path.sh
+[1.392s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/ament_prefix_path.dsv
+[1.407s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/path.sh
+[1.428s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/environment/path.dsv
+[1.444s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.bash
+[1.498s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.sh
+[1.527s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.zsh
+[1.557s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/local_setup.dsv
+[1.565s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/package.dsv
+[1.573s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/ament_index/resource_index/packages/cmake_modules
+[1.600s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/cmake_modules-extras.cmake
+[1.608s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.618s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig.cmake
+[1.626s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/cmake/cmake_modulesConfig-version.cmake
+[1.636s] -- Symlinking: /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/install/cmake_modules/share/cmake_modules/package.xml
+[1.663s] Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules

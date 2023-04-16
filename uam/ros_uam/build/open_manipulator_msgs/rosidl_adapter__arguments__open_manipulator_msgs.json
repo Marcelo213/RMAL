@@ -1,0 +1,14 @@
+{
+  "package_name": "open_manipulator_msgs",
+  "non_idl_tuples": [
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:msg/JointPosition.msg",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:msg/KinematicsPose.msg",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:msg/OpenManipulatorState.msg",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:srv/GetJointPosition.srv",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:srv/GetKinematicsPose.srv",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:srv/SetJointPosition.srv",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:srv/SetKinematicsPose.srv",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:srv/SetDrawingTrajectory.srv",
+    "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/src/open_manipulator_msgs:srv/SetActuatorState.srv"
+  ]
+}

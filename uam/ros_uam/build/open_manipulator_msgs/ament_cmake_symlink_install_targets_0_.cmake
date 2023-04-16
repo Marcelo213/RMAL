@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/open_manipulator_msgs/libopen_manipulator_msgs__rosidl_typesupport_fastrtps_c.so" "TARGETS" "open_manipulator_msgs__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

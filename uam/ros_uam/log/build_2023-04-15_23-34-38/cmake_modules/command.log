@@ -1,0 +1,4 @@
+Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules -- -j6 -l6
+Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules -- -j6 -l6
+Invoking command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules
+Invoked command in '/home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marcelo/Documents/GitHub/RMAL/uam/ros_uam/build/cmake_modules
